@@ -1,0 +1,20 @@
+// $Naked List
+// -------------------------------------//
+//A list stripped of it's left-padding and bullets.
+//@notes
+//Since there are no numbers, or bullets, we remove the left padding.
+//The left margin remains intact to keep some focus on the list, and seperate it from other content.
+
+.list--naked,
+%list--naked {
+	list-style: none;
+    padding-left: 0;
+}
+
+.list--horizontal,
+%list--horizontal {
+	> li {
+		display: inline-block;
+		margin-right: $margin;
+	}
+}

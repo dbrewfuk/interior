@@ -1,0 +1,73 @@
+
+
+
+.contact-card {
+	padding: $padding--small $padding $padding;
+	&.inline > dl {
+		@extend .grid;
+		@extend .grid--center;
+		@extend .gutters--large;
+	}
+}
+
+
+.contact-card,
+.contact-list > li {
+	background: #fff;
+	border: solid $light-grey;
+	display: inline-block;
+	font-size: $typl8-smaller-font-size;
+	dl {
+		margin: 0;
+	}
+	dt {
+		@include typl8-smallcaps($dark-grey, 700);
+		margin-top: $margin--tiny;
+	}
+	dd {
+		margin-left: 0;
+		padding-left: 0;
+		font-weight: 500;
+
+	}
+}
+
+.contact-card,
+.contact-list {
+	&.no-labels {
+		padding: $padding;
+		dt {
+			display: none;
+		}
+		dd[data-contact-id="name"] {
+			font-weight: 600;
+			font-size: 1rem;
+		}
+		dd[data-contact-id="position"] {
+			font-size: 1rem;
+		}
+		dd[data-contact-id="department"] {
+			font-weight: 500;
+			margin-bottom: $margin--tiny;
+			font-size: 1rem;
+		}
+	}
+}
+
+
+.contact-list {
+	@extend %list-block;
+	@extend %list--naked;
+	width: 100%;
+	li {
+		&:last-child {
+			border-bottom: 0;
+		}
+		width: auto;
+	}
+	.contact-id {
+		padding-right: $padding;
+		margin-right: $padding;
+	}
+}
+

@@ -1,0 +1,18 @@
+.page-anchors {
+    border-left: solid 4px $light-grey;
+    ul {
+        @extend %list--naked;
+        &:before {
+            @extend .typl8-zeta;
+            content: "On this page";
+            display: block;
+            color: $dark-grey;
+        }
+        li {
+            a {
+                @extend %link--no-decoration;
+                @extend %base-text--bigger;
+            }
+        }
+    }
+}

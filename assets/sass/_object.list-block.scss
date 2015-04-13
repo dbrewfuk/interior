@@ -1,0 +1,77 @@
+$list-block-namespace: null !default;
+
+$list-block-padding: $base-spacing-unit !default;
+
+$list-block-padding--tiny: (0.25 * $list-block-padding) !default;
+$list-block-padding--small: (0.5 * $list-block-padding) !default;
+$list-block-padding--large: (1.25 * $list-block-padding) !default;
+$list-block-padding--xlarge: (1.5 * $list-block-padding) !default;
+$list-block-padding--xxlarge: (2 * $list-block-padding) !default;
+
+.#{$list-block-namespace}list-block,
+%#{$list-block-namespace}list-block {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+        @extend %#{$list-block-namespace}list-block__item;
+    }
+
+}
+
+.#{$list-block-namespace}list-block__item,
+    %#{$list-block-namespace}list-block__item {
+        padding: $list-block-padding#{rem};
+    }
+
+ .#{$list-block-namespace}list-block--tiny,
+ %#{$list-block-namespace}list-block--tiny {
+
+        > .#{$list-block-namespace}list-block__item,
+        > %#{$list-block-namespace}list-block__item {
+            padding: $list-block-padding--tiny#{rem};
+        }
+
+    }
+
+    .#{$list-block-namespace}list-block--small,
+    %#{$list-block-namespace}list-block--small {
+
+        > .#{$list-block-namespace}list-block__item,
+        > %#{$list-block-namespace}list-block__item {
+            padding: $list-block-padding--small#{rem};
+        }
+
+    }
+
+
+    .#{$list-block-namespace}list-block--large,
+    %#{$list-block-namespace}list-block--large {
+
+        > .#{$list-block-namespace}list-block__item,
+        > %#{$list-block-namespace}list-block__item {
+            padding: $list-block-padding--large#{rem};
+        }
+
+    }
+
+    .#{$list-block-namespace}list-block--xlarge,
+    %#{$list-block-namespace}list-block--xlarge {
+
+        > .#{$list-block-namespace}list-block__item,
+        > %#{$list-block-namespace}list-block__item {
+            padding: $list-block-padding--xlarge#{rem};
+        }
+
+    }
+
+    .#{$list-block-namespace}list-block--xxlarge,
+    %#{$list-block-namespace}list-block--xxlarge {
+
+        > .#{$list-block-namespace}list-block__item,
+        > %#{$list-block-namespace}list-block__item {
+            padding: $list-block-padding--xxlarge#{rem};
+        }
+
+    }

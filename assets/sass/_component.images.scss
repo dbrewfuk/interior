@@ -1,0 +1,71 @@
+.image--circle,
+%image--circle {
+	@extend %image-ratio-1x1;
+	border-radius: 50%;
+}
+
+
+.image {
+	&-full {
+		width: 100%;
+		margin-bottom: $margin;
+		> figure {
+			@extend %image-ratio-3x1;
+		}
+	}
+	&-right {
+		width: 100%;
+		float: right;
+		margin-left: $margin;
+		margin-bottom: $margin;
+		@include media(desktop) {
+			width: 33%;
+		}
+	}
+	&-left {
+		width: 100%;
+		float: left;
+		margin-right: $margin;
+		margin-bottom: $margin;
+		@include media(desktop) {
+			width: 33%;
+		}
+	}
+	&-center {
+		width: 66%;
+		margin-right: auto;
+		margin-bottom: $margin;
+		margin-left: auto;
+		> figure {
+			@extend %image-ratio-16x9;
+		}
+	}
+	&-right,
+	&-left {
+		> figure {
+			@extend %image-ratio-4x3;
+		}
+	}
+	&-full,
+	&-right,
+	&-left,
+	&-center {
+		> figcaption {
+			font-size: $typl8-smaller-font-size;
+			padding: $padding--tiny;
+			color: $dark-grey;
+			text-align: center;
+		}
+	}
+}
+
+.profile-pic {
+	width: 100px;
+	margin-bottom: $margin--small;
+	@include media(desktop){
+		margin-bottom: 0;
+	}
+	> figure {
+		@extend %image--circle;
+	}
+}

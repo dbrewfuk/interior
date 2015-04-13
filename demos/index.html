@@ -1,0 +1,19 @@
+---
+template: default.html
+title: RSS
+excerpt: RSS
+---
+
+<div id="feed"></div>
+
+<script>
+
+$(document).ready(function () {
+  $('#feed').rssfeed('http://msu-chfa.blogspot.com/feeds/posts/default', {
+    limit: 10
+  });
+});
+
+</script>
+
+

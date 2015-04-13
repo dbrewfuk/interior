@@ -1,0 +1,113 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 4.8em 57.6em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+.icon.business-grey-24:before {
+    background-position: 0em 0em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.business-grey-48:before {
+    background-position: 0em -2.4em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.business-white-24:before {
+    background-position: 0em -7.2em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.business-white-48:before {
+    background-position: 0em -9.6em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.mail-grey-24:before {
+    background-position: 0em -14.4em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.mail-grey-48:before {
+    background-position: 0em -16.8em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.mail-white-24:before {
+    background-position: 0em -21.6em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.mail-white-48:before {
+    background-position: 0em -24em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.menu-grey-24:before {
+    background-position: 0em -28.8em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.menu-grey-48:before {
+    background-position: 0em -31.2em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.menu-white-24:before {
+    background-position: 0em -36em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.menu-white-48:before {
+    background-position: 0em -38.4em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.person-grey-24:before {
+    background-position: 0em -43.2em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.person-grey-48:before {
+    background-position: 0em -45.6em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.person-white-24:before {
+    background-position: 0em -50.4em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.person-white-48:before {
+    background-position: 0em -52.8em;
+    width: 4.8em;
+    height: 4.8em;
+}
+

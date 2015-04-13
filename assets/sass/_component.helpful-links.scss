@@ -1,0 +1,19 @@
+.helpful-links {
+    display: inline-block;
+    width: 100%;
+    border-top: solid #eee;
+    border-bottom: solid #eee;
+    ul {
+        @extend %list--naked;
+        @extend %list--horizontal;
+        &:before {
+            content: "Helpful Links";
+            @extend .typl8-zeta;
+            color: $medium-grey;
+            margin-right: $margin;
+        }
+    }
+    a {
+        @extend %link--no-decoration;
+    }
+}

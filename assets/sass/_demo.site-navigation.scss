@@ -1,0 +1,41 @@
+.icon.menu-white-48 {
+	opacity: 0.25;
+	position: absolute;
+	left: 3rem;
+	top: 50%;
+	transform: translateY(-50%);
+	&:hover {
+		opacity: 0.75;
+	}
+	&.is-toggled {
+		opacity: 1;
+	}
+}
+
+.site-navigation {
+	overflow: hidden;
+	max-height: 0;
+	background: $msu-blue;
+	transition: ease-out max-height 0.4s;
+	ul {
+		@extend %container;
+		@extend %base-text--bigger;
+		padding-top: $padding;
+		padding-bottom: $padding;
+		color: #fff;
+	}
+	a {
+		color: $msu-blue--bright;
+		@extend %link--no-decoration;
+		&.is-current,
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+
+.site-navigation.is-visible {
+	max-height: 1000px;
+}
+

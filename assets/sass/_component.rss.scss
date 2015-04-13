@@ -1,0 +1,88 @@
+
+
+
+.feed__header {
+	display: inline-block;
+	width: 100%;
+	border-bottom: solid #eee;
+	position: relative;
+	padding: 0 1rem;
+}
+.header__feed-link {
+    @extend %link--no-decoration;
+    font-weight: 500;
+	margin-bottom: 0.5rem;
+	display: inline-block;
+}
+.feed__title {
+    @extend .typl8-delta;
+	margin-bottom: 0;
+}
+
+.article-list {
+    @extend %list-block;
+}
+
+.article--snippet {
+    @extend %list-block__item;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    border-bottom: solid thin #eee;
+    p {
+        font-family: $base-serif;
+        margin: 0;
+    }
+    &:hover {
+    	.article__image-inner:before {
+    		opacity: 0;
+    	}
+    }
+}
+
+.article__link-mask {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    border-bottom: 0;
+}
+
+.article__meta-content {
+    @include typl8-smallcaps($dark-grey, 700);
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 1px;
+    > span {
+        font-size: 16px; //smallcaps doesn't apply to numbers, had to manually shrink the numbers to fit.
+        letter-spacing: normal;
+    }
+}
+
+.article__headline {
+    @extend .typl8-epsilon;
+    position: relative; //need this to wrap the absolute positioned .article__link-mask that's inside
+    z-index: 200;
+    a {
+        color: #3c3c3c;
+        border-bottom: 0;
+        text-decoration: none;
+    }
+    
+}
+
+.article__image-wrapper {
+    width: 25%;
+    float: left;
+    margin-right: 1.5rem;
+    .article__image-inner {
+        @extend %image-ratio-4x3;
+        &:before {
+        	@extend %image-overlay--dark;
+        }
+    }
+}
+
+

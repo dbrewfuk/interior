@@ -1,0 +1,13 @@
+[
+  {
+    "sizes": [24, 48],
+    "ids": ["grey","white"],
+    "fills": ["#797979","#ffffff"],
+    "icons": [
+      "communication/business",
+      "content/mail",
+      "social/person",
+      "navigation/menu"
+    ]
+  }
+]

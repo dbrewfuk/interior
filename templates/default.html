@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'head.html' %}
+  <body class="Site">
+  <nav class="site-navigation">
+    <ul class="list--naked">
+    <li><a href="{{ site.baseUrl }}demos/components/page-anchors/">Page Anchors</a></li>
+    <li><a href="{{ site.baseUrl }}demos/components/helpful-links/">Helpful Links</a></li>
+    <li><a href="{{ site.baseUrl }}demos/components/images/">Images</a></li>
+    <li><a href="{{ site.baseUrl }}demos/components/contact-cards/">Contact Cards</a></li>
+    </ul>
+    </nav>
+    <script>
+      $(document).on('click','.js-site-navigation-toggle',function(){
+        $('.site-navigation').toggleClass('is-visible');
+        $(this).toggleClass('is-toggled');
+      })
+    </script>
+    <header class="site-header">
+        <div class="site-header__wrapper">
+        <a class="js-site-navigation-toggle icon menu-white-48 link--no-decoration"></a>
+        <h1>{{ page.title }}</h1>
+        </div>
+    </header>
+    <main class="site-content">
+      <div class="site-content__wrapper">
+        {{ page.content }}
+      </div>
+    </main>
+    <footer class="Site-footer">
+      <div class="Footer">
+        {% include 'footer.html' %}
+      </div>
+    </footer>
+    <script>
+    $(function(){
+       $("a").each(function(){
+        var path = "{{ site.baseUrl }}" + window.location.pathname;
+               if ($(this).attr("href") == window.location.pathname){
+                       $(this).addClass("is-current");
+               }
+       });
+});
+    </script>
+    {% include 'scripts.html' %}
+  </body>
+</html>
