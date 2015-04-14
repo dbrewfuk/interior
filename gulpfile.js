@@ -31,6 +31,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var through = require('through2');
 var uglify = require('gulp-uglify');
 var svg2png = require('gulp-svg2png');
+var deploy = require('gulp-gh-pages');
 
 gulp.task("icons", function() {
     return icons({tasks: tasks})
@@ -247,32 +248,7 @@ gulp.task('serve', ['default'], function() {
 });
 
 
-gulp.task('release', ['default'], function() {
-
-  // Create a tempory directory and
-  // checkout the existing gh-pages branch.
-  rm('-rf', '_tmp');
-  mkdir('_tmp');
-  cd('_tmp');
-  exec('git init');
-  exec('git remote add origin git@github.com:dbrewfuk/' + REPO + '.git');
-  exec('git pull origin gh-pages');
-
-  // Delete all the existing files and add
-  // the new ones from the build directory.
-  rm('-rf', './*');
-  cp('-rf', path.join('..', DEST, '/'), './');
-  exec('git add -A');
-
-  // Commit and push the changes to
-  // the gh-pages branch.
-  exec('git commit -m "Deploy site."');
-  exec('git branch -m gh-pages');
-  exec('git push origin gh-pages');
-
-  // Clean up.
-  cd('..');
-  rm('-rf', '_tmp');
-  rm('-rf', DEST);
-
+gulp.task('deploy',['default'], function () {
+  return gulp.src("./build/**/*")
+    .pipe(deploy())
 });
