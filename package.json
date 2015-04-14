@@ -9,8 +9,8 @@
   "license": "MIT",
   "scripts": {
     "build": "gulp",
-    "start": "NODE_ENV=dev gulp serve",
-    "release": "gulp clean && gulp release"
+    "start": "gulp clean && gulp release",
+    "publish": "gulp clean && gulp release"
   },
   "devDependencies": {
     "browserify": "^8.1.1",
