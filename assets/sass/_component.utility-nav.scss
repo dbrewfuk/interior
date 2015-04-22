@@ -1,0 +1,15 @@
+.utility-nav {
+	background: $msu-navy;
+	ul {
+		@extend %grid;
+		@extend %grid--end;
+	}
+	.icon {
+		@extend %link--no-decoration;
+		display: inline-block;
+		padding: $padding--tiny;
+	}
+	.icon.sort-white-24:before {
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+}

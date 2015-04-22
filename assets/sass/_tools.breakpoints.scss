@@ -43,7 +43,13 @@ $mobile-ie6: true !default;
         @content;
       }
     }
-  } @else {
+  } 
+  @else {
+    @if $size == big-desktop {
+      @media (min-width: $breakpoint-desktop-big){
+        @content;
+      }
+    }
     @if $size == desktop {
       @media (min-width: $breakpoint-desktop){
         @content;

@@ -6,6 +6,7 @@ html {
     -ms-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 *,
@@ -16,14 +17,14 @@ html {
 
 a {
     border-bottom: dotted thin;
-    color: $color-link;
+    color: $msu-blue;
     text-decoration: none;
     font-weight: 500;
 }
 
 a:focus,
 a:hover {
-    color: $color-link-hover;
+    color: $msu-gold;
 }
 
 dt {

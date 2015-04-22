@@ -15,7 +15,7 @@
 .site-navigation {
 	overflow: hidden;
 	max-height: 0;
-	background: $msu-blue;
+	background: $light-grey;
 	transition: ease-out max-height 0.4s;
 	ul {
 		@extend %container;
@@ -23,13 +23,23 @@
 		padding-top: $padding;
 		padding-bottom: $padding;
 		color: #fff;
+		ul {
+			font-size: 1rem;
+			padding-top: $padding--tiny;
+			padding-bottom: $padding--small;
+			a {
+				font-weight: 500;
+				color: $dark-grey;
+			}
+		}
 	}
 	a {
-		color: $msu-blue--bright;
+		color: $medium-grey;
 		@extend %link--no-decoration;
+		font-weight: 600;
 		&.is-current,
 		&:hover {
-			color: #fff;
+			color: $msu-blue--bright;
 		}
 	}
 }

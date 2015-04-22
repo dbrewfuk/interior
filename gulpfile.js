@@ -242,13 +242,38 @@ gulp.task('serve', ['default'], function() {
 
   gulp.watch('./assets/sass/**/*.scss', ['compass']);
   gulp.watch('./assets/css/**/*.css', ['css']);
-  gulp.watch('./assets/images/*', ['images']);
+  gulp.watch('./assets/images/**/*', ['images']);
   gulp.watch('./assets/javascript/*', ['javascript']);
   gulp.watch(['*.html', './demos/**/*', './templates/*/*'], ['pages']);
 });
 
 
-gulp.task('deploy',['default'], function () {
-  return gulp.src("./build/**/*")
-    .pipe(deploy())
+gulp.task('deploy', function() {
+
+  // Create a tempory directory and
+  // checkout the existing gh-pages branch.
+  rm('-rf', '_tmp');
+  mkdir('_tmp');
+  cd('_tmp');
+  exec('git init');
+  exec('git remote add origin git@github.com:dbrewfuk/' + REPO + '.git');
+  exec('git pull origin gh-pages');
+
+  // Delete all the existing files and add
+  // the new ones from the build directory.
+  rm('-rf', './*');
+  cp('-rf', path.join('..', DEST, '/'), './');
+  exec('git add -A');
+
+  // Commit and push the changes to
+  // the gh-pages branch.
+  exec('git commit -m "Deploy site."');
+  exec('git branch -m gh-pages');
+  exec('git push origin gh-pages');
+
+  // Clean up.
+  cd('..');
+  rm('-rf', '_tmp');
+  rm('-rf', DEST);
+
 });

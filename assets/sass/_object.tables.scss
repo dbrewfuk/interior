@@ -1,0 +1,18 @@
+.table {
+	width: 100%;
+	th,
+	td {
+		padding: $padding--small $padding--small $padding--tiny $padding--tiny;
+		text-align: left;
+	}
+	th {
+		font-weight: 600;
+		color: $medium-grey;
+		border-bottom: solid #eee;
+	}
+	td {
+		border-bottom: solid thin #eee;
+		font-size: smaller;
+		font-weight: 500;
+	}
+}

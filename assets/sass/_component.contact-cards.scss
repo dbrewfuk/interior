@@ -1,73 +1,81 @@
-
-
-
 .contact-card {
-	padding: $padding--small $padding $padding;
-	&.inline > dl {
-		@extend .grid;
-		@extend .grid--center;
-		@extend .gutters--large;
-	}
+    background: $white;
+    border: solid $light-grey;
+    display: inline-block;
+    padding: $padding--small $padding $padding;
+    dl {
+        margin: 0;
+    }
+    dd {
+        margin-left: 0;
+        padding-left: 0;
+        font-weight: 500;
+    }
+    .profile-pic {
+        max-width: 140px;
+        min-width: 140px;
+        margin-bottom: $margin--small;
+        @include media(desktop) {
+            margin-bottom: 0;
+        }
+        > figure {
+            @extend %image--circle;
+        }
+    }
+    .contact-info {
+        font-size: smaller;
+    }
+    //Variations
+    &.stacked,
+    &.stacked.inline {
+        .contact-id {
+            margin-bottom: $margin--small;
+            padding-bottom: $padding--small;
+            border-bottom: solid thin #eee;
+        }
+    }
+    &.inline > dl {
+        @extend %grid;
+        @extend %grid--full;
+        @extend %large-grid--auto;
+        @extend %large-grid--center;
+        @extend %large-grid--gutters-large;
+        .profile-pic, .contact-id, .contact-info {
+            @extend %grid-cell;
+        }
+        .contact-id {
+            margin-bottom: $margin--small;
+            padding-bottom: $padding--small;
+            border-bottom: solid thin #eee;
+        }
+        @include media(desktop) {
+            .contact-id {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+            .contact-info {
+                margin-left: $margin;
+                border-left: solid thin #eee;
+            }
+        }
+    }
+    &.no-labels {
+        padding: $padding;
+        dt {
+            display: none;
+        }
+        dd[data-contact-id="name"] {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        dd[data-contact-id="position"] {
+            font-size: 1rem;
+        }
+        dd[data-contact-id="department"] {
+            font-weight: 500;
+            margin-bottom: $margin--tiny;
+            font-size: 1rem;
+        }
+    }
 }
-
-
-.contact-card,
-.contact-list > li {
-	background: #fff;
-	border: solid $light-grey;
-	display: inline-block;
-	font-size: $typl8-smaller-font-size;
-	dl {
-		margin: 0;
-	}
-	dt {
-		@include typl8-smallcaps($dark-grey, 700);
-		margin-top: $margin--tiny;
-	}
-	dd {
-		margin-left: 0;
-		padding-left: 0;
-		font-weight: 500;
-
-	}
-}
-
-.contact-card,
-.contact-list {
-	&.no-labels {
-		padding: $padding;
-		dt {
-			display: none;
-		}
-		dd[data-contact-id="name"] {
-			font-weight: 600;
-			font-size: 1rem;
-		}
-		dd[data-contact-id="position"] {
-			font-size: 1rem;
-		}
-		dd[data-contact-id="department"] {
-			font-weight: 500;
-			margin-bottom: $margin--tiny;
-			font-size: 1rem;
-		}
-	}
-}
-
-
-.contact-list {
-	@extend %list-block;
-	@extend %list--naked;
-	width: 100%;
-	li {
-		&:last-child {
-			border-bottom: 0;
-		}
-		width: auto;
-	}
-	.contact-id {
-		padding-right: $padding;
-		margin-right: $padding;
-	}
-}
-

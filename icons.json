@@ -4,9 +4,10 @@
     "ids": ["grey","white"],
     "fills": ["#797979","#ffffff"],
     "icons": [
+      "action/search",
       "communication/business",
       "content/mail",
-      "social/person",
+      "content/sort",
       "navigation/menu"
     ]
   }

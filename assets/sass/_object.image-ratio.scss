@@ -46,4 +46,20 @@
   @include padding-ratio(16, 9, img);
 }
 
+%ratio-1x1 {
+  @include padding-ratio(1, 1, div);
+}
+%ratio-2x1 {
+  @include padding-ratio(2, 1, div);
+}
+%ratio-3x1 {
+  @include padding-ratio(3, 1, div);
+}
+%ratio-4x3 {
+  @include padding-ratio(4, 3, div);
+}
+%ratio-16x9 {
+  @include padding-ratio(16, 9, div);
+}
+
 

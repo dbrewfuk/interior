@@ -1,8 +1,6 @@
 .helpful-links {
     display: inline-block;
     width: 100%;
-    border-top: solid #eee;
-    border-bottom: solid #eee;
     ul {
         @extend %list--naked;
         @extend %list--horizontal;
@@ -15,5 +13,15 @@
     }
     a {
         @extend %link--no-decoration;
+    }
+
+    //Variations
+    &.middle {
+        border-top: solid thin #eee;
+        border-bottom: solid thin #eee;
+        margin-bottom: $margin;
+    }
+    &.bottom {
+        border-top: solid #eee;
     }
 }

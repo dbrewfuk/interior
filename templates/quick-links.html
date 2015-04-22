@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+
+<body class="Site">
+    {% include 'site-navigation.html' %}
+    <script>
+    $(document).on('click', '.js-site-navigation-toggle', function() {
+        $('.site-navigation').toggleClass('is-visible');
+        $(this).toggleClass('is-toggled');
+    })
+    </script>
+    <nav class="utility-nav">
+            <ul>
+                <li><a class="icon search-white-24"></a></li>
+                <li><a class="js-quick-links-toggle icon sort-white-24"></a></li>
+            </ul>
+        </nav>
+    <header class="site-header">
+        
+        <div class="site-header__wrapper">
+            <a class="js-site-navigation-toggle icon menu-white-48 link--no-decoration"></a>
+            <h1>{{ page.title }}</h1>
+        </div>
+    </header>
+    <main class="site-content">
+        <div class="site-content__wrapper">
+            
+        </div>
+
+    </main>
+    <aside class="quick-links">
+        {{ page.content }}
+    </aside>
+    <div class="js-quick-links-toggle full-page-mask"></div>
+    <footer class="Site-footer">
+        <div class="Footer">
+            {% include 'footer.html' %}
+        </div>
+    </footer>
+    <script>
+    $(function() {
+        $(document).on('click','.js-quick-links-toggle',function(){
+            $('.quick-links').toggleClass('is-showing');
+            $('.full-page-mask').toggleClass('is-showing');
+        });
+    
+        $(document).ready(function() {
+    $(".tabs a").click(function() {
+        $(".list-group ul").hide();
+        $($(this).attr("href")).show();
+        $(this).parent('li').addClass('is-selected').siblings().removeClass('is-selected');
+    });
+})
+        $("a").each(function() {
+            var path = "{{ site.baseUrl }}" + window.location.pathname;
+            if ($(this).attr("href") == window.location.pathname) {
+                $(this).addClass("is-current");
+            }
+        });
+    });
+    </script>
+    {% include 'scripts.html' %}
+</body>
+
+</html>

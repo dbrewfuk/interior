@@ -1,0 +1,25 @@
+.color-palette {
+	@extend %grid;
+	@extend %grid--gutters;
+	.color-card {
+		@extend .grid-cell;
+		.inner {
+			@extend %ratio-4x3;
+		}
+		span {
+			@extend %position-centered;
+			color: #fff;
+			font-weight: 600;
+		}
+	}
+	.color-palette {
+		@extend %grid--gutters-none;
+		margin-top: $margin;
+		.color-card {
+		padding-left: 0;
+	}
+	}
+}
+
+
+

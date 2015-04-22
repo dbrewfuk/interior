@@ -1,3 +1,5 @@
+
+
 .container,
 %container {
 	width: 100%;
@@ -6,9 +8,11 @@
 	padding: 0 1rem;
 }
 
+
+
 .site {
 	&-header {
-	    background: $msu-blue--darkest;
+	    background: $msu-gold;
 	    color: $white;
 	    padding-top: $padding--large;
 	    padding-bottom: $padding--small;
@@ -19,3 +23,4 @@
 		@extend %container;
 	}
 }
+

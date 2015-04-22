@@ -59,13 +59,3 @@
 	}
 }
 
-.profile-pic {
-	width: 100px;
-	margin-bottom: $margin--small;
-	@include media(desktop){
-		margin-bottom: 0;
-	}
-	> figure {
-		@extend %image--circle;
-	}
-}

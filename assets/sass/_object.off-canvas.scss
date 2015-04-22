@@ -1,0 +1,12 @@
+.off-canvas--right,
+%off-canvas--right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	transform: translateX(100%);
+	transition: ease-out all 0.4s;
+	&.is-showing {
+		transform: translateX(0);
+	}
+}
