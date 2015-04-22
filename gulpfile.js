@@ -248,7 +248,7 @@ gulp.task('serve', ['default'], function() {
 });
 
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['default'], function() {
 
   // Create a tempory directory and
   // checkout the existing gh-pages branch.
