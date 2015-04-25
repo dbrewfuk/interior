@@ -15,6 +15,8 @@
 @import "tools.breakpoints";
 @import "base/typography/typeplate/typeplate";
 @import "tools.spacing";
+@import "tools.shadows";
+@import "tools.transitions";
 
 @import "generic.shared";
 
@@ -31,7 +33,7 @@
 @import "object.off-canvas";
 @import "object.icons";
 
-
+@import "component.footer";
 @import "component.rss";
 @import "component.helpful-links";
 @import "component.contact-cards";

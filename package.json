@@ -1,7 +1,7 @@
 {
   "name": "interior",
-  "description": "",
-  "homepage": "",
+  "description": "Testing site for MSU interior pages.",
+  "homepage": "http://dbrewfuk.github.io/interior",
   "repository": {
     "type": "git",
     "url": "https://github.com/dbrewfuk/interior.git"
@@ -10,7 +10,7 @@
   "scripts": {
     "build": "gulp",
     "start": "NODE_ENV=dev gulp serve",
-    "deploy": "gulp clean && gulp release"
+    "release": "gulp clean && gulp release"
   },
   "devDependencies": {
     "browserify": "^8.1.1",

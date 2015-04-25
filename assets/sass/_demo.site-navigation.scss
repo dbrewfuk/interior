@@ -13,10 +13,10 @@
 }
 
 .site-navigation {
+	@extend %transition--off-canvas-top;
 	overflow: hidden;
 	max-height: 0;
 	background: $light-grey;
-	transition: ease-out max-height 0.4s;
 	ul {
 		@extend %container;
 		@extend %base-text--bigger;

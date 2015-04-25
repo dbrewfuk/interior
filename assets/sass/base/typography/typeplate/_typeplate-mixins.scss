@@ -89,11 +89,9 @@
 // or don't provide them with their Webfont.
 
 @mixin typl8-smallcaps($color, $font-weight) {
-  @each $prefix in $typl8-prefixes {
-    #{$prefix}font-variant: small-caps;
-  }
   font-weight: $font-weight;
-  text-transform: lowercase;
+  text-transform: uppercase;
+  font-size: $typl8-smallest-font-size;
   color: $color;
   letter-spacing: typl8-context-calc(1,19,rem);
 }

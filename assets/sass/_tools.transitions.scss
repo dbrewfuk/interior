@@ -1,0 +1,29 @@
+.transition--off-canvas,
+%transition--off-canvas {
+    transition-duration: 0.28s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.transition--off-canvas-top,
+%transition--off-canvas-top {
+    transition-duration: 0.28s;
+    transition-property: max-height;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.transition--opacity,
+%transition--opacity {
+ transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+ -webkit-backface-visibility: hidden;
+ -webkit-perspective: 1000;
+ -webkit-transform: translate3d(0,0,0);
+}
+
+

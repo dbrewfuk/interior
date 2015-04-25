@@ -9,6 +9,10 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+}
+
 *,
 *::after,
 *::before {
@@ -20,6 +24,7 @@ a {
     color: $msu-blue;
     text-decoration: none;
     font-weight: 500;
+    cursor: pointer;
 }
 
 a:focus,

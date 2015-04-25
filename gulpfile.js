@@ -4,6 +4,7 @@ require('shelljs/global');
 var argv = require('yargs').argv;
 var compass = require('gulp-compass');
 var assign = require('object-assign');
+var babelify = require('babelify');
 var buffer = require('vinyl-buffer');
 var browserify = require('browserify');
 var connect = require('connect');
@@ -32,12 +33,8 @@ var through = require('through2');
 var uglify = require('gulp-uglify');
 var svg2png = require('gulp-svg2png');
 var deploy = require('gulp-gh-pages');
+var filter    = require('gulp-filter');
 
-gulp.task("icons", function() {
-    return icons({tasks: tasks})
-        .pipe(sprites())
-        .pipe(gulp.dest(path.join(DEST, 'svg')));
-});
 
 /**
  * The output directory for all the built files.
@@ -181,18 +178,21 @@ gulp.task('pages', function() {
 });
 
 
-gulp.task('images', function() {
+gulp.task("sprites", function() {
+    return icons({tasks: tasks})
+        .pipe(sprites())
+        .pipe(gulp.dest("assets/images"))
+        .pipe(filter("**/*.svg")) // Filter out everything except the SVG file 
+        .pipe(svg2png()) // Create a PNG 
+        .pipe(gulp.dest("assets/images"));
+});
+
+
+gulp.task('images', ['sprites'], function() {
   return gulp.src('./assets/images/**/*')
       .pipe(gulp.dest(path.join(DEST, 'images')));
 });
 
-
-gulp.task('css', function() {
-  return gulp.src('./assets/css/main.css')
-      .pipe(plumber({errorHandler: streamError}))
-      .pipe(cssnext({compress: true}))
-      .pipe(gulp.dest(DEST));
-});
  
 gulp.task('compass', function() {
   gulp.src('./assets/sass/*.scss')
@@ -203,9 +203,19 @@ gulp.task('compass', function() {
     .pipe(gulp.dest('./assets/css'));
 });
 
+gulp.task('css', ['compass'], function() {
+  return gulp.src('./assets/css/style.css')
+      .pipe(plumber({errorHandler: streamError}))
+      .pipe(cssnext({
+        browsers: '> 1%, last 2 versions, Safari > 5, ie > 9, Firefox ESR',
+        compress: true,
+        url: false
+      }))
+      .pipe(gulp.dest(DEST));
+});
 
 gulp.task('lint', function() {
-  return gulp.src('./assets/javascript/**/*.js')
+  return gulp.src('./assets/javascript/*.js')
       .pipe(plumber({errorHandler: streamError}))
       .pipe(jshint())
       .pipe(jshint.reporter('default'))
@@ -214,7 +224,9 @@ gulp.task('lint', function() {
 
 
 gulp.task('javascript', ['lint'], function() {
-  return browserify('./assets/javascript/main.js', {debug: true}).bundle()
+  return browserify('./assets/javascript/main.js', {debug: true})
+      .transform(babelify)
+      .bundle()
       .on('error', streamError)
       .pipe(source('main.js'))
       .pipe(buffer())
@@ -233,22 +245,21 @@ gulp.task('clean', function(done) {
 });
 
 
-gulp.task('default', ['icons', 'images', 'css', 'compass', 'javascript', 'pages']);
+gulp.task('default', ['images', 'css', 'javascript', 'pages']);
 
 
 gulp.task('serve', ['default'], function() {
   var port = argv.port || argv.p || 4000;
   connect().use(serveStatic(DEST)).listen(port);
-
-  gulp.watch('./assets/sass/**/*.scss', ['compass']);
   gulp.watch('./assets/css/**/*.css', ['css']);
+  gulp.watch('./assets/sass/**/*.scss', ['compass']);
   gulp.watch('./assets/images/**/*', ['images']);
   gulp.watch('./assets/javascript/*', ['javascript']);
-  gulp.watch(['*.html', './demos/**/*', './templates/*/*'], ['pages']);
+  gulp.watch(['*.html', './demos/**/*', './templates/**/*'], ['pages']);
 });
 
 
-gulp.task('deploy', function() {
+gulp.task('release', ['default'], function() {
 
   // Create a tempory directory and
   // checkout the existing gh-pages branch.

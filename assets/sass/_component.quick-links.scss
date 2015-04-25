@@ -1,7 +1,61 @@
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color 
+/// @param {Length} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+  
+  $perpendicular-borders: $size solid transparent;
+  
+  @if $direction == top or $direction == bottom {
+    border-left:   $perpendicular-borders;
+    border-right:  $perpendicular-borders;
+  } @else if $direction == right or $direction == left {
+    border-bottom: $perpendicular-borders;
+    border-top:    $perpendicular-borders;
+  }
+}
+
+.helper {
+@include box-shadow(5);
+	position: absolute;
+  background: $msu-teal;
+  padding: $padding--tiny $padding--small;
+  z-index: 998;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  right: 48px;
+  line-height: 1;
+  border-radius: 2px;
+  margin-top: $margin--tiny;
+
+  &:after {
+  	@include triangle(right, $msu-teal, 0.5em);
+  	position:absolute;
+  	transform: translateX(100%);
+  	right: 0;
+  }
+}
+
 .quick-links {
-    @extend %off-canvas--right;
+	@extend %off-canvas--right;
+	@extend %transition--off-canvas;
+  -webkit-backface-visibility: hidden;
     background: tint($msu-blue,96%);
     z-index: 1000;
+	&.is-showing {
+		@include box-shadow(2);
+	}
+    
     .featured {
     	@extend %list--naked;
     	margin: 0;
@@ -15,7 +69,7 @@
             padding: $padding--tiny $padding--small;
             color: #fafafa;
             &:hover {
-            	background: tint($msu-navy--bright,15%);
+            	color: $msu-gold;
             }
         }
         .icon {
@@ -23,7 +77,6 @@
         	width: 2.4em;
         }
     }
-    .quick-links-wrapper {}
     //Tabbed lists
     .tabs {
     	background: $msu-navy;
@@ -44,7 +97,7 @@
         }
         a {
             color: tint($msu-navy,50%);
-            padding: 0 $padding--tiny;
+            padding: $padding--tiny;
             display: inline-block;
             @extend abbr;
             &:hover {
@@ -53,8 +106,7 @@
         }
         .is-selected {
             a {
-                color: tint($msu-navy,100%);
-                border-bottom: solid 4px $msu-gold;
+                color: $msu-gold;
             }
         }
     }
@@ -72,7 +124,6 @@
         	border-bottom: solid thin tint($msu-navy,85%);
             width: 100%;
             display: inline-block;
-            transition: ease-out color 0.18s;
             &:hover {
             	color: $msu-gold;
             }
@@ -89,4 +140,25 @@
     a {
         @extend %link--no-decoration;
     }
+
 }
+
+.close-button {
+      @extend abbr; 
+      padding: $padding--tiny $padding--small;
+      background: shade(white,5%);
+      color: shade(white,25%);
+      position: absolute;
+      bottom: $margin;
+      left: 50%;
+      transform: translateX(-50%);
+      &:hover {
+        color: shade(white,50%);
+      }
+      @include media(tablet) {
+  display: none;
+}
+    }
+
+
+

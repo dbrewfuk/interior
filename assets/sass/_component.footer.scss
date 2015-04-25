@@ -1,0 +1,10 @@
+.site-footer {
+	padding: $padding;
+	font-size: smaller;
+	color: white;
+	background: #4d4e53;
+}
+
+.footer {
+	@extend %container;
+}
