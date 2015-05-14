@@ -1,6 +1,6 @@
 .contact-card {
+    @include box-shadow(1);
     background: $white;
-    border: solid $light-grey;
     display: inline-block;
     padding: $padding--small $padding $padding;
     dl {

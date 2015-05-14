@@ -1,0 +1,118 @@
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+.button,
+%button {
+    @extend %small-caps;
+    @extend %link--no-decoration;
+    border-radius: 3px;
+    font-size: $typl8-smaller-font-size;
+    color: white;
+    background: $msu-teal;
+    line-height: 1;
+    padding: strip-units($padding--small)#{em} strip-units($padding)#{em};
+    display: inline-block;
+    margin-bottom: $margin;
+    &:hover {
+        background: shade($msu-teal, 15%);
+        color: white;
+    }
+    &.small,
+    %small {
+        font-size: $typl8-smallest-font-size;
+    }
+    &.large,
+    &%large {
+        font-size: 1rem;
+    }
+    &.no-caps,
+    &%no-caps {
+        text-transform: initial;
+        letter-spacing: normal;
+        font-size: 1rem;
+    }
+    &.bare,
+    &%bare {
+        background: transparent;
+        color: $msu-teal;
+        &:hover {
+            background: shade(white,5%);
+        }
+    }
+    &.subtle,
+    &%subtle {
+        background: $subtle-color;
+    }
+    &.outline,
+    &%outline {
+        background: transparent;
+        border: solid thin;
+        color: $msu-teal;
+        &:hover {
+            background: $msu-teal;
+            color: white;
+        }
+    }
+    &.disabled,
+    &%disabled {
+        background: $disabled-color;
+        color: shade($disabled-color, 15%);
+    }
+    &.action,
+    &%action {
+        background: #64CC8B;
+        &:hover {
+            background: tint(#64CC8B, 25%);
+        }
+    }
+    &.red,
+    &%red {
+        background: #FF4E23;
+        &:hover {
+            background: shade(#FF4E23, 15%);
+        }
+    }
+    &.yellow,
+    &%yellow {
+        background: #FFF04A;
+        color: shade(#FFF04A, 50%);
+    }
+
+    &.with-icon,
+    &%with-icon {
+    	
+    	span {
+    		vertical-align: middle;
+    		display: inline-block;
+            &:first-child {
+                margin-right: $margin--tiny;
+            }
+    	}
+        .icon:before {
+            font-size: 10px;
+            margin: 0;
+        }
+
+        .nudge-right {
+            transition: ease all 0.28s;
+        }
+
+        &:hover {
+            .nudge-right {
+                transform: translateX($margin--tiny/2);
+            }
+        }
+        
+    }
+}
+
+.read-more {
+    @extend %button;
+    @extend %bare;
+    @extend %with-icon;
+    @extend %no-caps;
+    &:hover {
+        color: $msu-teal;
+    }
+}

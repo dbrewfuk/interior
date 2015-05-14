@@ -149,6 +149,10 @@ $msu-teal: #1291B9;
 // $Grey Scale
 // -------------------------------------//
 
+$copy-color: #3c3c3c; //#44484C;
+$subtle-color: #959595; //#889199;
+$disabled-color: #D4D4D4;
+
 $grey-scale-1: #fafafa;
     $grey-scale-2: darken($grey-scale-1, 1.5%);
     $grey-scale-3: darken($grey-scale-2, 2.5%);
@@ -180,6 +184,8 @@ $grey-scale-1: #fafafa;
 %darkest-grey {
 	background-color: $grey-scale-5;
 }
+
+
 
 
 

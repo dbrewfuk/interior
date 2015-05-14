@@ -108,9 +108,13 @@ code {
 // $Smallcaps
 // -------------------------------------//
 
-abbr {
+abbr,
+%small-caps {
   @include typl8-smallcaps($typl8-smcps-color, $typl8-smcps-weight);
   &[title]:hover {
     cursor: help;
   }
 }
+
+
+

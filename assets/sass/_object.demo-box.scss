@@ -3,5 +3,5 @@
 .demo-box {
 	padding: $padding;
 	background: $white;
-	border: solid thin #eee;
+	@include box-shadow(1);
 }

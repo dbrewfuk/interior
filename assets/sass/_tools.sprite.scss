@@ -1,0 +1,305 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("images/svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 4.8em 172.8em;
+}
+
+.no-svg .icon:before {
+    background-image: url("images/svg/sprite.png");
+}
+
+.icon.business-grey-24:before {
+    background-position: 0em 0em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.business-grey-48:before {
+    background-position: 0em -2.4em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.business-msu-blue-24:before {
+    background-position: 0em -7.2em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.business-msu-blue-48:before {
+    background-position: 0em -9.6em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.business-white-24:before {
+    background-position: 0em -14.4em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.business-white-48:before {
+    background-position: 0em -16.8em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.chevron_right-grey-24:before {
+    background-position: 0em -21.6em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.chevron_right-grey-48:before {
+    background-position: 0em -24em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.chevron_right-msu-blue-24:before {
+    background-position: 0em -28.8em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.chevron_right-msu-blue-48:before {
+    background-position: 0em -31.2em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.chevron_right-white-24:before {
+    background-position: 0em -36em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.chevron_right-white-48:before {
+    background-position: 0em -38.4em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.expand_less-grey-24:before {
+    background-position: 0em -43.2em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.expand_less-grey-48:before {
+    background-position: 0em -45.6em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.expand_less-msu-blue-24:before {
+    background-position: 0em -50.4em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.expand_less-msu-blue-48:before {
+    background-position: 0em -52.8em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.expand_less-white-24:before {
+    background-position: 0em -57.6em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.expand_less-white-48:before {
+    background-position: 0em -60em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.expand_more-grey-24:before {
+    background-position: 0em -64.8em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.expand_more-grey-48:before {
+    background-position: 0em -67.2em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.expand_more-msu-blue-24:before {
+    background-position: 0em -72em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.expand_more-msu-blue-48:before {
+    background-position: 0em -74.4em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.expand_more-white-24:before {
+    background-position: 0em -79.2em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.expand_more-white-48:before {
+    background-position: 0em -81.6em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.mail-grey-24:before {
+    background-position: 0em -86.4em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.mail-grey-48:before {
+    background-position: 0em -88.8em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.mail-msu-blue-24:before {
+    background-position: 0em -93.6em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.mail-msu-blue-48:before {
+    background-position: 0em -96em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.mail-white-24:before {
+    background-position: 0em -100.8em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.mail-white-48:before {
+    background-position: 0em -103.2em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.menu-grey-24:before {
+    background-position: 0em -108em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.menu-grey-48:before {
+    background-position: 0em -110.4em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.menu-msu-blue-24:before {
+    background-position: 0em -115.2em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.menu-msu-blue-48:before {
+    background-position: 0em -117.6em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.menu-white-24:before {
+    background-position: 0em -122.4em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.menu-white-48:before {
+    background-position: 0em -124.8em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.search-grey-24:before {
+    background-position: 0em -129.6em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.search-grey-48:before {
+    background-position: 0em -132em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.search-msu-blue-24:before {
+    background-position: 0em -136.8em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.search-msu-blue-48:before {
+    background-position: 0em -139.2em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.search-white-24:before {
+    background-position: 0em -144em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.search-white-48:before {
+    background-position: 0em -146.4em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.sort-grey-24:before {
+    background-position: 0em -151.2em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.sort-grey-48:before {
+    background-position: 0em -153.6em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.sort-msu-blue-24:before {
+    background-position: 0em -158.4em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.sort-msu-blue-48:before {
+    background-position: 0em -160.8em;
+    width: 4.8em;
+    height: 4.8em;
+}
+
+.icon.sort-white-24:before {
+    background-position: 0em -165.6em;
+    width: 2.4em;
+    height: 2.4em;
+}
+
+.icon.sort-white-48:before {
+    background-position: 0em -168em;
+    width: 4.8em;
+    height: 4.8em;
+}
+

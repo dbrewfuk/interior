@@ -1,6 +1,6 @@
 // $Image Ratios for background images
 // -------------------------------------//
-//e.g.
+//@example
 //CSS
 //.article__image-wrapper {
 //    .article__image-inner {
@@ -18,7 +18,6 @@
   position: relative;
   padding: 0 0 percentage($y/$x) 0;
   height: 0;
-  overflow: hidden;
   margin: 0;
   #{$selector} {
     position: absolute;
@@ -42,8 +41,17 @@
 %image-ratio-4x3 {
   @include padding-ratio(4, 3, img);
 }
+%image-ratio-3x4 {
+  @include padding-ratio(3, 4, img);
+}
 %image-ratio-16x9 {
   @include padding-ratio(16, 9, img);
+}
+%image-ratio-21x9 {
+  @include padding-ratio(21, 9, img);
+}
+%image-ratio-9x16 {
+  @include padding-ratio(9, 16, img);
 }
 
 %ratio-1x1 {
@@ -60,6 +68,9 @@
 }
 %ratio-16x9 {
   @include padding-ratio(16, 9, div);
+}
+%ratio-9x16 {
+  @include padding-ratio(9, 16, div);
 }
 
 

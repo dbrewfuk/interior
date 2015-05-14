@@ -8,6 +8,9 @@
 // Components -- Your designed UI elements (inuitcss includes none of these).
 // Trumps -- Overrides and helper classes.
 //
+
+@import "normalize.css";
+
 @import "settings.defaults";
 @import "settings.colors";
 @import "settings.breakpoints";
@@ -17,6 +20,8 @@
 @import "tools.spacing";
 @import "tools.shadows";
 @import "tools.transitions";
+@import "tools.linear-gradients";
+@import "tools.sprite";
 
 @import "generic.shared";
 
@@ -42,6 +47,10 @@
 @import "component.quick-links";
 @import "component.utility-nav";
 @import "component.full-page-mask";
+@import "component.accordion";
+@import "component.buttons";
+@import "component.figcaptions";
+@import "component.banner";
 
 @import "demo.site-navigation";
 @import "demo.color-palette";

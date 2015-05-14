@@ -43,7 +43,8 @@
 
 @mixin typl8-headings() {
   @each $name, $size in $typl8-scale {
-    .#{$name} {
+    .#{$name},
+    %#{$name} {
       @extend %typl8-hN;
       @include typl8-typescale(
         $size,

@@ -4,12 +4,6 @@
 
 <body class="Site">
     {% include 'site-navigation.html' %}
-    <script>
-    $(document).on('click', '.js-site-navigation-toggle', function() {
-        $('.site-navigation').toggleClass('is-visible');
-        $(this).toggleClass('is-toggled');
-    })
-    </script>
     <header class="site-header">
         <div class="site-header__wrapper">
             <a class="js-site-navigation-toggle icon menu-white-48 link--no-decoration"></a>
@@ -26,16 +20,6 @@
             {% include 'footer.html' %}
         </div>
     </footer>
-    <script>
-    $(function() {
-        $("a").each(function() {
-            var path = "{{ site.baseUrl }}" + window.location.pathname;
-            if ($(this).attr("href") == window.location.pathname) {
-                $(this).addClass("is-current");
-            }
-        });
-    });
-    </script>
     {% include 'scripts.html' %}
 </body>
 

@@ -15,7 +15,7 @@
 	display: inline-block;
 }
 .feed__title {
-    @extend .typl8-delta;
+    @extend %typl8-delta;
 	margin-bottom: 0;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .article__headline {
-    @extend .typl8-epsilon;
+    @extend %typl8-epsilon;
     position: relative; //need this to wrap the absolute positioned .article__link-mask that's inside
     z-index: 200;
     a {

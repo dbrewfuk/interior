@@ -1,27 +1,45 @@
 .helpful-links {
     display: inline-block;
     width: 100%;
-    ul {
+    border-top: solid thin #eee;
+    border-bottom: solid thin #eee;
+    margin-bottom: $margin;
+    .list {
         @extend %list--naked;
         @extend %list--horizontal;
         &:before {
+            @extend %label;
             content: "Helpful Links";
-            @extend .typl8-zeta;
-            color: $medium-grey;
-            margin-right: $margin;
         }
     }
-    a {
+    .item {
+    }
+    .link {
         @extend %link--no-decoration;
     }
-
-    //Variations
-    &.middle {
-        border-top: solid thin #eee;
-        border-bottom: solid thin #eee;
-        margin-bottom: $margin;
+    &.middle {    
+    }
+    &.right {
+        @include media(desktop) {
+            border-top: 0;
+            border-bottom: 0;
+            border-left: solid thin #eee;
+            float: right;
+            margin-left: $margin;
+            width: 33%;
+            .list {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .item {
+                width: 100%;
+            }
+        }
     }
     &.bottom {
-        border-top: solid #eee;
+        border-top: solid thin #eee;
+        border-bottom: 0;
     }
 }
+
+

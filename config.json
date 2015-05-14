@@ -4,6 +4,6 @@
   "description": "",
   "baseUrl": "/",
   "env": "prod",
-  "gaTrackingId": "",
+  "gaTrackingId": "UA-62289370-1",
   "typekitKitId": "hsy5lps"
 }

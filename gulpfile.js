@@ -180,7 +180,11 @@ gulp.task('pages', function() {
 
 gulp.task("sprites", function() {
     return icons({tasks: tasks})
-        .pipe(sprites())
+        .pipe(sprites({
+          svgPath: "images/%f",
+          pngPath: "images/%f",
+          cssFile: "../sass/_tools.sprite.scss"
+        }))
         .pipe(gulp.dest("assets/images"))
         .pipe(filter("**/*.svg")) // Filter out everything except the SVG file 
         .pipe(svg2png()) // Create a PNG 
@@ -245,7 +249,7 @@ gulp.task('clean', function(done) {
 });
 
 
-gulp.task('default', ['images', 'css', 'javascript', 'pages']);
+gulp.task('default', ['css', 'images', 'javascript', 'pages']);
 
 
 gulp.task('serve', ['default'], function() {

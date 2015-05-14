@@ -1,14 +1,17 @@
 [
   {
     "sizes": [24, 48],
-    "ids": ["grey","white"],
-    "fills": ["#797979","#ffffff"],
+    "ids": ["grey","white","msu-blue"],
+    "fills": ["#797979","#ffffff","#5381ac"],
     "icons": [
       "action/search",
       "communication/business",
       "content/mail",
       "content/sort",
-      "navigation/menu"
+      "navigation/menu",
+      "navigation/expand_more",
+      "navigation/expand_less",
+      "navigation/chevron_right"
     ]
   }
 ]

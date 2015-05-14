@@ -1,10 +1,11 @@
 .color-palette {
 	@extend %grid;
-	@extend %grid--gutters;
+	@extend %med-grid--1of2;
+	@extend %small-grid--full;
 	.color-card {
-		@extend .grid-cell;
+		@extend %grid-cell;
 		.inner {
-			@extend %ratio-4x3;
+			@extend %ratio-16x9;
 		}
 		span {
 			@extend %position-centered;
@@ -13,8 +14,6 @@
 		}
 	}
 	.color-palette {
-		@extend %grid--gutters-none;
-		margin-top: $margin;
 		.color-card {
 		padding-left: 0;
 	}

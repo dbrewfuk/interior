@@ -6,13 +6,17 @@
 		text-align: left;
 	}
 	th {
-		font-weight: 600;
-		color: $medium-grey;
-		border-bottom: solid #eee;
+		font-weight: 500;
+		color: #888888;
+		border-bottom: solid thin tint(#888888,50%);
 	}
 	td {
-		border-bottom: solid thin #eee;
+		border-bottom: solid thin tint(#888888,75%);
 		font-size: smaller;
 		font-weight: 500;
 	}
+}
+
+.demo-box h3 {
+	margin-top: 0;
 }

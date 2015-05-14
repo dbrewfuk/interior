@@ -176,7 +176,8 @@ $typl8-scale: (
   typl8-gamma: modular-scale(3),
   typl8-delta: modular-scale(2),
   typl8-epsilon: modular-scale(1),
-  typl8-zeta: modular-scale(0)
+  typl8-zeta: modular-scale(0),
+  typl8-zeta--smaller: modular-scale(-1)
 ) !default;
 
 $typl8-headings: (
@@ -186,6 +187,9 @@ $typl8-headings: (
   h4: typl8-zeta
 ) !default;
 
+$typl8-beta: (modular-scale(4)/$typl8-font-base)#{rem};
+$typl8-alpha: (modular-scale(5)/$typl8-font-base)#{rem};
+$typl8-mega: (modular-scale(6)/$typl8-font-base)#{rem};
 
 // $Typescale Unit
 // -------------------------------------//
@@ -196,7 +200,7 @@ $typl8-typescale-unit: rem !default;
 // $Lede Paragraph - df
 // -------------------------------------//
 
-$typl8-lede-paragraph-size: modular-scale(1)#{px};
+$typl8-lede-paragraph-size: (modular-scale(1)/$typl8-font-base)#{rem};
 
 
 // $16px text - df

@@ -202,7 +202,7 @@
   }
   %#{$name}#{$sep}grid--gutters-none {
     margin-left: 0;
-    & > .grid-cell {
+    & > %grid-cell {
       padding-left: 0;
     }
   }
@@ -227,7 +227,7 @@
   }
   %#{$name}#{$sep}grid--gutters {
     margin-left: -1 * $margin;
-    & > .grid-cell {
+    & > %grid-cell {
       padding-left: $padding;
     }
   }
@@ -253,7 +253,7 @@
   }
   %#{$name}#{$sep}grid--gutters-xlarge {
     margin-left: -1 * $margin--xlarge;
-    & > .grid-cell {
+    & > %grid-cell {
       padding-left: $padding--xlarge;
     }
   }
