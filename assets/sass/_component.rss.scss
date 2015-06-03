@@ -78,7 +78,7 @@
     float: left;
     margin-right: 1.5rem;
     .article__image-inner {
-        @extend %image-ratio-4x3;
+        @include aspect-ratio(4,3,img);
         &:before {
         	@extend %image-overlay--dark;
         }

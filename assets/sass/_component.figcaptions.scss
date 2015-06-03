@@ -23,8 +23,7 @@
 //Variations
 .media-caption.overlay-bottom {
   @extend %media-caption;
-  position: absolute;
-  bottom: 0;
+  @include absolute($bottom: 0);
   text-align: left;
   width: 100%;
   color: white;

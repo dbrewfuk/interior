@@ -1,4 +1,5 @@
-.table {
+.table,
+%table {
 	width: 100%;
 	th,
 	td {
@@ -19,4 +20,24 @@
 
 .demo-box h3 {
 	margin-top: 0;
+}
+
+
+@mixin table(){
+	width: 100%;
+	th,
+	td {
+		padding: $padding--small $padding--small $padding--tiny $padding--tiny;
+		text-align: left;
+	}
+	th {
+		font-weight: 500;
+		color: #888888;
+		border-bottom: solid thin tint(#888888,50%);
+	}
+	td {
+		border-bottom: solid thin tint(#888888,75%);
+		font-size: smaller;
+		font-weight: 500;
+	}
 }

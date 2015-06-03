@@ -9,6 +9,13 @@ html {
     overflow-x: hidden;
 }
 
+@mixin font-smoothing(){
+     -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
     margin: 0;
 }
@@ -20,7 +27,7 @@ body {
 }
 
 a {
-    border-bottom: dotted thin;
+    border-bottom: solid thin;
     color: $msu-blue;
     text-decoration: none;
     font-weight: 500;
@@ -36,15 +43,6 @@ dt {
     font-weight: 600;
 }
 
-
-
-ul, ol, dd,
-%margin-left {
-    margin-left: (1 * $base-spacing-unit * $base-font-size);
-    padding-left: (1 * $base-spacing-unit * $base-font-size);
-    margin-left: (1 * $base-spacing-unit)#{rem};
-    padding-left: (1 * $base-spacing-unit)#{rem};
-}
 
 .link--no-decoration,
 %link--no-decoration {

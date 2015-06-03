@@ -1,0 +1,57 @@
+.instagram-widget {
+	margin-bottom: $margin;
+	.instagram-widget-header {
+		margin-bottom: $margin--small;
+	}
+	.icon.instagram {
+		display: inline-block;
+		opacity: 0.5;
+	}
+	.instagram-username {
+		display: inline-block;
+			@include typl8-smallcaps(shade(white,25%),700);
+			margin-left: $margin--tiny;
+		}
+	.instagram-feed {
+
+		.post {
+
+		}
+		.post-link {
+			border-bottom: 0;
+		}
+		.time-posted {
+			@include typl8-smallcaps(shade(white,25%),700);
+		}
+		.post-caption {
+			max-width: 320px;
+			margin-bottom: $margin--tiny;
+		}
+	}
+    &.photo-grid {
+    	.instagram-widget-header {
+		text-align: center;
+
+	}
+
+	.instagram-username,
+	.icon.instagram {
+		display: block;
+	}
+	.icon.instagram {
+		margin-bottom: $margin--tiny;
+	}
+        .instagram-feed {
+        	@include grid("1of4", post);
+        	.post-link {
+                @include aspect-ratio(1, 1, photo);
+                display: block;
+            }
+        	@include media(desktop){
+
+            @include grid("1of5", post);
+            
+        }
+    }
+    }
+}

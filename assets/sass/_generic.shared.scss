@@ -1,5 +1,23 @@
 $context-label-font-size: calc(13/19)#{rem};
 
+@mixin icon-name($icon-name){
+    $target: map-get($icons, $icon-name);
+    background-position: map-get($target, background-position);
+    width: map-get($target, width);
+    height: map-get($target, height);
+}
+
+@mixin icon($name,$color,$size){
+    &:before {
+    @include icon-name(#{$name}-#{$color}-#{$size});
+    content:' ';
+    font-size: 10px;
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("images/svg/sprite.svg");
+    background-repeat: no-repeat;
+    }
+}
 
 .page-title {
 	margin-bottom: 0;
@@ -8,6 +26,9 @@ $context-label-font-size: calc(13/19)#{rem};
 %link--no-decoration {
 	border-bottom: none;
 	text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .position-centered,

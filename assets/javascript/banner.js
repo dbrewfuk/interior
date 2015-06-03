@@ -56,7 +56,7 @@ $(function() {
 		
 
 			// If it is the first item, let's add the activeClass.
-				if ( index == 0 ) {
+				if ( index === 0 ) {
 					me.addClass( _.o.activeClass );
 				}
 
@@ -64,8 +64,7 @@ $(function() {
 
 
 			//  Cached vars
-			var o = _.o,
-				ul = _.ul,
+			var ul = _.ul,
 				li = _.li,
 				len = li.length;
 
@@ -73,7 +72,7 @@ $(function() {
 			_.i = 0;
 
 			//  Set the main element
-			el.css({width: _.max[0], height: li.first().outerHeight(), overflow: 'hidden'});
+		
 
 			//  Set the relative widths
 			ul.css({position: 'relative', left: 0, width: '100%'});
@@ -93,8 +92,8 @@ $(function() {
 							_.stop();
 							e.type === 'mouseout' && _.play();
 						});
-					};
-				};
+					}
+				}
 			}, o.init | 0);
 
 			//  Keypresses
@@ -110,15 +109,15 @@ $(function() {
 						case 27:
 							_.stop(); // Esc
 							break;
-					};
+					}
 				});
-			};
+			}
 
 			//  Dot pagination
 			o.dots && nav('dot');
 
 			//  Arrows support
-			o.arrows && nav('arrow');
+			o.arrows && nav('banner-arrow');
 
 			//  Patch for fluid-width sliders. Screw those guys.
 			o.fluid && $(window).resize(function() {
@@ -128,9 +127,9 @@ $(function() {
 					var styl = {height: li.eq(_.i).outerHeight()},
 						width = el.outerWidth();
 
-					ul.css(styl);
-					styl['width'] = Math.min(Math.round((width / el.parent().width()) * 100), 100) + '%';
-					el.css(styl);
+				
+					styl.width = Math.min(Math.round((width / el.parent().width()) * 100), 100) + '%';
+			
 					if (o.fluidh) {
 					li.css({ width: width + 'px' });
 				}
@@ -138,21 +137,21 @@ $(function() {
 			}).resize();
 
 			//  Move support
-			if ($.event.special['move'] || $.Event('move')) {
+			if ($.event.special.move || $.Event('move')) {
 				el.on('movestart', function(e) {
 					if ((e.distX > e.distY && e.distX < -e.distY) || (e.distX < e.distY && e.distX > -e.distY)) {
 						e.preventDefault();
 					}else{
-						el.data("left", _.ul.offset().left / el.width() * 100);
+						el.data('left', _.ul.offset().left / el.width() * 100);
 					}
 				}).on('move', function(e) {
 					var left = 100 * e.distX / el.width();
 				        var leftDelta = 100 * e.deltaX / el.width();
-					_.ul[0].style.left = parseInt(_.ul[0].style.left.replace("%", ""))+leftDelta+"%";
+					_.ul[0].style.left = parseInt(_.ul[0].style.left.replace('%', ''))+leftDelta+'%';
 
-					_.ul.data("left", left);
+					_.ul.data('left', left);
 				}).on('moveend', function(e) {
-					var left = _.ul.data("left");
+					var left = _.ul.data('left');
 					if (Math.abs(left) > 30){
 						var i = left > 0 ? _.i-1 : _.i+1;
 						if (i < 0 || i >= len) i = _.i;
@@ -161,7 +160,7 @@ $(function() {
 						_.to(_.i);
 					}
 				});
-			};
+			}
 
 			return _;
 		};
@@ -198,7 +197,7 @@ $(function() {
 				el.find('.dot').eq(index).addClass('active').siblings().removeClass('active');
 		
 
-				el.animate(obj, speed) && ul.animate($.extend({}, obj), speed, function(data) {
+				el.animate(speed) && ul.animate($.extend({}), speed, function(data) {
  					_.i = index;
 
 					// Add an active class to the slide and remove it from the previous slide
@@ -208,7 +207,7 @@ $(function() {
 					$.isFunction(o.complete) && !callback && o.complete(el, target);
 				});
 			
-			};
+			}
 
 		};
 
@@ -239,19 +238,20 @@ $(function() {
 			if (name == 'dot') {
 				html = '<ol class="dots">';
 					$.each(_.li, function(index) {
-						html += '<li class="' + (index === _.i ? name + ' active' : name) + '">' + ++index + '</li>';
+						html += '<li class="' + (index === _.i ? name + ' active' : name) + '">' + index + '</li>';
 					});
 				html += '</ol>';
 			} else {
 				html = '<div class="';
-				html = html + name + 's">' + html + name + ' prev">' + _.o.prev + '</div>' + html + name + ' next">' + _.o.next + '</div></div>';
-			};
+				html = html + name + 's"><a class="' + name + ' prev">' + _.o.prev + '</a><a class="' + name + ' next">' + _.o.next + '</a></div>';
+			}
 
-			_.el.addClass('has-' + name + 's').append(html).find('.' + name).click(function() {
+			_.el.addClass('has-' + name + 's');
+			$('.js-slider').append(html).find('.' + name).click(function() {
 				var me = $(this);
 				me.hasClass('dot') ? _.stop().to(me.index()) : me.hasClass('prev') ? _.prev() : _.next();
 			});
-		};
+		}
 	};
 
 	//  Create a jQuery plugin
@@ -262,13 +262,13 @@ $(function() {
 		return this.each(function(index) {
 			//  Cache a copy of $(this), so it
 			var me = $(this),
-				key = 'unslider' + (len > 1 ? '-' + ++index : ''),
-				instance = (new Unslider).init(me, o);
+				key = 'unslider' + (len > 1 ? '-' + index : ''),
+				instance = (new Unslider()).init(me, o);
 
 			//  Invoke an Unslider instance
 			me.data(key, instance).data('key', key);
 		});
 	};
 
-	Unslider.version = "1.0.0";
+	Unslider.version = '1.0.0';
 })(jQuery, false);

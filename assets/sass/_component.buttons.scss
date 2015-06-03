@@ -93,16 +93,6 @@
             font-size: 10px;
             margin: 0;
         }
-
-        .nudge-right {
-            transition: ease all 0.28s;
-        }
-
-        &:hover {
-            .nudge-right {
-                transform: translateX($margin--tiny/2);
-            }
-        }
         
     }
 }
@@ -114,5 +104,26 @@
     @extend %no-caps;
     &:hover {
         color: $msu-teal;
+    }
+}
+
+
+
+.dropdown-button {
+    @include button(with-icon);
+    .icon {
+        @include icon("expand_more","white","24");
+        width: 24px;
+        height: 1em;
+        &:before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &.is-active {
+        .icon {
+        @include icon("expand_less","white","24");
+    }
     }
 }

@@ -9,6 +9,10 @@
     background: rgba($mask-color, 0.75);
 }
 
+
+
+
+
 // $Banner
 //-------------------------------------//
 // @Components
@@ -33,9 +37,13 @@
     $secondary-color: $msu-gold;
     $max-height: 720px;
     $transition: cubic-bezier(0.4, 0, 0.2, 1);
+    @include font-smoothing();
     position: relative;
     width: 100%;
     overflow: hidden;
+    .banner-slider {
+        @include aspect-ratio(21,9,banner-slide);
+    }
     .banner-slide {
         max-height: $max-height;
         position: relative;
@@ -51,14 +59,18 @@
             }
         }
         .banner-figure {
-            @extend %image-ratio-21x9;
             overflow: visible;
+            width: 100%;
+            height: 100%;
+            margin: 0;
             .banner-image {
-                max-height: $max-height;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
         .banner-caption-wrapper {
-            @extend %container--large;
+            @include container(67.3684211rem);
             display: block;
             padding: $padding--small;
             position: absolute;
@@ -78,48 +90,52 @@
         }
         .banner-caption {
             z-index: 2;
-            max-width: 500px;
+            bottom: 0;
+            padding-bottom: $padding--small;
             position: absolute;
             @include media(desktop) {
-                bottom: 0;
+                max-width: 50%;
                 padding: $padding;
+                padding-bottom: $padding--xxlarge;
             }
             .banner-context {
-                @extend %label;
+                @include typl8-smallcaps($secondary-color, 700);
                 margin-bottom: 0;
-                color: $secondary-color;
                 font-size: $context-label-font-size;
-                font-weight: 700;
             }
             .banner-headline {
-                @extend %typl8-epsilon;
+                @include typl8(1);
                 margin-bottom: $margin--tiny;
                 color: $color;
                 line-height: 1;
-                font-weight: 500;
+                font-weight: 600;
                 @include media(desktop) {
-                    font-size: $typl8-beta;
+                    @include typl8(4);
                 }
             }
             .banner-description {
+                font-size: 1rem;
                 color: $color;
                 font-weight: 500;
                 line-height: 1.3;
-                font-size: calc(22/19)#{rem};
                 margin-bottom: $margin--small;
                 @include media(desktop) {
                     margin-bottom: $margin;
+                    @include typl8(1);
                 }
             }
             .banner-button {
-                @extend %button.outline;
+                @include button(outline);
+                @include no-smallcaps();
+                font-size: 1rem;
                 padding: $padding--tiny $padding--small;
                 border-radius: 0;
                 margin-bottom: 0;
                 display: inline-block;
                 line-height: 1;
+                color: white;
                 &:hover {
-                    color: white;
+                    color: $msu-gold;
                     background: transparent;
                 }
             }
@@ -132,6 +148,68 @@
                 transform: translateY(0);
             }
         }
+        
+        &.top-right {
+            @include media(desktop) {
+                &:after {
+                    @include angle-gradient(-120deg, rgba(black, 0.45), 30%, transparent, 100%);
+                }
+                .banner-caption-wrapper {
+                    top: 0;
+                    transform: translateY(0);
+                    .banner-caption {
+                        padding: $padding;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+                &.is-active {
+                    .banner-caption-wrapper {
+                        transform: translateY(0.825rem);
+                    }
+                }
+            }
+        }
+        &.top-left {
+            @include media(desktop) {
+                &:after {
+                    @include angle-gradient(120deg, rgba(black, 0.45), 30%, transparent, 100%);
+                }
+                .banner-caption-wrapper {
+                    top: 0;
+                    transform: translateY(0);
+                    .banner-caption {
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                &.is-active {
+                    .banner-caption-wrapper {
+                        transform: translateY(0.825rem);
+                    }
+                }
+            }
+        }
+
+        &.centered {
+            .banner-caption-wrapper {
+                .banner-caption {
+                    width: 100%;
+                    text-align: center;
+                    bottom: auto;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    .banner-headline {
+                        font-weight: 700;
+                    }
+                    .banner-description {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
         &.gold {
             &:after {
                 @include mask($msu-gold, 100%);
@@ -157,10 +235,10 @@
         &.navy {
             .banner-caption {
                 .banner-context {
-                    color: $msu-blue;
+                    color: $msu-gold;
                 }
                 .banner-headline {
-                    color: $msu-gold;
+                    color: white;
                 }
                 .banner-description {
                     color: $color;
@@ -176,73 +254,23 @@
                 @include mask($msu-navy, 100%);
             }
         }
-        &.top-right {
-            @include media(desktop) {
-                .banner-caption-wrapper {
-                    top: 0;
-                    transform: translateY(0);
-                    .banner-caption {
-                        padding: $padding;
-                        top: 0;
-                        right: 0;
-                    }
-                }
-                &.is-active {
-                    .banner-caption-wrapper {
-                        transform: translateY(0.825rem);
-                    }
-                }
-            }
-        }
-        &.top-left {
-            @include media(desktop) {
-                &:after {
-                    @include linear-horizontal-gradient(rgba(black, 0.45), 0%, transparent, 100%);
-                }
-                .banner-caption-wrapper {
-                    top: 0;
-                    transform: translateY(0);
-                    .banner-caption {
-                        top: 0;
-                        left: 0;
-                    }
-                }
-                &.is-active {
-                    .banner-caption-wrapper {
-                        transform: translateY(0.825rem);
-                    }
-                }
-            }
-        }
-        &.centered {
-            .banner-caption-wrapper {
-                .banner-caption {
-                    width: 100%;
-                    text-align: center;
-                    bottom: auto;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    .banner-headline {
-                        font-weight: 700;
-                    }
-                    .banner-description {
-                        font-weight: 400;
-                    }
-                }
-            }
-        }
     }
-    .arrows {
+    .banner-arrows {
         position: absolute;
         right: 0;
         bottom: 1px;
         z-index: 4;
         color: white;
-        .arrow {
-            display: inline-block;
-            line-height: 1;
+        &.with-action-buttons {
+            left: 0;
+        }
+        .banner-arrow {
+            @include button(icon);
+            border-radius: 0;
+            margin-bottom: 0;
             padding: $padding--tiny;
+            color: white;
+            background: transparent;
             &:hover {
                 background: $msu-gold;
             }
@@ -252,6 +280,86 @@
                     background: $msu-gold;
                 }
             }
+        }
+    }
+    &.with-action-buttons {
+        .banner-arrows {
+            left: 0;
+        }
+    }
+}
+
+.banner-editor {
+    @include table();
+    line-height: 1.25;
+    .helper-text {
+        font-size: $typl8-smaller-font-size;
+        font-style: italic;
+        display: block;
+    }
+    .banner-editor-head {
+        th {
+            vertical-align: bottom;
+        }
+    }
+    .banner-editor-image {
+        @include icon("insert_photo","grey","48");
+        @include aspect-ratio(16,9,img);
+        min-width: 200px;
+        position: relative;
+        background: shade(white,5%);
+        text-align: center;
+        &:before {
+            opacity: 0.5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        img {
+            @include position(absolute, $top: 0, $left: 0);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .banner-editor-alignment {
+        padding: $padding--small;
+    }
+    .banner-editor-link {
+        text-align: center;
+    }
+    select {
+        margin-bottom: $margin--tiny;
+    }
+
+}
+
+.action-buttons {
+    background: $msu-navy;
+    padding: $padding--small;
+    @include media(desktop){
+            padding: 0 $padding;
+            position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background: transparent;
+        }
+    
+    .action-button {
+        @include button(with-icon);
+        
+        @include media(desktop){
+        }
+        .icon {
+            @include icon("menu","white","24");
+        }
+        &.bare {
+            background: transparent;
+        }
+        &.raised {
+            @include box-shadow(4);
         }
     }
 }

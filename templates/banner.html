@@ -5,12 +5,7 @@
 
 <body class="Site">
     {% include 'site-navigation.html' %}
-    <header class="site-header">
-        <div class="site-header__wrapper">
-            <a class="js-site-navigation-toggle icon menu-white-48 link--no-decoration"></a>
-            <h1>{{ page.title }}</h1>
-        </div>
-    </header>
+    {% include 'site-header.html' %}
     <div class="banner js-unslider">
 
     <div class="banner-slider js-slider">
@@ -22,7 +17,7 @@
             <div class="banner-caption-wrapper">
                 <figcaption class="banner-caption">
                     <div class="banner-context">banner types</div>
-                    <h1 class="banner-headline">Default: Bottom left</h1>
+                    <h1 class="banner-headline">Bottom left</h1>
                     <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <a class="banner-button">Read more</a>
                 </figcaption>
@@ -63,12 +58,12 @@
 
         <div class="banner-slide gold centered js-slide">
             <figure class="banner-figure">
-                <img src="https://farm9.staticflickr.com/8654/16450282692_e8f3e42b7d_b.jpg" />
+                <img class="banner-image" src="https://farm9.staticflickr.com/8654/16450282692_e8f3e42b7d_b.jpg" />
             </figure>
             <div class="banner-caption-wrapper">
                 <figcaption class="banner-caption">
                     <div class="banner-context">banner types</div>
-                    <h1 class="banner-headline">Gold mask</h1>
+                    <h1 class="banner-headline">Centered & Gold</h1>
                     <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <a class="banner-button">
                       <span>Read more</span>
@@ -79,12 +74,12 @@
 
         <div class="banner-slide navy centered js-slide">
             <figure class="banner-figure">
-                <img src="https://farm9.staticflickr.com/8654/16450282692_e8f3e42b7d_b.jpg" />
+                <img class="banner-image" src="https://farm9.staticflickr.com/8654/16450282692_e8f3e42b7d_b.jpg" />
             </figure>
             <div class="banner-caption-wrapper">
                 <figcaption class="banner-caption">
                     <div class="banner-context">banner types</div>
-                    <h1 class="banner-headline">Navy mask</h1>
+                    <h1 class="banner-headline">Centered & Navy</h1>
                     <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <a class="banner-button">
                       <span>Read more</span>

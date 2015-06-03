@@ -1,12 +1,19 @@
 import analytics from './analytics';
 import supports from './supports';
+import './vendor/moment.js';
 import './vendor/velocity';
+import './vendor/instafeed';
+
+import './vendor/fitvids';
 import './site-navigation';
 import './quick-links';
 import './accordion';
 import './page-anchors';
 import './visibility-toggle';
 import './banner';
+import './quote-slider';
+import './twitter-feed';
+import './facebook-feed';
 
 
 
@@ -26,4 +33,4 @@ if (!supports.flexbox()) {
 analytics.track();
 
 
-        
+      

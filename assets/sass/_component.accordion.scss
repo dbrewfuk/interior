@@ -3,18 +3,13 @@
         padding-bottom: $padding--tiny;
         color: $msu-blue;
         border-bottom: solid thin shade(white, 10%);
-        //Add expand icon before title
+        @include icon("expand_more","msu-blue","24");
         &:before {
-            @extend .icon;
-            @extend .icon.expand_more-msu-blue-24;
             margin-right: $margin--tiny;
         }
         //Change to expand less icon once expanded
         &.is-expanded {
-            &:before {
-                @extend .icon;
-                @extend .icon.expand_less-msu-blue-24;
-            }
+            @include icon("expand_less","msu-blue","24");
         }
     }
     //Hide content

@@ -283,6 +283,79 @@
   }
 } 
 
+@mixin grid($name,$selector) {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @if $name == "auto" {
+   > .#{$selector} {
+    flex: 0 1 auto;
+  }
+}
+  @if $name == "fit" {
+   > .#{$selector} {
+    flex: 1;
+  }
+}
+  @if $name == "full" {
+   > .#{$selector} {
+    flex: 0 0 100%;
+  }
+}
+  @if $name == "1of2" {
+   > .#{$selector} {
+    flex: 0 0 50%;
+  }
+}
+  @if $name == "1of3" {
+   > .#{$selector} {
+    flex: 0 0 33.3333%;
+  }
+}
+  @if $name == "1of4" {
+   > .#{$selector} {
+    flex: 0 0 25%;
+  }
+}
+@if $name == "1of5" {
+   > .#{$selector} {
+    flex: 0 0 20%;
+  }
+}
+@if $name == "1of6" {
+   > .#{$selector} {
+    flex: 0 0 16.6666666667%;
+  }
+}
+}
+@mixin gutter-spacing($space,$selector){
+  margin: -#{$space} 0 #{$space} -#{$space};
+   > .#{$selector} {
+    padding: #{$space} 0 0 #{$space};
+}
+}
+@mixin gutters($size,$selector) {
+  @if $size == "" {
+    margin: -#{$margin} 0 $margin -#{$margin};
+   > .#{$selector} {
+    padding: $padding 0 0 $padding;
+  }
+}
+@if $size == "large" {;
+  @include gutter-spacing($margin--large,$selector);
+}
+@if $size == "small" {
+  @include gutter-spacing($margin--small,$selector);
+}
+@if $size == "tiny" {
+  @include gutter-spacing($margin--tiny,$selector);
+}
+}
+
+
+
 
 
 

@@ -1,81 +1,81 @@
 .contact-card {
+    @include font-smoothing();
     @include box-shadow(1);
     background: $white;
     display: inline-block;
-    padding: $padding--small $padding $padding;
+    padding: $padding;
     dl {
         margin: 0;
+        padding: 0;
     }
     dd {
         margin-left: 0;
         padding-left: 0;
         font-weight: 500;
+        margin-bottom: $margin--tiny;
+        line-height: 1.3;
     }
-    .profile-pic {
-        max-width: 140px;
-        min-width: 140px;
+    .contact-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: $margin;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+    }
+    .contact-id {
         margin-bottom: $margin--small;
-        @include media(desktop) {
-            margin-bottom: 0;
-        }
-        > figure {
-            @extend %image--circle;
-        }
+        padding-bottom: $padding--tiny;
+        border-bottom: solid thin shade(white, 15%);
     }
     .contact-info {
-        font-size: smaller;
+        font-size: 16px;
     }
-    //Variations
-    &.stacked,
-    &.stacked.inline {
+    .contact-name {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .contact-title {
+        font-size: 1rem;
+    }
+    .contact-department {
+        font-weight: 500;
+        margin-bottom: $margin--tiny;
+        font-size: 1rem;
+    }
+
+    @include media(desktop){
+
+    &.inline {
+        .contact-pic,
+        .contact-content,
+        .contact-id,
+        .contact-info {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .contact-pic {
+            margin-bottom: 0;
+        }
+        .contact-id,
+        .contact-info {
+            margin-left: $margin;
+        }
         .contact-id {
-            margin-bottom: $margin--small;
-            padding-bottom: $padding--small;
-            border-bottom: solid thin #eee;
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+        .contact-info {
+            padding-left: $padding;
+            border-left: solid thin shade(white,15%);
         }
     }
-    &.inline > dl {
-        @extend %grid;
-        @extend %grid--full;
-        @extend %large-grid--auto;
-        @extend %large-grid--center;
-        @extend %large-grid--gutters-large;
-        .profile-pic, .contact-id, .contact-info {
-            @extend %grid-cell;
-        }
-        .contact-id {
-            margin-bottom: $margin--small;
-            padding-bottom: $padding--small;
-            border-bottom: solid thin #eee;
-        }
-        @include media(desktop) {
-            .contact-id {
-                margin-bottom: 0;
-                padding-bottom: 0;
-                border-bottom: 0;
-            }
-            .contact-info {
-                margin-left: $margin;
-                border-left: solid thin #eee;
-            }
-        }
-    }
-    &.no-labels {
-        padding: $padding;
-        dt {
-            display: none;
-        }
-        dd[data-contact-id="name"] {
-            font-weight: 600;
-            font-size: 1rem;
-        }
-        dd[data-contact-id="position"] {
-            font-size: 1rem;
-        }
-        dd[data-contact-id="department"] {
-            font-weight: 500;
-            margin-bottom: $margin--tiny;
-            font-size: 1rem;
-        }
-    }
+}
 }

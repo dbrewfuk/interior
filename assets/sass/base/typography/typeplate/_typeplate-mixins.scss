@@ -65,6 +65,7 @@
 }
 
 
+
 // $Hypens
 // -------------------------------------//
 // @notes
@@ -89,12 +90,13 @@
 // Some font-families don't support small caps
 // or don't provide them with their Webfont.
 
-@mixin typl8-smallcaps($color, $font-weight) {
+@mixin typl8-smallcaps($color: shade(white,50%), $font-weight: 600) {
   font-weight: $font-weight;
   text-transform: uppercase;
   font-size: $typl8-smallest-font-size;
   color: $color;
   letter-spacing: typl8-context-calc(1,19,rem);
+  text-rendering: optimizeLegibility;
 }
 
 

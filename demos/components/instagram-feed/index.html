@@ -1,0 +1,69 @@
+---
+template: default.html
+title: Instagram feed
+excerpt: Instagram feed
+---
+
+
+
+<div class="instagram-widget">
+    <div class="instagram-widget-header">
+        <div class="icon instagram"></div>
+        <div class="instagram-username">murraystateuniv</div>
+    </div>
+    <div id="singlefeed" class="instagram-feed"></div>
+</div>
+<div class="instagram-widget photo-grid">
+    <div class="instagram-widget-header">
+        <div class="icon instagram"></div>
+        <div class="instagram-username">murraystateuniv</div>
+    </div>
+    <div id="gridfeed" class="instagram-feed"></div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
+<script type="text/javascript">
+$(function(){
+var singlefeed = new Instafeed({
+    get: 'user',
+    sortBy: 'most-recent',
+    userId: 18916390,
+    accessToken: '6678174.467ede5.205a03ebc4b74d4082823781c3149575',
+    target: 'singlefeed',
+    resolution: 'low_resolution',
+    limit: 1,
+    {% raw %}
+    template: '<div class="post"><a class="post-link photo-wrapper" href="{{link}}"><img class="photo" src="{{image}}" /></a><div class="post-caption">{{caption}}</div><div class="time-posted">{{model.created_time}}</div></div>',
+    {% endraw %}
+    after: function() {
+     $('.time-posted').each(function(){
+       var unixDate = +($(this).text() * 1000);
+       var date = moment(unixDate).fromNow();
+       $(this).text(date);
+     });
+     }
+});
+
+
+
+var gridfeed = new Instafeed({
+    get: 'user',
+    sortBy: 'most-recent',
+    userId: 18916390,
+    accessToken: '6678174.467ede5.205a03ebc4b74d4082823781c3149575',
+    target: 'gridfeed',
+    limit: 10,
+    resolution: 'standard_resolution',
+    {% raw %}
+    template: '<div class="post"><a class="post-link photo-wrapper" href="{{link}}"><img class="photo" src="{{image}}" /></a></div>'
+    {% endraw %}
+});
+
+singlefeed.run();
+gridfeed.run();
+});
+</script>
+
+

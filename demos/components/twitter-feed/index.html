@@ -1,0 +1,53 @@
+---
+template: default.html
+title: Twitter feed
+excerpt: Twitter feed
+---
+
+<div class="twitter-widget">
+		<span class="icon twitter"></span>
+		<span class="twitter-username">@murraystonline</span>
+		<div class="twitter-feed-one">
+		</div>
+		</div>
+		
+		<div class="twitter-widget horizontal">
+		<span class="icon twitter"></span>
+		<span class="twitter-username">@murraystonline</span>
+		<div class="twitter-feed-two">
+		</div>
+		</div>
+
+		<div class="facebook-widget">
+<span class="icon facebook"></span>
+<div class="facebook-feed"></div>
+</div>
+	
+
+
+
+<script>
+
+$(function(){
+
+var config1 = {
+    "id": '605433577849954304',
+    "domId": 'twitter-feed-one',
+    "showImages": false,
+    "maxTweets": 3
+};
+twitterFetcher.fetch(config1);
+
+
+var config2 = {
+    "id": '605433577849954304',
+    "domId": 'twitter-feed-two',
+    "showImages": false,
+    "maxTweets": 3
+};
+twitterFetcher.fetch(config2);
+
+});
+
+
+</script>

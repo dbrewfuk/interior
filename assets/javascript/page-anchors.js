@@ -7,5 +7,5 @@ if ($('.js-scrolltop-fixable').length > 0) {
             } else {
             	$('.js-scrolltop-fixable').removeClass('is-fixed');
             }
-    })
+    });
 }

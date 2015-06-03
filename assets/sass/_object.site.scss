@@ -20,6 +20,17 @@
   }
 }
 
+@mixin container($size){
+  width: 100%;
+  max-width: $size; //1280px
+  margin: 0 auto;
+  padding: 0 $padding--small;
+  @include media(desktop) {
+    padding: 0 $padding;
+  }
+}
+
+
 .site {
   &-header {
     background: $msu-gold;

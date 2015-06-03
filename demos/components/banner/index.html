@@ -1,93 +1,119 @@
 ---
-template: banner.html 
-title: Banner 
+template: banner.html
+title: Banner
 excerpt: Banner
 ---
 
-<div class="banner js-unslider">
 
-    <div class="banner-slider js-slider">
+<table class="banner-editor">
+    <thead class="banner-editor-head">
+        <tr>
+            <th>Image</th>
+            <th>Options</th>
+            <th>Context</th>
+            <th>Headline</th>
+            <th>Description</th>
+            <th>Link</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="banner-editor-slide">
+            <td>
+                <div class="banner-editor-image"></div>
+            </td>
+            <td class="banner-editor-alignment">
+                <select>
+                    <option>Caption alignment</option>
+                    <option value="top-left">top-left</option>
+                    <option value="top-right">top-right</option>
+                    <option value="centered">centered</option>
+                </select>
+                <select>
+                    <option>Background mask</option>
+                    <option value="default">default</option>
+                    <option value="gold">gold</option>
+                    <option value="navy">navy</option>
+                </select>
+            </td>
+            
+            <td class="banner-editor-context">banner context</td>
+            <td class="banner-editor-headline">banner headline</td>
+            <td class="banner-editor-description">this is the banner description.</td>
+            <td class="banner-editor-link"><a href="">link</a></td>
+        </tr>
+        <tr class="banner-editor-slide">
+            <td>
+                <div class="banner-editor-image"></div>
+            </td>
+            <td class="banner-editor-alignment">
+                <select>
+                    <option>Caption alignment</option>
+                    <option value="top-left">top-left</option>
+                    <option value="top-right">top-right</option>
+                    <option value="centered">centered</option>
+                </select>
+                <select>
+                    <option>Background mask</option>
+                    <option value="default">default</option>
+                    <option value="gold">gold</option>
+                    <option value="navy">navy</option>
+                </select>
+            </td>
+            <td class="banner-editor-context">banner context</td>
+            <td class="banner-editor-headline">banner headline</td>
+            <td class="banner-editor-description">this is the banner description.</td>
+            <td class="banner-editor-link"><a href="">link</a></td>
+        </tr>
+        <tr class="banner-editor-slide">
+            <td>
+                <div class="banner-editor-image"></div>
+            </td>
+            <td class="banner-editor-alignment">
+                <select>
+                    <option>Caption alignment</option>
+                    <option value="top-left">top-left</option>
+                    <option value="top-right">top-right</option>
+                    <option value="centered">centered</option>
+                </select>
+                <select>
+                    <option>Background mask</option>
+                    <option value="default">default</option>
+                    <option value="gold">gold</option>
+                    <option value="navy">navy</option>
+                </select>
+            </td>
+            <td class="banner-editor-context">banner context</td>
+            <td class="banner-editor-headline">banner headline</td>
+            <td class="banner-editor-description">this is the banner description.</td>
+            <td class="banner-editor-link"><a href="">link</a></td>
+        </tr>
+        <tr class="banner-editor-slide">
+            <td>
+                <div class="banner-editor-image"></div>
+            </td>
+            <td class="banner-editor-alignment">
+                <select>
+                    <option>Caption alignment</option>
+                    <option value="top-left">top-left</option>
+                    <option value="top-right">top-right</option>
+                    <option value="centered">centered</option>
+                </select>
+                <select>
+                    <option>Background mask</option>
+                    <option value="default">default</option>
+                    <option value="gold">gold</option>
+                    <option value="navy">navy</option>
+                </select>
+            </td>
+            
+            <td class="banner-editor-context">banner context</td>
+            <td class="banner-editor-headline">banner headline</td>
+            <td class="banner-editor-description">this is the banner description.</td>
+            <td class="banner-editor-link"><a href="">link</a></td>
+        </tr>
+    </tbody>
+</table>
 
-        <div class="banner-slide js-slide">
-            <figure class="banner-figure">
-                <img class="banner-image" src="https://c1.staticflickr.com/9/8715/17125150408_7fa1288b55_k.jpg" />
-            </figure>
-            <div class="banner-caption-wrapper">
-                <figcaption class="banner-caption">
-                    <div class="banner-context">banner types</div>
-                    <h1 class="banner-headline">Default: Bottom left</h1>
-                    <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a class="banner-button">Read more</a>
-                </figcaption>
-            </div>
-        </div>
 
-        <div class="banner-slide top-right js-slide">
-            <figure class="banner-figure">
-                <img class="banner-image" src="https://farm9.staticflickr.com/8592/16265009129_bdf46d7d29_b.jpg" />
-            </figure>
-            <div class="banner-caption-wrapper">
-                <figcaption class="banner-caption">
-                    <div class="banner-context">banner types</div>
-                    <h1 class="banner-headline">Top right</h1>
-                    <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a class="banner-button">
-                      <span>Read more</span>
-                    </a>
-                </figcaption>
-            </div>
-        </div>
-
-        <div class="banner-slide top-left js-slide">
-            <figure class="banner-figure">
-                <img class="banner-image" src="https://c2.staticflickr.com/8/7585/17148946812_1fd3ae9067_k.jpg" />
-            </figure>
-            <div class="banner-caption-wrapper">
-                <figcaption class="banner-caption">
-                    <div class="banner-context">banner types</div>
-                    <h1 class="banner-headline">Top left</h1>
-                    <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a class="banner-button">
-                      <span>Read more</span>
-                    </a>
-                </figcaption>
-            </div>
-        </div>
-
-        <div class="banner-slide gold centered js-slide">
-            <figure class="banner-figure">
-                <img src="https://farm9.staticflickr.com/8654/16450282692_e8f3e42b7d_b.jpg" />
-            </figure>
-            <div class="banner-caption-wrapper">
-                <figcaption class="banner-caption">
-                    <div class="banner-context">banner types</div>
-                    <h1 class="banner-headline">Gold mask</h1>
-                    <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a class="banner-button">
-                      <span>Read more</span>
-                    </a>
-                </figcaption>
-            </div>
-        </div>
-
-        <div class="banner-slide navy centered js-slide">
-            <figure class="banner-figure">
-                <img src="https://farm9.staticflickr.com/8654/16450282692_e8f3e42b7d_b.jpg" />
-            </figure>
-            <div class="banner-caption-wrapper">
-                <figcaption class="banner-caption">
-                    <div class="banner-context">banner types</div>
-                    <h1 class="banner-headline">Navy mask</h1>
-                    <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a class="banner-button">
-                      <span>Read more</span>
-                    </a>
-                </figcaption>
-            </div>
-        </div>
-
-    </div>
-
-</div>
 
 

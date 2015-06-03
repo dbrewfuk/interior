@@ -1,0 +1,53 @@
+@mixin no-smallcaps(){
+    letter-spacing: normal;
+    text-transform: initial;
+}
+
+
+@mixin button($button-style){
+    font-weight: 500;
+    border-radius: 3px;
+    border-bottom: 0;
+    text-decoration: none;
+    font-size: $typl8-smaller-font-size;
+    color: white;
+    background: $msu-teal;
+    line-height: 1;
+    padding: strip-units($padding--small)#{em} strip-units($padding)#{em};
+    display: inline-block;
+    margin-bottom: $margin;
+    &:hover {
+        background: shade($msu-teal, 15%);
+        color: white;
+        text-decoration: none;
+    }
+    @if $button-style == outline {
+        background: transparent;
+        border: solid thin;
+        color: $msu-teal;
+        &:hover {
+            background: $msu-teal;
+            color: white;
+        }
+    }
+    @if $button-style == icon {
+        padding: $padding--tiny;
+    }
+    @if $button-style == with-icon {
+        padding-left: $padding--small;
+        &.icon-after {
+            padding-left: $padding;
+            padding-right: $padding--small;
+        }
+        span {
+            vertical-align: middle;
+            display: inline-block;
+            &:first-child {
+                margin-right: $margin--tiny;
+            }
+        }
+        .icon {
+            position: relative;
+        }
+    }
+}

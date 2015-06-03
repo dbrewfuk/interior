@@ -5,7 +5,7 @@
 	.color-card {
 		@extend %grid-cell;
 		.inner {
-			@extend %ratio-16x9;
+			@include aspect-ratio(16,9,div);
 		}
 		span {
 			@extend %position-centered;

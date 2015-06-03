@@ -1,0 +1,107 @@
+
+@mixin list-style($name){
+	@if $name == bare {
+		list-style: none;
+	}
+	@if $name == bullet {
+		list-style: disc;
+		margin-left: $margin;
+	}
+	@if $name == circle {
+		list-style: circle;
+		margin-left: $margin;
+	}
+	@if $name == square {
+		list-style: square;
+		margin-left: $margin;
+	}
+	
+}
+
+
+@mixin list-orientation($name, $selector: li, $style: false){
+	@if $name == horizontal {
+		#{$selector} {
+			display: inline-block;
+			margin-right: $margin--small;
+
+			@if $style == bars {
+			&:after {
+				margin-left: $margin--small;
+				content: "|";
+				color: shade(white,15%);
+			}
+			&:last-child:after {
+				content: "";
+			}
+		}
+		}
+	}
+}
+
+
+@mixin list-block($size: tiny,$selector: li){
+	@if $size == tiny {
+		#{$selector} { 
+			padding: $padding--tiny;
+			border-bottom: solid thin shade(white,15%);
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+	@if $size == small {
+		#{$selector} { 
+			padding: $padding--small;
+			border-bottom: solid thin shade(white,15%);
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+	@if $size == normal {
+		#{$selector} { 
+			padding: $padding;
+			border-bottom: solid thin shade(white,15%);
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+ul {
+	@include list-style(bare);
+	margin-bottom: $margin;
+}
+
+ol {
+	margin-left: $margin;
+}
+
+ul,
+ol,
+dl {
+	padding-left: $padding;
+}
+
+.bullet-list {
+	@include list-style(bullet);
+}
+
+.circle-list {
+	@include list-style(circle);
+}
+
+.square-list {
+	@include list-style(square);
+}
+
+.block-list {
+	@include list-style(bare);
+	@include list-block();
+}
+
+.horizontal-list {
+	@include list-orientation(horizontal,$style: bars);
+}

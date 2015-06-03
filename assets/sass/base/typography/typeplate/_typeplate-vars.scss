@@ -191,6 +191,10 @@ $typl8-beta: (modular-scale(4)/$typl8-font-base)#{rem};
 $typl8-alpha: (modular-scale(5)/$typl8-font-base)#{rem};
 $typl8-mega: (modular-scale(6)/$typl8-font-base)#{rem};
 
+@mixin typl8($scale){
+  font-size: (modular-scale($scale)/$typl8-font-base)#{rem};
+}
+
 // $Typescale Unit
 // -------------------------------------//
 

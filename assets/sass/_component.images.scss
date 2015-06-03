@@ -1,6 +1,6 @@
 .image--circle,
 %image--circle {
-    @extend %image-ratio-1x1;
+    @include aspect-ratio(1,1,img);
     border-radius: 50%;
 }
 
@@ -9,7 +9,7 @@
         width: 100%;
         margin-bottom: $margin;
         > *[class^="figure"] {
-            @extend %image-ratio-3x1;
+            @include aspect-ratio(3,1,img);
         }
     }
     &.right {
@@ -51,7 +51,7 @@
         margin-bottom: $margin;
         margin-left: auto;
         > *[class^="figure"] {
-            @extend %image-ratio-16x9;
+            @include aspect-ratio(16,9,img);
         }
         &.collage {
             float: left;
@@ -63,24 +63,22 @@
     &.right,
     &.left {
         > *[class^="figure"] {
-            @extend %image-ratio-4x3;
+            @include aspect-ratio(16,9,img);
         }
     }
 }
 
 .media-grid {
+    @include grid("1of3","grid-image");
     margin-bottom: $margin;
     width: 100%;
-    @extend %grid;
-    @extend %grid--1of3;
     .grid-image {
-        @extend %grid-cell;
         > figure {
-            @extend %image-ratio-4x3;
+            @include aspect-ratio(4,3,img);
         }
     }
     &.with-gutters {
-        @extend %grid--gutters;
+        @include gutters("large","grid-image");
     }
 }
 
