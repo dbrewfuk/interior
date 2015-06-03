@@ -44,7 +44,7 @@
                     }
                     if (def.ShowDesc) {
                         if (def.DescCharacterLimit > 0 && item.content.length > def.DescCharacterLimit) {
-                            s += '<div class="post-content">' + item.content.substr(0, def.DescCharacterLimit) + "...</div>";
+                            s += '<div class="post-content">' + item.content.substr(0, def.DescCharacterLimit) + '...</div>';
                         } else {
                             s += '<div class="post-content">' + item.content + '</div>';
                         }

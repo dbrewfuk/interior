@@ -289,7 +289,7 @@ gulp.task('serve', ['default'], function() {
 });
 
 
-gulp.task('release', function() {
+gulp.task('release', ['default'], function() {
 
     // Create a tempory directory and
     // checkout the existing gh-pages branch.
