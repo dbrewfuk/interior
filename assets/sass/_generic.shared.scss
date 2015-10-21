@@ -7,9 +7,8 @@ $context-label-font-size: calc(13/19)#{rem};
     height: map-get($target, height);
 }
 
-@mixin icon($name,$color,$size,$position: before){
- @if $position == before {
-  &:before {
+@mixin icon($name,$color,$size){
+    &:before {
     @include icon-name(#{$name}-#{$color}-#{$size});
     content:' ';
     font-size: 10px;
@@ -17,19 +16,11 @@ $context-label-font-size: calc(13/19)#{rem};
     display: inline-block;
     background-image: url("images/svg/sprite.svg");
     background-repeat: no-repeat;
-  }
- }
- @if $position == after {
-  &:after {
-    @include icon-name(#{$name}-#{$color}-#{$size});
-    content:' ';
-    font-size: 10px;
-    vertical-align:middle;
-    display: inline-block;
-    background-image: url("images/svg/sprite.svg");
-    background-repeat: no-repeat;
-  }
- }
+    }
+}
+
+.page-title {
+	margin-bottom: 0;
 }
 
 %link--no-decoration {
@@ -38,16 +29,6 @@ $context-label-font-size: calc(13/19)#{rem};
   &:hover {
     text-decoration: none;
   }
-}
-
-@mixin link($name){
- @if $name == no-decoration {
-  border-bottom: none;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
- }
 }
 
 .position-centered,
@@ -98,27 +79,6 @@ $context-label-font-size: calc(13/19)#{rem};
   bottom: 0;
 }
 
-.snippet {
-  margin-bottom: $margin;
-}
-
-.code-expander {
-  display: inline-block;
-  margin-bottom: $margin--small;
-}
-
-.code {
-  display: none;
-  margin-bottom: $margin;
-  &.is-expanded {
-    display: block;
-  }
-}
-
-.code-inner {
-  width: 100%;
-  height: 320px;
-}
 
 
 

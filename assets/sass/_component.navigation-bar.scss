@@ -7,21 +7,21 @@ $anchor: a;
 
 
 .#{$navigation} {
-	background: shade(white,5%);
-	@include container();
+	@include list-orientation(horizontal);
 	.#{$list} {
-		@include list-orientation(horizontal);
 		margin-top: 0;
+		background: shade(white,5%);
+		text-align: center;
 		padding: 0;
 		position: relative;
-		margin-bottom: 0;
 		#{$list-item}{
 			width: 100%;
+			background: shade(white,5%);
 			@include media(desktop){
 				width: auto;
 			}
 			#{$anchor}{
-	
+				@include typl8-smallcaps(shade(white,35%),600);
 				border-bottom: 0;
 				display: inline-block;
 				padding: $padding--tiny $padding--small;
@@ -35,6 +35,22 @@ $anchor: a;
 }
 
 
+.grid.grid--auto {
+	border-top: solid thin shade(white,25%);
+}
+dl {
+	margin: 0;
+	padding: $padding;
+}
+
+
+dt {
+	@include typl8-smallcaps(shade(white,25%),600);
+}
+dd {
+	margin-left: 0;
+	margin-bottom: $margin--tiny;
+}
 
 
 

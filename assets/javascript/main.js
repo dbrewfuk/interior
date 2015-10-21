@@ -3,7 +3,6 @@ import supports from './supports';
 import './vendor/moment.js';
 import './vendor/velocity';
 import './vendor/instafeed';
-import './vendor/prism.js';
 
 import './vendor/fitvids';
 import './site-navigation';
@@ -32,8 +31,6 @@ if (!supports.flexbox()) {
 
 // Track various interations with Google Analytics
 analytics.track();
-
-
 
 
       

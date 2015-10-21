@@ -33,8 +33,6 @@ var uglify = require('gulp-uglify');
 var svg2png = require('gulp-svg2png');
 var deploy = require('gulp-gh-pages');
 var filter = require('gulp-filter');
-var merge = require('merge-stream');
-var browserSync = require('browser-sync');
 
 
 /**
@@ -151,14 +149,6 @@ function renderTemplate() {
     });
 }
 
-gulp.task('browserSync', function() {
-  browserSync({
-    server: {
-      baseDir: 'build'
-    },
-  })
-})
-
 
 gulp.task('pages', function() {
 
@@ -209,20 +199,15 @@ var spritesConfig = {
 };
 
 gulp.task("sprites", function() {
-
-    var source1 = icons({
+    return icons({
             tasks: tasks
-        });
-    var source2 = gulp.src('assets/svg/*.svg');
-    return merge(source1, source2)
+        })
         .pipe(sprites(spritesConfig))
         .pipe(gulp.dest("assets/images"))
         .pipe(filter("**/*.svg")) // Filter out everything except the SVG file 
         .pipe(svg2png()) // Create a PNG 
         .pipe(gulp.dest("assets/images"));
 });
-
-
 
 
 gulp.task('images', ['sprites'], function() {
@@ -237,11 +222,10 @@ gulp.task('compass', function() {
             css: './assets/css',
             sass: './assets/sass'
         }))
-        .pipe(gulp.dest('./assets/css'))
-        
+        .pipe(gulp.dest('./assets/css'));
 });
 
-gulp.task('css', ['browserSync','compass'], function() {
+gulp.task('css', ['compass'], function() {
     return gulp.src('./assets/css/style.css')
         .pipe(plumber({
             errorHandler: streamError
@@ -251,10 +235,7 @@ gulp.task('css', ['browserSync','compass'], function() {
             compress: true,
             url: false
         }))
-        .pipe(gulp.dest(DEST))
-        .pipe(browserSync.reload({
-      stream: true
-    }))
+        .pipe(gulp.dest(DEST));
 });
 
 gulp.task('lint', function() {
@@ -308,7 +289,7 @@ gulp.task('serve', ['default'], function() {
 });
 
 
-gulp.task('release', function() {
+gulp.task('release', ['default'], function() {
 
     // Create a tempory directory and
     // checkout the existing gh-pages branch.

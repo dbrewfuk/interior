@@ -1,11 +1,11 @@
 @function strip-units($number) {
     @return $number / ($number * 0 + 1);
 }
-.interior-template {
+
 .button,
 %button {
-    @include typl8-smallcaps();
-    border-bottom: 0;
+    @extend %small-caps;
+    @extend %link--no-decoration;
     border-radius: 3px;
     font-size: $typl8-smaller-font-size;
     color: white;
@@ -17,11 +17,6 @@
     &:hover {
         background: shade($msu-teal, 15%);
         color: white;
-    }
-    &.tiny,
-    %tiny {
-        font-size: $typl8-smallest-font-size;
-        padding: strip-units($padding--tiny)#{em} strip-units($padding--small)#{em};
     }
     &.small,
     %small {
@@ -68,7 +63,7 @@
     &%action {
         background: #64CC8B;
         &:hover {
-            background: shade(#64CC8B, 25%);
+            background: tint(#64CC8B, 25%);
         }
     }
     &.red,
@@ -100,8 +95,6 @@
         }
         
     }
-
-
 }
 
 .read-more {
@@ -134,60 +127,3 @@
     }
     }
 }
-
-.more-info {
-    border-bottom: 0;
-    font-weight: 500;
-    margin-bottom: $margin;
-    display: inline-block;
-            @include icon(chevron_right, msu-blue, 24, $position: after);
-            &:after {
-                transition: ease transform 0.3s;
-            }
-            &:hover {
-                @include icon(chevron_right, msu-gold, 24, $position: after);
-                &:after {
-                    transform: translateX(4px);
-                }
-            }
-            
-
-      
-}
-
-.arrow-right-button {
-    @include button(with-icon);
-    @include typl8-smallcaps();
-    color: white;
-    font-size: 16px;
-    span {
-        color: white;
-    }
-    .icon {
-        @include icon("chevron_right","white","24");
-        width: 24px;
-        height: 1em;
-        &:before {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-    &.is-active {
-        .icon {
-        @include icon("expand_less","white","24");
-    }
-    }
-}
-
-
-}
-
-.msu-dark-logo {
-    @include icon(msu-logo,dark,large);
-    background: $msu-navy;
-    padding: $padding;
-}
-
-
-

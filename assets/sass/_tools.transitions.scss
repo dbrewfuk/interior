@@ -1,6 +1,3 @@
-$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-$duration: 0.4s;
-
 .transition--off-canvas,
 %transition--off-canvas {
     transition-duration: 0.28s;
@@ -32,9 +29,6 @@ $duration: 0.4s;
 @mixin transition($name) {
     @if $name == opacity {
         transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    @if $name == max-height {
-        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 

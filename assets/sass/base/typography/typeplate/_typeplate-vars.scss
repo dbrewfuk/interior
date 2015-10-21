@@ -11,7 +11,7 @@ $typl8-serif-boolean: false !default;
 $typl8-custom-font: "freight-sans-pro" !default;
 $typl8-font-family: if($typl8-serif-boolean, serif, sans-serif) !default;
 $typl8-font-weight: normal !default;
-$typl8-line-height: 1.5 !default;
+$typl8-line-height: 1.65 !default;
 $typl8-font-size: 100 !default;
 $typl8-desktop-font-size: 118.75 !default;
 $typl8-font-base: 16 * ($typl8-font-size/100) !default;
@@ -164,7 +164,7 @@ $major-eleventh:   2.667;
 $major-twelfth:    3;
 $double-octave:    4;
 
-$modular-scale-ratio: $augmented-fourth !default;
+$modular-scale-ratio: $perfect-fourth !default;
 $modular-scale-base: strip-units($em-base) !default;
 
 $typl8-scale: (

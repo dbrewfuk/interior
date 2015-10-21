@@ -1,6 +1,6 @@
 html {
     font-family: $base-font-family;
-    
+    line-height: $base-line-height / $base-font-size;
     color: $base-text-color;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -9,8 +9,8 @@ html {
     overflow-x: hidden;
 }
 
-@mixin font-smoothing() {
-    -webkit-text-size-adjust: 100%;
+@mixin font-smoothing(){
+     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -26,71 +26,38 @@ body {
     box-sizing: border-box;
 }
 
-.interior-template {
-    a {
-        border-bottom: solid thin;
-        color: $msu-blue;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    a:focus,
-    a:hover {
-        color: $msu-gold;
-    }
-    .link--no-decoration,
-    %link--no-decoration {
-        text-decoration: none;
-        border-bottom: none;
-    }
-    %image-overlay--dark {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #002144;
-        opacity: 0.25;
-        transition: ease-out 0.2s;
-        z-index: 99;
-    }
-    ul {
-        li a {
-            font-weight: 500;
-        }
-    }
-    .page-content {
-        ul, ol {
-            list-style: initial;
-            li a {
-                font-weight: 500;
-            }
-        }
-        p {
-            text-rendering: optimizeLegibility;
-            a {
-                background-position: 0 1.15rem;
-                background-size: 2px 2px;
-                background-image: linear-gradient(#fff 50%, $text 50%);
-                background-repeat: repeat-x;
-                color: $text;
-                text-decoration: none;
-                cursor: pointer;
-                border-bottom: 0;
-            }
-            a:focus,
-            a:hover {
-                color: $msu-blue;
-                background-image: linear-gradient(#fff 50%, $msu-blue 50%);
-            }
-        }
-        h1,
-        h2,
-        h3,
-        h4 {
-            a[id] {
-                color: $text;
-                text-decoration: none;
-                border-bottom: 0;
-            }
-        }
-    }
+a {
+    border-bottom: solid thin;
+    color: $msu-blue;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
 }
+
+a:focus,
+a:hover {
+    color: $msu-gold;
+}
+
+dt {
+    font-weight: 600;
+}
+
+
+.link--no-decoration,
+%link--no-decoration {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+%image-overlay--dark {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #002144;
+    opacity: 0.25;
+    transition: ease-out 0.2s;
+    z-index: 99;
+}
+

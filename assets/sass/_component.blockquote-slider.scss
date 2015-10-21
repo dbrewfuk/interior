@@ -1,120 +1,116 @@
-//Dependencies
-// - typl8
-// - aspect-ratio
-// - breakpoints
-// - sprites
-// - spacing
-// - colors
-
-
-
 .quote-slider {
-    padding: $padding--small;
-    text-align: center;
-    background: $msu-navy;
-    position: relative;
-    .quote-slides {
-        @include aspect-ratio(2, 1, quote-slide);
-        @include media(tablet) {
-            @include aspect-ratio(6, 1, quote-slide);
-        }
-        .quote-slide {
-            transition: cubic-bezier(0.4, 0, 0.2, 1) opacity 0.56s, cubic-bezier(0.4, 0, 0.2, 1) transform 0.56s;
-            color: white;
-            font-family: "freight-text-pro";
-            font-style: italic;
-            opacity: 0;
-            margin: 0;
-            padding: 0 $padding--large;
-            top: 50%;
-            transform: translateY(-40%);
-            height: auto;
-            @include media(desktop) {
-                font-size: $typl8-lede-paragraph-size;
-            }
-            p {
-                margin-bottom: $margin--small;
-            }
-            cite {
-                @include typl8-smallcaps($msu-blue, 600);
-                @include typl8(-1);
-                font-family: $typl8-custom-font;
-                font-style: normal;
-                display: block;
-            }
-            mark {
-                background: transparent;
-                color: white;
-                display: block;
-                line-height: 1;
-                font-weight: 700;
-            }
-            &.is-active {
-                opacity: 1;
-                transform: translateY(-50%);
-                transition: cubic-bezier(0.4, 0, 0.2, 1) opacity 0.56s 0.56s, cubic-bezier(0.4, 0, 0.2, 1) transform 0.56s 0.28s;
-            }
-        }
-    }
-    &.right {
-        width: 100%;
-        @include media(tablet) {
-            width: 50%;
-        }
-        @include media(desktop) {
-            width: 33%;
-        }
-        .quote-slides {
-            @include aspect-ratio(2, 1, quote-slide);
-            @include media(tablet) {
-                @include aspect-ratio(4, 3, quote-slide);
-            }
-            .quote-slide {
-                font-size: 1rem;
-                height: auto;
-                max-height: 86%;
-                overflow: hidden;
-            }
-        }
-    }
-    .slide-title {
-        @include typl8-smallcaps($msu-gold, 600);
-        margin-top: $margin;
-        margin-bottom: 0;
-    }
-    .arrows {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        left: 0;
-    }
-    .arrow-prev {
-        @include icon('chevron_left', 'msu-blue', '48');
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        border-bottom: 0;
-        padding: $padding--tiny;
-        opacity: 0.25;
-        transition: cubic-bezier(0.4, 0, 0.2, 1) opacity 0.28s;
-        &:hover {
-            opacity: 1;
-        }
-    }
-    .arrow-next {
-        @include icon('chevron_right', 'msu-blue', '48');
-        border-bottom: 0;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        padding: $padding--tiny;
-        opacity: 0.25;
-        transition: cubic-bezier(0.4, 0, 0.2, 1) opacity 0.28s;
-        &:hover {
-            opacity: 1;
-        }
-    }
+	margin-top: $margin;
+	padding: $padding--small;
+	text-align: center;
+	background: $msu-navy;
+	position: relative;
+
+	.quote-slides {
+		@include aspect-ratio(2,1,quote-slide);
+		@include media(tablet){
+			@include aspect-ratio(5,1,quote-slide);
+		}
+
+		.quote-slide {
+        transition: cubic-bezier(0.4, 0, 0.2, 1) opacity 0.56s, cubic-bezier(0.4, 0, 0.2, 1) transform 0.56s;
+		color: white;
+		font-family: "freight-text-pro";
+		font-style: italic;
+		opacity: 0;
+		margin: 0;
+		padding: 0 $padding--large;
+		top: 50%;
+		transform: translateY(-40%);
+		height: auto;
+		@include media(desktop){
+			font-size: $typl8-lede-paragraph-size;
+		}
+		p {
+			margin-bottom: $margin--small;
+		}
+		cite {
+			@include typl8-smallcaps($msu-blue,600);
+			@include typl8(-1);
+			font-family: $typl8-custom-font;
+			font-style: normal;
+			display: block;
+		}
+		mark {
+			background: transparent;
+			color: white;
+			display: block;
+			line-height: 1;
+			font-weight: 700;
+		}
+		&.is-active {
+			opacity: 1;
+			transform: translateY(-50%);
+			transition: cubic-bezier(0.4, 0, 0.2, 1) opacity 0.56s 0.56s, cubic-bezier(0.4, 0, 0.2, 1) transform 0.56s 0.28s;
+		}
+	}
+
+	}
+	&.right {
+			width: 100%;
+			@include media(tablet){
+				width: 50%;
+			}
+			@include media(desktop){
+				width: 33%;
+			}
+			.quote-slides {
+				@include aspect-ratio(2,1,quote-slide);
+				@include media(tablet){
+			@include aspect-ratio(4,3,quote-slide);
+		}
+			.quote-slide {
+				font-size: 1rem;
+				height: auto;
+				max-height: 86%;
+				overflow: hidden;
+			}
+		}
+	}
+	.slide-title {
+		@include typl8-smallcaps($msu-gold,600);
+		margin-top: $margin--small;
+		margin-bottom: 0;
+	}
+	.arrows {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		left: 0;
+
+	}
+	.arrow-prev {
+		@include icon('chevron_left','msu-blue','48');
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		border-bottom: 0;
+		padding: $padding--tiny;
+		opacity: 0.25;
+		transition: cubic-bezier(0.4, 0, 0.2, 1) opacity 0.28s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.arrow-next {
+		@include icon('chevron_right','msu-blue','48');
+		border-bottom: 0;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		padding: $padding--tiny;
+		opacity: 0.25;
+		transition: cubic-bezier(0.4, 0, 0.2, 1) opacity 0.28s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	
 }

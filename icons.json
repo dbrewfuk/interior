@@ -1,21 +1,18 @@
 [
   {
     "sizes": [24, 48],
-    "ids": ["grey","white","msu-blue","red","yellow","msu-navy","msu-gold"],
-    "fills": ["#797979","#ffffff","#5381ac","#fa5e5b","#f4e565","#142C43","#ecac00"],
+    "ids": ["grey","white","msu-blue"],
+    "fills": ["#797979","#ffffff","#5381ac"],
     "icons": [
       "action/search",
-      "alert/error",
       "communication/business",
       "content/mail",
       "content/sort",
-      "content/reply",
       "navigation/menu",
       "navigation/expand_more",
       "navigation/expand_less",
       "navigation/chevron_left",
       "navigation/chevron_right",
-      "navigation/more_horiz",
       "editor/insert_photo"
     ]
   }

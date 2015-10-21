@@ -1,21 +1,9 @@
-/*--------------------
- $Contact-card
---------------------*/
-@mixin contact-card {
-    @extend %contact-card;
-}
-
-.interior-template {
-
 .contact-card {
     @include font-smoothing();
     @include box-shadow(1);
     background: $white;
     display: inline-block;
     padding: $padding;
-    margin-bottom: $margin;
-    position: relative;
-    width: 100%;
     dl {
         margin: 0;
         padding: 0;
@@ -38,7 +26,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top;
+            object-position: center;
             border-radius: 50%;
         }
     }
@@ -49,32 +37,6 @@
     }
     .contact-info {
         font-size: 16px;
-        &.with-labels {
-    dd:before {
-        display: inline-block;
-        width: 100%;
-        @include typl8-smallcaps();
-        margin-top: $margin--tiny;
-    }
-    .contact-email:before {
-        content: "email";
-    }
-    .contact-phone:before {
-        content: "phone";
-    }
-    .contact-address {
-        dd {
-            margin-bottom: 0;
-        }
-        .contact-building {
-           
-            &:before {
-        content: "address";
-    }
-        }
-        
-    }
-}
     }
     .contact-name {
         font-weight: 600;
@@ -88,46 +50,6 @@
         margin-bottom: $margin--tiny;
         font-size: 1rem;
     }
-    
-
-    &.with-bio {
-        .contact-wrapper {
-            background: white;
-            padding-bottom: $padding;
-            border-bottom: solid thin shade(white,10%);
-        }
-        .contact-bio {
-        max-height: 0;
-        overflow: hidden;
-        max-width: 720px;
-        margin: $margin auto 0 auto;
-
-        &.is-expanded {
-            max-height: 2000px;
-        }
-        .bio-title {
-            @include typl8-smallcaps();
-            margin-bottom: $margin--small;
-        }
-    }
-    .bio-expander {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding: $padding--small $padding;
-        font-size: 16px;
-        border-bottom: 0;
-        line-height: 1;
-        width: 100%;
-        text-align: center;
-        .icon {
-            @include icon(more_horiz,msu-blue,24);
-        }
-     
-    }
-
-    }
-    
 
     @include media(desktop){
 
@@ -155,38 +77,5 @@
             border-left: solid thin shade(white,15%);
         }
     }
-    &.flex {
-        @include grid($name: "auto", $align-items: "center",$selector: ".contact-pic-wrapper, .contact-id, .contact-info");
-    }
 }
-
-}
-.contact-list {
-    padding-left: 0;
-    .contact-card {
-        @include box-shadow(1);
-      
-      
-        transition: all ease 0.4s;
-        &:hover {
-            @include box-shadow(2);
-            background: white;
-        }
-    }
-}
-
-.office-contact-info,
-.faculty-contact-info {
-    margin-bottom: $margin;
-    dt {
-        @include typl8-smallcaps();
-    }
-    dd {
-        margin-bottom: $margin--small;
-        font-weight: 500;
-    }
-}
-
-
-
 }

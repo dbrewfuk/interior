@@ -5,8 +5,6 @@
     border-bottom: solid thin #eee;
     margin-bottom: $margin;
     .list {
-        margin-top: $margin--small;
-        margin-bottom: $margin--small;
         @extend %list--naked;
         @extend %list--horizontal;
         &:before {
@@ -28,7 +26,6 @@
             border-left: solid thin #eee;
             float: right;
             margin-left: $margin;
-            padding-left: $padding;
             width: 33%;
             .list {
                 margin-top: 0;
@@ -42,59 +39,7 @@
     &.bottom {
         border-top: solid thin #eee;
         border-bottom: 0;
-
     }
 }
-
-.social-links {
-    display: inline-block;
-    width: 100%;
-    border-top: solid thin #eee;
-    border-bottom: solid thin #eee;
-    margin-bottom: $margin;
-    .list {
-        margin-top: $margin--small;
-        margin-bottom: $margin--small;
-        @extend %list--naked;
-        @extend %list--horizontal;
-        &:before {
-            @extend %label;
-            content: "Follow us";
-        }
-    }
-    .item {
-    }
-    .link {
-        @extend %link--no-decoration;
-    }
-    &.middle {    
-    }
-    &.right {
-        @include media(desktop) {
-            border-top: 0;
-            border-bottom: 0;
-            border-left: solid thin #eee;
-            float: right;
-            margin-left: $margin;
-            padding-left: $padding;
-            width: 33%;
-            .list {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            .item {
-                width: 100%;
-            }
-        }
-    }
-    &.bottom {
-        border-top: solid thin #eee;
-        border-bottom: 0;
-
-    }
-}
-
-
-
 
 
