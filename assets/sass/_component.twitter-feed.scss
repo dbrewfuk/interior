@@ -1,16 +1,21 @@
 .twitter-widget {
     .twitter-username {
-        @include typl8-smallcaps($font-weight: 700);
-        display: inline-block;
+        @include typl8-smallcaps($font-weight: 700, $color: $msu-blue);
+        border-bottom: 0;
     }
     .twitter-feed-one,
     .twitter-feed-two {
         .tweet-list {
-            @include list-block($size: small);
             padding-left: 0;
+            margin-top: 0;
+        }
+        .tweet {
+            padding: $padding--small 0;
+            border-bottom: solid thin shade(white,15%);
         }
         .tweet-content {
-            margin-bottom: $margin--tiny;
+            margin-bottom: 0;
+            font-size: 16px;
         }
         .time-posted a {
             @include typl8-smallcaps($color: shade(white, 25%));
@@ -63,16 +68,19 @@
 
 .facebook-widget {
 	.facebook-pagename {
-		@include typl8-smallcaps($font-weight: 700);
+		@include typl8-smallcaps($font-weight: 700, $color: $msu-blue);
+        border-bottom: 0;
         display: inline-block;
 	}
     .facebook-feed {
         .post-list {
-            @include list-block($size: small);
             padding-left: 0;
+            margin-top: 0;
         }
         .post {
             position: relative;
+            padding: $padding--small 0;
+            border-bottom: solid thin shade(white,15%);
         }
         .post-link {
             position: absolute;
@@ -83,7 +91,8 @@
             left: 0;
         }
         .post-content {
-            margin-bottom: $margin--tiny;
+            margin-bottom: 0;
+            font-size: 16px;
         }
         .time-posted {
             @include typl8-smallcaps($color: shade(white, 25%));

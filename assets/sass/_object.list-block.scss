@@ -22,7 +22,7 @@ $list-block-padding--xxlarge: (2 * $list-block-padding) !default;
 
 .#{$list-block-namespace}list-block__item,
     %#{$list-block-namespace}list-block__item {
-        padding: $list-block-padding#{rem};
+        padding: $list-block-padding#{rem} 0;
     }
 
  .#{$list-block-namespace}list-block--tiny,
@@ -30,7 +30,7 @@ $list-block-padding--xxlarge: (2 * $list-block-padding) !default;
 
         > .#{$list-block-namespace}list-block__item,
         > %#{$list-block-namespace}list-block__item {
-            padding: $list-block-padding--tiny#{rem};
+            padding: $list-block-padding--tiny#{rem} 0;
         }
 
     }
@@ -40,7 +40,7 @@ $list-block-padding--xxlarge: (2 * $list-block-padding) !default;
 
         > .#{$list-block-namespace}list-block__item,
         > %#{$list-block-namespace}list-block__item {
-            padding: $list-block-padding--small#{rem};
+            padding: $list-block-padding--small#{rem} 0;
         }
 
     }
@@ -51,7 +51,7 @@ $list-block-padding--xxlarge: (2 * $list-block-padding) !default;
 
         > .#{$list-block-namespace}list-block__item,
         > %#{$list-block-namespace}list-block__item {
-            padding: $list-block-padding--large#{rem};
+            padding: $list-block-padding--large#{rem} 0;
         }
 
     }
@@ -61,7 +61,7 @@ $list-block-padding--xxlarge: (2 * $list-block-padding) !default;
 
         > .#{$list-block-namespace}list-block__item,
         > %#{$list-block-namespace}list-block__item {
-            padding: $list-block-padding--xlarge#{rem};
+            padding: $list-block-padding--xlarge#{rem} 0;
         }
 
     }
@@ -71,7 +71,7 @@ $list-block-padding--xxlarge: (2 * $list-block-padding) !default;
 
         > .#{$list-block-namespace}list-block__item,
         > %#{$list-block-namespace}list-block__item {
-            padding: $list-block-padding--xxlarge#{rem};
+            padding: $list-block-padding--xxlarge#{rem} 0;
         }
 
     }

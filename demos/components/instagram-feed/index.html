@@ -22,10 +22,9 @@ excerpt: Instagram feed
 </div>
 
 
-
+<script src="http://f.cl.ly/items/3o2z3b1R3G250G1t0w2L/instafeed.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.js"></script>
 <script type="text/javascript">
-$(function(){
 var singlefeed = new Instafeed({
     get: 'user',
     sortBy: 'most-recent',
@@ -63,7 +62,6 @@ var gridfeed = new Instafeed({
 
 singlefeed.run();
 gridfeed.run();
-});
 </script>
 
 

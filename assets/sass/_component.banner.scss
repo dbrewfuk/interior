@@ -41,6 +41,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    max-height: $max-height;
     .banner-slider {
         @include aspect-ratio(21,9,banner-slide);
     }
@@ -105,10 +106,11 @@
             }
             .banner-headline {
                 @include typl8(1);
-                margin-bottom: $margin--tiny;
+                margin-bottom: 0.4125rem;
                 color: $color;
                 line-height: 1;
                 font-weight: 600;
+
                 @include media(desktop) {
                     @include typl8(4);
                 }
@@ -137,6 +139,7 @@
                 &:hover {
                     color: $msu-gold;
                     background: transparent;
+                    border-bottom: solid thin;
                 }
             }
         }
@@ -363,4 +366,6 @@
         }
     }
 }
+
+
 

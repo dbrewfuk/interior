@@ -1,0 +1,23 @@
+//Dependencies
+// - tools.spacing
+// - object.site
+
+.page-intro {
+  
+    .intro-content {
+        @include media(desktop) {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    .intro-content-wrapper {
+        max-width: 760px;
+        margin: auto;
+    }
+    .page-intro-aside {
+        @include media(desktop) {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}

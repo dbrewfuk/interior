@@ -9,7 +9,8 @@
 	}
 	.instagram-username {
 		display: inline-block;
-			@include typl8-smallcaps(shade(white,25%),700);
+		@include typl8-smallcaps($font-weight: 700, $color: $msu-blue);
+        border-bottom: 0;
 			margin-left: $margin--tiny;
 		}
 	.instagram-feed {
@@ -20,12 +21,16 @@
 		.post-link {
 			border-bottom: 0;
 		}
+		.photo {
+			width: 100%;
+		}
 		.time-posted {
 			@include typl8-smallcaps(shade(white,25%),700);
 		}
 		.post-caption {
 			max-width: 320px;
 			margin-bottom: $margin--tiny;
+			font-size: 16px;
 		}
 	}
     &.photo-grid {

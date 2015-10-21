@@ -1,21 +1,25 @@
+.interior-template {
 .page-anchors {
     padding: 0;
+    margin-bottom: $margin;
     .list {
-        @extend %list--naked;
+        @include list-style(bare);
         margin: 0;
         padding-left: $padding;
         border-left: solid shade(white,10%);
 
         &:before {
-            @extend %label;
+            @include typl8-smallcaps();
             content: "On this page";
+            margin-bottom: $margin--tiny;
+            display: block;
         }
         .item {
             line-height: 1.3;
             margin-bottom: $margin--tiny;
 
             a {
-                @extend %link--no-decoration;
+                @include link(no-decoration);
             }
         }
 
@@ -29,7 +33,7 @@
     }
 
     &.is-fixed {
-        @extend %container;
+        @include container;
         @include media(big-desktop) {
             position: fixed;
             top: 0;
@@ -38,4 +42,5 @@
             }
         }
     }
+}
 }

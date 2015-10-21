@@ -1,5 +1,23 @@
-.site-content {
-    padding: $padding--xlarge 0;
+
+
+
+
+.intro {
+	padding: $padding--xlarge $padding--xxlarge;
+	max-width: 960px;
+}
+
+
+
+.aside-content {
+	@include media(desktop){
+	width: 400px;
+	display: inline-block;
+	vertical-align: top;
+	background: shade(white,5%);
+	padding: $padding--large $padding--xxlarge $padding--large 0;
+}
+
 }
 
 
@@ -7,14 +25,14 @@
 // -------------------------------------//
 
 //using this to create our content separation
-.site-content h2,
-.site-content h3 {
+.main-content h2,
+.main-content h3 {
 	margin-top: $margin;
 	clear: both;
 }
 
 //remove top margin from h2 elements that immediately follow h1 elements.
-.site-content h1 + h2,
-.site-content h2 + h3 {
+.main-content h1 + h2,
+.main-content h2 + h3 {
 	margin-top: 0;
 }

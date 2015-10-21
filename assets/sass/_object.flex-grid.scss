@@ -1,3 +1,9 @@
+.grid-cell-demo {
+  width: 100%;
+  height: 200px;
+  background: shade(white,10%);
+}
+
 .grid,
 %grid {
   display: flex;
@@ -84,6 +90,90 @@
 .grid-cell--center,
 %grid-cell--center {
   align-self: center;
+}
+
+.grid-cell {
+  &.u-1of2 {
+    flex: 0 0 50%;
+  }
+  &.u-1of3 {
+    flex: 0 0 33.3333%;
+  }
+  &.u-1of4 {
+    flex: 0 0 25%;
+  }
+  &.u-full {
+    flex: 0 0 100% !important;
+  }
+  &.u-3of4 {
+    flex: 0 0 75%;
+  }
+  &.u-2of3 {
+    flex: 0 0 66.6666%;
+  }
+  @include media(mobile){
+    &.u-small-1of2 {
+    flex: 0 0 50%;
+  }
+  &.u-small-1of3 {
+    flex: 0 0 33.3333%;
+  }
+  &.u-small-1of4 {
+    flex: 0 0 25%;
+  }
+  &.u-small-full {
+    flex: 0 0 100% !important;
+  }
+  &.u-small-3of4 {
+    flex: 0 0 75%;
+  }
+  &.u-small-2of3 {
+    flex: 0 0 66.6666%;
+  }
+
+  }
+  @include media(tablet){
+    &.u-med-1of2 {
+    flex: 0 0 50%;
+  }
+  &.u-med-1of3 {
+    flex: 0 0 33.3333%;
+  }
+  &.u-med-1of4 {
+    flex: 0 0 25%;
+  }
+  &.u-med-full {
+    flex: 0 0 100% !important;
+  }
+  &.u-med-3of4 {
+    flex: 0 0 75%;
+  }
+  &.u-med-2of3 {
+    flex: 0 0 66.6666%;
+  }
+
+  }
+  @include media(desktop){
+    &.u-large-1of2 {
+    flex: 0 0 50%;
+  }
+  &.u-large-1of3 {
+    flex: 0 0 33.3333%;
+  }
+  &.u-large-1of4 {
+    flex: 0 0 25%;
+  }
+  &.u-large-full {
+    flex: 0 0 100% !important;
+  }
+  &.u-large-3of4 {
+    flex: 0 0 75%;
+  }
+  &.u-large-2of3 {
+    flex: 0 0 66.6666%;
+  }
+
+  }
 }
 
 @mixin grid-sizing($name: "") {
@@ -194,80 +284,84 @@
   @if $name == "" {
     $sep: "";
   }
-  .#{$name}#{$sep}grid--gutters-none {
-    margin-left: 0;
-    & > .grid-cell {
-      padding-left: 0;
-    }
-  }
+  
+  .#{$name}#{$sep}grid--gutters-none,
   %#{$name}#{$sep}grid--gutters-none {
-    margin-left: 0;
-    & > %grid-cell {
-      padding-left: 0;
-    }
-  }
-  .#{$name}#{$sep}grid--gutters-small {
-    margin-left: -0.5 * $margin--small;
+    margin: 0;
     & > .grid-cell {
-      padding-left: $padding--small;
+      padding: 0;
     }
   }
+
+  .#{$name}#{$sep}grid--gutters-tiny,
+  %#{$name}#{$sep}grid--gutters-tiny {
+    $space: $margin--tiny;
+    margin-left: -1 * $space;
+    margin-top: -1 * $space;
+    margin-bottom: $space;
+    & > .grid-cell {
+      padding-left: $space;
+      padding-top: $space;
+    }
+  }
+
+  .#{$name}#{$sep}grid--gutters-small,
   %#{$name}#{$sep}grid--gutters-small {
-    margin-left: -0.5 * $margin--small;
-    & > %grid-cell {
-      padding-left: $padding--small;
+    $space: $margin--small;
+    margin-left: -1 * $space;
+    margin-top: -1 * $space;
+    margin-bottom: $space;
+    & > .grid-cell {
+      padding-left: $space;
+      padding-top: $space;
     }
   }
   
-  .#{$name}#{$sep}grid--gutters {
-    margin-left: -1 * $margin;
-    & > .grid-cell {
-      padding-left: $padding;
-    }
-  }
+  .#{$name}#{$sep}grid--gutters,
   %#{$name}#{$sep}grid--gutters {
-    margin-left: -1 * $margin;
-    & > %grid-cell {
-      padding-left: $padding;
+    $space: $margin;
+    margin-left: -1 * $space;
+    margin-top: -1 * $space;
+    margin-bottom: $space;
+    & > .grid-cell {
+      padding-left: $space;
+      padding-top: $space;
     }
   }
 
-  .#{$name}#{$sep}grid--gutters-large {
-    margin-left: -1 * $margin--large;
-    & > .grid-cell {
-      padding-left: $padding--large;
-    }
-  }
+  .#{$name}#{$sep}grid--gutters-large,
   %#{$name}#{$sep}grid--gutters-large {
-    margin-left: -1 * $margin--large;
-    & > %grid-cell {
-      padding-left: $padding--large;
+    $space: $margin--large;
+    margin-left: -1 * $space;
+    margin-top: -1 * $space;
+    margin-bottom: $space;
+    & > .grid-cell {
+      padding-left: $space;
+      padding-top: $space;
     }
   }
 
-  .#{$name}#{$sep}grid--gutters-xlarge {
-    margin-left: -1 * $margin--xlarge;
-    & > .grid-cell {
-      padding-left: $padding--xlarge;
-    }
-  }
+  .#{$name}#{$sep}grid--gutters-xlarge,
   %#{$name}#{$sep}grid--gutters-xlarge {
-    margin-left: -1 * $margin--xlarge;
-    & > %grid-cell {
-      padding-left: $padding--xlarge;
+    $space: $margin--xlarge;
+    margin-left: -1 * $space;
+    margin-top: -1 * $space;
+    margin-bottom: $space;
+    & > .grid-cell {
+      padding-left: $space;
+      padding-top: $space;
     }
   }
 
-  .#{$name}#{$sep}grid--gutters-xxlarge {
-    margin-left: -1 * $margin--xxlarge;
-    & > .grid-cell {
-      padding-left: $padding--xxlarge;
-    }
-  }
+  .#{$name}#{$sep}grid--gutters-xxlarge,
   %#{$name}#{$sep}grid--gutters-xxlarge {
-    margin-left: -1 * $margin--xxlarge;
-    & > %grid-cell {
-      padding-left: $padding--xxlarge;
+    $space: $margin--xxlarge;
+    margin-left: -1 * $space;
+    margin-top: -1 * $space;
+    margin-bottom: $space;
+    & > .grid-cell {
+      padding-left: $space;
+      padding-top: $space;
     }
   }
 }
@@ -283,39 +377,39 @@
   }
 } 
 
-@mixin grid($name,$selector) {
+@mixin grid($name:"",$selector:"",$gutters:"",$align-items:"") {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
   @if $name == "auto" {
-   > .#{$selector} {
+   > #{$selector} {
     flex: 0 1 auto;
   }
 }
   @if $name == "fit" {
-   > .#{$selector} {
+   > #{$selector} {
     flex: 1;
   }
 }
   @if $name == "full" {
-   > .#{$selector} {
+   > #{$selector} {
     flex: 0 0 100%;
   }
 }
   @if $name == "1of2" {
-   > .#{$selector} {
+   > #{$selector} {
     flex: 0 0 50%;
   }
 }
   @if $name == "1of3" {
-   > .#{$selector} {
+   > #{$selector} {
     flex: 0 0 33.3333%;
   }
 }
   @if $name == "1of4" {
-   > .#{$selector} {
+   > #{$selector} {
     flex: 0 0 25%;
   }
 }
@@ -329,17 +423,24 @@
     flex: 0 0 16.6666666667%;
   }
 }
+@if $gutters == "large" {
+  @include gutters(large,$selector);
+}
+
+@if $align-items == "center" {
+  align-items: center;
+}
 }
 @mixin gutter-spacing($space,$selector){
   margin: -#{$space} 0 #{$space} -#{$space};
-   > .#{$selector} {
+   > #{$selector}{
     padding: #{$space} 0 0 #{$space};
 }
 }
 @mixin gutters($size,$selector) {
   @if $size == "" {
     margin: -#{$margin} 0 $margin -#{$margin};
-   > .#{$selector} {
+   > #{$selector} {
     padding: $padding 0 0 $padding;
   }
 }

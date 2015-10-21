@@ -1,0 +1,11 @@
+.main-aside {
+	display: inline-block;
+	vertical-align: top;
+    @include media(desktop) {
+        max-width: 400px;
+        font-size: 81.25%;
+    }
+    .aside-wrapper {
+        padding: $padding;
+    }
+}

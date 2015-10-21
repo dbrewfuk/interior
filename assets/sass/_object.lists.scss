@@ -23,8 +23,6 @@
 	@if $name == horizontal {
 		#{$selector} {
 			display: inline-block;
-			margin-right: $margin--small;
-
 			@if $style == bars {
 			&:after {
 				margin-left: $margin--small;
@@ -35,16 +33,43 @@
 				content: "";
 			}
 		}
+		@if $style == breadcrumbs {
+			padding-left: $padding--small;
+			line-height: 1;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:after {
+				margin-left: $margin--small;
+				content: "/";
+				color: shade(white,15%);
+			}
+			&:last-child {
+				font-size: 16px;
+				color: shade(white,30%);
+				font-weight: 500;
+				a {
+					color: shade(white,30%);
+				}
+			}
+			&:last-child:after {
+				content: "";
+			}
+			a {
+				border-bottom: 0;
+				font-size: 16px;
+				color: shade(white,50%);
+			}
+		}
 		}
 	}
 }
 
 
-@mixin list-block($size: tiny,$selector: li){
+@mixin list-block($size: tiny,$selector: li,$border-bottom: true){
 	@if $size == tiny {
 		#{$selector} { 
 			padding: $padding--tiny;
-			border-bottom: solid thin shade(white,15%);
 			&:last-child {
 				border-bottom: 0;
 			}
@@ -53,7 +78,6 @@
 	@if $size == small {
 		#{$selector} { 
 			padding: $padding--small;
-			border-bottom: solid thin shade(white,15%);
 			&:last-child {
 				border-bottom: 0;
 			}
@@ -62,16 +86,17 @@
 	@if $size == normal {
 		#{$selector} { 
 			padding: $padding;
-			border-bottom: solid thin shade(white,15%);
 			&:last-child {
 				border-bottom: 0;
 			}
 		}
 	}
+	@if $border-bottom == true {
+		border-bottom: solid thin shade(white,15%);
+	}
 }
 
 ul {
-	@include list-style(bare);
 	margin-bottom: $margin;
 }
 
@@ -80,9 +105,16 @@ ol {
 }
 
 ul,
-ol,
-dl {
+ol {
 	padding-left: $padding;
+}
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin-left: 0;
 }
 
 .bullet-list {
@@ -97,6 +129,14 @@ dl {
 	@include list-style(square);
 }
 
+.naked-list {
+	@include list-style(bare);
+	padding-left: 0;
+	a {
+		border-bottom: 0;
+	}
+}
+
 .block-list {
 	@include list-style(bare);
 	@include list-block();
@@ -105,3 +145,4 @@ dl {
 .horizontal-list {
 	@include list-orientation(horizontal,$style: bars);
 }
+
