@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gulp",
-    "start": "NODE_ENV=dev gulp serve",
+    "start": "gulp clean && gulp release",
     "release": "gulp clean && gulp release"
   },
   "devDependencies": {
