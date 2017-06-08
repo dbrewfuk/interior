@@ -1,7 +1,20 @@
-$context-label-font-size: calc(13/19)#{rem};
 
-@mixin icon-name($icon-name){
+$context-label-font-size: calc(13/19)#{rem};
+/// @requires $mq-base-font-size
+/// @returns {Number}
+@function px2em($px, $base-font-size: 1.9px) {
+    @if unitless($px) {
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
+        @return px2em($px + 0px); // That may fail.
+    } @else if unit($px) == em {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1em;
+}
+
+@mixin icon-name($icon-name) {
     $target: map-get($icons, $icon-name);
+<<<<<<< Updated upstream
     background-position: map-get($target, background-position);
     width: map-get($target, width);
     height: map-get($target, height);
@@ -21,83 +34,238 @@ $context-label-font-size: calc(13/19)#{rem};
 
 .page-title {
 	margin-bottom: 0;
+=======
+    background-size: map-get($target, background-size);
+    background-position: px2em(map-get($target, backgroundX)) px2em(map-get($target, backgroundY));
+    width: px2em(map-get($target, width));
+    height: px2em(map-get($target, height));
+
+}
+
+@mixin icon($name, $color, $size, $position: before) {
+
+    @if $position==before {
+        &:before {
+            @include icon-name(#{$name}-#{$color}-#{$size});
+            content: ' ';
+            vertical-align: middle;
+            display: inline-block;
+            background-image: url("images/svg/sprite.svg");
+            background-repeat: no-repeat;
+            @include shared-icon-stuff();
+        }
+    }
+    @if $position==after {
+        &:after {
+            @include icon-name(#{$name}-#{$color}-#{$size});
+            content: ' ';
+            vertical-align: middle;
+            display: inline-block;
+            background-image: url("images/svg/sprite.svg");
+            background-repeat: no-repeat;
+            @include shared-icon-stuff();
+        }
+    }
+>>>>>>> Stashed changes
 }
 
 %link--no-decoration {
-	border-bottom: none;
-	text-decoration: none;
-  &:hover {
+    border-bottom: none;
     text-decoration: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
 }
 
+<<<<<<< Updated upstream
 .position-centered,
 %position-centered {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
+=======
+@mixin link($style: "") {
+  color: $msu-blue;
+  font-weight: 500;
+    @if $style==paragraph {
+        background-position: 0 1.15rem;
+        background-size: 2px 2px;
+        background-image: linear-gradient(#fff 50%, $text 50%);
+        background-repeat: repeat-x;
+        color: $text;
+        text-decoration: none;
+        cursor: pointer;
+        border-bottom: 0;
+        &:focus,
+        &:hover {
+            color: $msu-blue;
+            background-image: linear-gradient(#fff 50%, $msu-blue 50%);
+        }
+    }
+    @if $style==no-decoration {
+        border-bottom: none;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
+
+@mixin absolute-centered() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+@mixin gradient-overlay($style: "", $color: black) {
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(to top, rgba($color, 0.8) 30%, transparent 100%);
+    }
+}
+
+@mixin gradient-overlay-top($color: black) {
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(to bottom, rgba($color, 0.6) 10%, transparent 100%);
+    }
+>>>>>>> Stashed changes
+}
+
 
 
 .figure-gradient-overlay,
 %gradient-overlay {
-  @extend %with-overlay;
-  background: #222;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) all 0.48s;
-  
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    background: linear-gradient(to top, rgba(#222, 0.5) 0, rgba(#222, 0.1) 100%);
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    background: rgba(#222, 0);
+
+    background: #222;
     transition: cubic-bezier(0.4, 0, 0.2, 1) all 0.48s;
-  }
-  &.is-visible {
-    &:after {
-      background: rgba(#222, 0.25);
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: linear-gradient(to top, rgba(#222, 0.5) 0, rgba(#222, 0.1) 100%);
     }
-  }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: rgba(#222, 0);
+        transition: cubic-bezier(0.4, 0, 0.2, 1) all 0.48s;
+    }
+    &.is-visible {
+        &:after {
+            background: rgba(#222, 0.25);
+        }
+    }
 }
 
 %overlay--bottom {
-  position: absolute;
-  bottom: 0;
+    position: absolute;
+    bottom: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+.snippet {
+    margin-bottom: $margin;
+}
 
+.code-expander {
+    display: inline-block;
+    margin-bottom: $margin--small;
+}
 
+.code {
+    display: none;
+    margin-bottom: $margin;
+    &.is-expanded {
+        display: block;
+    }
+}
 
+.code-inner {
+    width: 100%;
+    height: 320px;
+}
+>>>>>>> Stashed changes
 
 // $Label
 // -------------------------------------//
-
 .label,
 %label {
-  @extend %small-caps;
-  margin-bottom: $margin--small;
-  display: block;
-  color: $subtle-color;
-  line-height: 1;
-  margin-top: 0;
-  
+    @extend %small-caps;
+    margin-bottom: $margin--small;
+    display: block;
+    color: $subtle-color;
+    line-height: 1;
+    margin-top: 0;
 }
 
 .u-full,
 %u-full {
-	width: 100%;
+    width: 100%;
 }
+
+//Easings
+//need to create tools sheet
+
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeInOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+$easeInOutFast: cubic-bezier(1,0,0,1);
+
+$authenticMotion: cubic-bezier(.4,0,.2,1);
+

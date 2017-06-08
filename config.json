@@ -1,9 +1,11 @@
 {
-  "title": "interior",
+  "title": "Pattern Library",
   "tagline": "",
   "description": "",
   "baseUrl": "/",
   "env": "prod",
   "gaTrackingId": "UA-62289370-1",
-  "typekitKitId": "hsy5lps"
+  "typekitKitId": "jor7knr",
+  "leftCurl": "{{",
+  "rightCurl": "}}"
 }

@@ -1,11 +1,19 @@
+<<<<<<< Updated upstream
 
+=======
+$text: #1d1d1d;
+>>>>>>> Stashed changes
 // $Primary
 // -------------------------------------//
 
+$msu-orange: #F46036;
+$msu-purple: #2e294e;
+$msu-green: #1b998b;
+$msu-purple: #777DA7;
 
 //Gold
 
-$msu-gold: #ecac00;
+$msu-gold: #f6c235;
     $msu-gold--bright: lighten($msu-gold, 5%);
     $msu-gold--brighter: lighten($msu-gold--bright, 5%);
     $msu-gold--dark: darken($msu-gold, 5%);
@@ -73,7 +81,7 @@ $msu-navy: #142C43; //#002144
 
 //Blue
 
-$msu-blue: #5381ac;
+$msu-blue: #52b7de;
     $msu-blue--bright: lighten($msu-blue, 5%);
     $msu-blue--brighter: lighten($msu-blue--bright, 5%);
     $msu-blue--dark: darken($msu-blue, 5%);
@@ -142,6 +150,11 @@ $msu-teal: #1291B9;
 %msu-brighter-teal {
     background-color: $msu-teal--brighter;
 }
+
+
+//Red
+
+$msu-red: #fe4a49;
 
 
 

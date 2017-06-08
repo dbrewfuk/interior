@@ -1,19 +1,23 @@
+<<<<<<< Updated upstream
 import analytics from './analytics';
 import supports from './supports';
 import './vendor/moment.js';
 import './vendor/velocity';
 import './vendor/instafeed';
+=======
+var supports = require('./supports');
 
-import './vendor/fitvids';
-import './site-navigation';
-import './quick-links';
-import './accordion';
-import './page-anchors';
-import './visibility-toggle';
-import './banner';
-import './quote-slider';
-import './twitter-feed';
-import './facebook-feed';
+import './vendor/prism.js';
+>>>>>>> Stashed changes
+
+
+
+// Stuff to be organized later...
+
+$('.js-msu-clear-search').on('click', function(){
+
+});
+
 
 
 
@@ -33,4 +37,16 @@ if (!supports.flexbox()) {
 analytics.track();
 
 
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
       

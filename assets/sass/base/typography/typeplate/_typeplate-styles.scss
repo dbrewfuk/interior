@@ -14,6 +14,13 @@ html {
     font: $typl8-font-weight #{$typl8-desktop-font-size + "%"}/#{$typl8-line-height} $typl8-font-family;
   }
 }
+  @include media(big-desktop){
+  @if $typl8-custom-font {
+    font: $typl8-font-weight #{$typl8-bigDesktop-font-size + "%"}/#{$typl8-line-height} $typl8-custom-font, $typl8-font-family;
+  } @else {
+    font: $typl8-font-weight #{$typl8-bigDesktop-font-size + "%"}/#{$typl8-line-height} $typl8-font-family;
+  }
+}
 }
 
 body {

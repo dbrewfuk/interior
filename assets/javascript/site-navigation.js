@@ -7,7 +7,16 @@ $(function() {
     });
 });
 
-$(document).on('click', '.js-site-navigation-toggle', function() {
-    $('.site-navigation').toggleClass('is-visible');
+$('.js-site-navigation-toggle').on('click', function() {
+    $('.site-navigation').addClass('is-visible');
+    $('.pl-page-mask').addClass('is-active');
     $(this).toggleClass('is-toggled');
 });
+
+$(document).on('click','.pl-page-mask', function(){
+	$('.pl-page-mask').removeClass('is-active');
+	$('.site-navigation').removeClass('is-visible');
+	$('.js-site-navigation-toggle').removeClass('is-toggled');
+});
+
+

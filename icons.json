@@ -1,11 +1,33 @@
 [
   {
     "sizes": [24, 48],
+<<<<<<< Updated upstream
     "ids": ["grey","white","msu-blue"],
     "fills": ["#797979","#ffffff","#5381ac"],
     "icons": [
       "action/search",
+=======
+    "ids": ["black", "light-grey","grey","white","msu-blue","red","yellow","msu-navy","msu-gold","green","ballblue"],
+    "fills": ["#484848", "#dddddd","#797979","#ffffff","#00A4E3","#fa5e5b","#f4e565","#142C43","#ecac00","#4AB657","#2AB7CA"],
+    "icons": [
+      "action/search",
+      "action/code",
+      "action/help",
+      "alert/error",
+      "action/favorite",
+      "action/favorite_border",
+      "action/list",
+      "action/view_module",
+      "action/view_headline",
+      "action/view_list",
+      "av/play_arrow",
+      "av/play_circle_filled",
+      "av/play_circle_outline",
+>>>>>>> Stashed changes
       "communication/business",
+      "communication/live_help",
+      "communication/call",
+      "content/filter_list",
       "content/mail",
       "content/sort",
       "navigation/menu",
@@ -13,7 +35,27 @@
       "navigation/expand_less",
       "navigation/chevron_left",
       "navigation/chevron_right",
+<<<<<<< Updated upstream
       "editor/insert_photo"
+=======
+      "navigation/close",
+      "navigation/more_horiz",
+      "editor/insert_photo",
+      "file/file_download",
+      "social/school"
+    ]
+  },
+  {
+    "sizes": [24],
+    "ids": ["black","light-grey","grey","white","msu-blue","red","yellow","msu-navy","msu-gold","green"],
+    "fills": ["#000000","#dddddd","#797979","#ffffff","#5381ac","#fa5e5b","#f4e565","#142C43","#ecac00","#4AB657"],
+    "icons": [
+     
+      "av/sort_by_alpha"
+>>>>>>> Stashed changes
     ]
   }
 ]
+
+
+  

@@ -8,7 +8,7 @@
 			@include aspect-ratio(16,9,div);
 		}
 		span {
-			@extend %position-centered;
+			@include absolute-centered();
 			color: #fff;
 			font-weight: 600;
 		}

@@ -1,52 +1,5904 @@
 
+
 .icon {
-    
+
 }
 
 .icon:before {
     content:' ';
-    font-size: 10px;
     vertical-align:middle;
     display: inline-block;
     background-image: url("images/svg/sprite.svg");
     background-repeat: no-repeat;
+<<<<<<< Updated upstream
     background-size: 4.8em 216em;
+=======
+    background-size: (100/1.9) + em (2364.4/1.9) + em;
+}
+
+@mixin shared-icon-stuff(){
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("images/svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: (100/1.9) + em (2364.4/1.9) + em;
+    
+>>>>>>> Stashed changes
 }
 
 .no-svg .icon:before {
     background-image: url("images/svg/sprite.png");
 }
+
 $icons: (
 
 
-business-grey-24:(
-    background-position: 0em 0em,
-    width: 2.4em,
-    height: 2.4em,
-),
+
+  business-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: 0,
+      background-position: 0px 0px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
 
 
-business-grey-48:(
-    background-position: 0em -2.4em,
-    width: 4.8em,
-    height: 4.8em,
-),
 
 
-business-msu-blue-24:(
-    background-position: 0em -7.2em,
-    width: 2.4em,
-    height: 2.4em,
-),
+  business-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -2.4,
+      background-position: 0px -2.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
 
 
-business-msu-blue-48:(
-    background-position: 0em -9.6em,
-    width: 4.8em,
-    height: 4.8em,
-),
 
 
+  business-black-24: (
+    backgroundX: 0,
+    backgroundY: -7.2,
+      background-position: 0px -7.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-black-48: (
+    backgroundX: 0,
+    backgroundY: -9.6,
+      background-position: 0px -9.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-green-24: (
+    backgroundX: 0,
+    backgroundY: -14.4,
+      background-position: 0px -14.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-green-48: (
+    backgroundX: 0,
+    backgroundY: -16.8,
+      background-position: 0px -16.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-grey-24: (
+    backgroundX: 0,
+    backgroundY: -21.6,
+      background-position: 0px -21.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-grey-48: (
+    backgroundX: 0,
+    backgroundY: -24,
+      background-position: 0px -24px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -28.8,
+      background-position: 0px -28.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -31.2,
+      background-position: 0px -31.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -36,
+      background-position: 0px -36px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -38.4,
+      background-position: 0px -38.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -43.2,
+      background-position: 0px -43.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -45.6,
+      background-position: 0px -45.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -50.4,
+      background-position: 0px -50.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -52.8,
+      background-position: 0px -52.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-red-24: (
+    backgroundX: 0,
+    backgroundY: -57.6,
+      background-position: 0px -57.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-red-48: (
+    backgroundX: 0,
+    backgroundY: -60,
+      background-position: 0px -60px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-white-24: (
+    backgroundX: 0,
+    backgroundY: -64.8,
+      background-position: 0px -64.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-white-48: (
+    backgroundX: 0,
+    backgroundY: -67.2,
+      background-position: 0px -67.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  business-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -72,
+      background-position: 0px -72px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  business-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -74.4,
+      background-position: 0px -74.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -79.2,
+      background-position: 0px -79.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -81.6,
+      background-position: 0px -81.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-black-24: (
+    backgroundX: 0,
+    backgroundY: -86.4,
+      background-position: 0px -86.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-black-48: (
+    backgroundX: 0,
+    backgroundY: -88.8,
+      background-position: 0px -88.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-green-24: (
+    backgroundX: 0,
+    backgroundY: -93.6,
+      background-position: 0px -93.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-green-48: (
+    backgroundX: 0,
+    backgroundY: -96,
+      background-position: 0px -96px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-grey-24: (
+    backgroundX: 0,
+    backgroundY: -100.8,
+      background-position: 0px -100.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-grey-48: (
+    backgroundX: 0,
+    backgroundY: -103.2,
+      background-position: 0px -103.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -108,
+      background-position: 0px -108px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -110.4,
+      background-position: 0px -110.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -115.2,
+      background-position: 0px -115.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -117.6,
+      background-position: 0px -117.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -122.4,
+      background-position: 0px -122.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -124.8,
+      background-position: 0px -124.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -129.6,
+      background-position: 0px -129.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -132,
+      background-position: 0px -132px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-red-24: (
+    backgroundX: 0,
+    backgroundY: -136.8,
+      background-position: 0px -136.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-red-48: (
+    backgroundX: 0,
+    backgroundY: -139.2,
+      background-position: 0px -139.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-white-24: (
+    backgroundX: 0,
+    backgroundY: -144,
+      background-position: 0px -144px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-white-48: (
+    backgroundX: 0,
+    backgroundY: -146.4,
+      background-position: 0px -146.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  call-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -151.2,
+      background-position: 0px -151.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  call-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -153.6,
+      background-position: 0px -153.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  cha_logo-color-24: (
+    backgroundX: 0,
+    backgroundY: -158.4,
+      background-position: 0px -158.4px,
+      width: 100px,
+      height: 62.5px,
+  ),
+
+
+
+
+  cha_logo-color-48: (
+    backgroundX: 0,
+    backgroundY: -220.9,
+      background-position: 0px -220.9px,
+      width: 9.95px,
+      height: 4.82px,
+  ),
+
+
+
+
+  cha_logo-color-80: (
+    backgroundX: 0,
+    backgroundY: -225.8,
+      background-position: 0px -225.8px,
+      width: 16.6px,
+      height: 8px,
+  ),
+
+
+
+
+  chevron_left-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -233.8,
+      background-position: 0px -233.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -236.2,
+      background-position: 0px -236.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-black-24: (
+    backgroundX: 0,
+    backgroundY: -241,
+      background-position: 0px -241px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-black-48: (
+    backgroundX: 0,
+    backgroundY: -243.4,
+      background-position: 0px -243.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-green-24: (
+    backgroundX: 0,
+    backgroundY: -248.2,
+      background-position: 0px -248.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-green-48: (
+    backgroundX: 0,
+    backgroundY: -250.6,
+      background-position: 0px -250.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-grey-24: (
+    backgroundX: 0,
+    backgroundY: -255.4,
+      background-position: 0px -255.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-grey-48: (
+    backgroundX: 0,
+    backgroundY: -257.8,
+      background-position: 0px -257.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -262.6,
+      background-position: 0px -262.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -265,
+      background-position: 0px -265px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -269.8,
+      background-position: 0px -269.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -272.2,
+      background-position: 0px -272.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -277,
+      background-position: 0px -277px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -279.4,
+      background-position: 0px -279.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -284.2,
+      background-position: 0px -284.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -286.6,
+      background-position: 0px -286.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-red-24: (
+    backgroundX: 0,
+    backgroundY: -291.4,
+      background-position: 0px -291.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-red-48: (
+    backgroundX: 0,
+    backgroundY: -293.8,
+      background-position: 0px -293.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-white-24: (
+    backgroundX: 0,
+    backgroundY: -298.6,
+      background-position: 0px -298.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-white-48: (
+    backgroundX: 0,
+    backgroundY: -301,
+      background-position: 0px -301px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_left-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -305.8,
+      background-position: 0px -305.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_left-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -308.2,
+      background-position: 0px -308.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -313,
+      background-position: 0px -313px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -315.4,
+      background-position: 0px -315.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-black-24: (
+    backgroundX: 0,
+    backgroundY: -320.2,
+      background-position: 0px -320.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-black-48: (
+    backgroundX: 0,
+    backgroundY: -322.6,
+      background-position: 0px -322.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-green-24: (
+    backgroundX: 0,
+    backgroundY: -327.4,
+      background-position: 0px -327.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-green-48: (
+    backgroundX: 0,
+    backgroundY: -329.8,
+      background-position: 0px -329.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-grey-24: (
+    backgroundX: 0,
+    backgroundY: -334.6,
+      background-position: 0px -334.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-grey-48: (
+    backgroundX: 0,
+    backgroundY: -337,
+      background-position: 0px -337px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -341.8,
+      background-position: 0px -341.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -344.2,
+      background-position: 0px -344.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -349,
+      background-position: 0px -349px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -351.4,
+      background-position: 0px -351.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -356.2,
+      background-position: 0px -356.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -358.6,
+      background-position: 0px -358.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -363.4,
+      background-position: 0px -363.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -365.8,
+      background-position: 0px -365.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-red-24: (
+    backgroundX: 0,
+    backgroundY: -370.6,
+      background-position: 0px -370.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-red-48: (
+    backgroundX: 0,
+    backgroundY: -373,
+      background-position: 0px -373px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-white-24: (
+    backgroundX: 0,
+    backgroundY: -377.8,
+      background-position: 0px -377.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-white-48: (
+    backgroundX: 0,
+    backgroundY: -380.2,
+      background-position: 0px -380.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  chevron_right-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -385,
+      background-position: 0px -385px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  chevron_right-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -387.4,
+      background-position: 0px -387.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -392.2,
+      background-position: 0px -392.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -394.6,
+      background-position: 0px -394.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-black-24: (
+    backgroundX: 0,
+    backgroundY: -399.4,
+      background-position: 0px -399.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-black-48: (
+    backgroundX: 0,
+    backgroundY: -401.8,
+      background-position: 0px -401.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-green-24: (
+    backgroundX: 0,
+    backgroundY: -406.6,
+      background-position: 0px -406.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-green-48: (
+    backgroundX: 0,
+    backgroundY: -409,
+      background-position: 0px -409px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-grey-24: (
+    backgroundX: 0,
+    backgroundY: -413.8,
+      background-position: 0px -413.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-grey-48: (
+    backgroundX: 0,
+    backgroundY: -416.2,
+      background-position: 0px -416.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -421,
+      background-position: 0px -421px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -423.4,
+      background-position: 0px -423.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -428.2,
+      background-position: 0px -428.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -430.6,
+      background-position: 0px -430.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -435.4,
+      background-position: 0px -435.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -437.8,
+      background-position: 0px -437.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -442.6,
+      background-position: 0px -442.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -445,
+      background-position: 0px -445px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-red-24: (
+    backgroundX: 0,
+    backgroundY: -449.8,
+      background-position: 0px -449.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-red-48: (
+    backgroundX: 0,
+    backgroundY: -452.2,
+      background-position: 0px -452.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-white-24: (
+    backgroundX: 0,
+    backgroundY: -457,
+      background-position: 0px -457px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-white-48: (
+    backgroundX: 0,
+    backgroundY: -459.4,
+      background-position: 0px -459.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  close-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -464.2,
+      background-position: 0px -464.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  close-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -466.6,
+      background-position: 0px -466.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -471.4,
+      background-position: 0px -471.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -473.8,
+      background-position: 0px -473.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-black-24: (
+    backgroundX: 0,
+    backgroundY: -478.6,
+      background-position: 0px -478.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-black-48: (
+    backgroundX: 0,
+    backgroundY: -481,
+      background-position: 0px -481px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-green-24: (
+    backgroundX: 0,
+    backgroundY: -485.8,
+      background-position: 0px -485.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-green-48: (
+    backgroundX: 0,
+    backgroundY: -488.2,
+      background-position: 0px -488.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-grey-24: (
+    backgroundX: 0,
+    backgroundY: -493,
+      background-position: 0px -493px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-grey-48: (
+    backgroundX: 0,
+    backgroundY: -495.4,
+      background-position: 0px -495.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -500.2,
+      background-position: 0px -500.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -502.6,
+      background-position: 0px -502.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -507.4,
+      background-position: 0px -507.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -509.8,
+      background-position: 0px -509.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -514.6,
+      background-position: 0px -514.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -517,
+      background-position: 0px -517px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -521.8,
+      background-position: 0px -521.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -524.2,
+      background-position: 0px -524.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-red-24: (
+    backgroundX: 0,
+    backgroundY: -529,
+      background-position: 0px -529px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-red-48: (
+    backgroundX: 0,
+    backgroundY: -531.4,
+      background-position: 0px -531.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-white-24: (
+    backgroundX: 0,
+    backgroundY: -536.2,
+      background-position: 0px -536.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-white-48: (
+    backgroundX: 0,
+    backgroundY: -538.6,
+      background-position: 0px -538.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  code-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -543.4,
+      background-position: 0px -543.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  code-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -545.8,
+      background-position: 0px -545.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -550.6,
+      background-position: 0px -550.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -553,
+      background-position: 0px -553px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-black-24: (
+    backgroundX: 0,
+    backgroundY: -557.8,
+      background-position: 0px -557.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-black-48: (
+    backgroundX: 0,
+    backgroundY: -560.2,
+      background-position: 0px -560.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-green-24: (
+    backgroundX: 0,
+    backgroundY: -565,
+      background-position: 0px -565px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-green-48: (
+    backgroundX: 0,
+    backgroundY: -567.4,
+      background-position: 0px -567.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-grey-24: (
+    backgroundX: 0,
+    backgroundY: -572.2,
+      background-position: 0px -572.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-grey-48: (
+    backgroundX: 0,
+    backgroundY: -574.6,
+      background-position: 0px -574.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -579.4,
+      background-position: 0px -579.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -581.8,
+      background-position: 0px -581.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -586.6,
+      background-position: 0px -586.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -589,
+      background-position: 0px -589px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -593.8,
+      background-position: 0px -593.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -596.2,
+      background-position: 0px -596.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -601,
+      background-position: 0px -601px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -603.4,
+      background-position: 0px -603.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-red-24: (
+    backgroundX: 0,
+    backgroundY: -608.2,
+      background-position: 0px -608.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-red-48: (
+    backgroundX: 0,
+    backgroundY: -610.6,
+      background-position: 0px -610.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-white-24: (
+    backgroundX: 0,
+    backgroundY: -615.4,
+      background-position: 0px -615.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-white-48: (
+    backgroundX: 0,
+    backgroundY: -617.8,
+      background-position: 0px -617.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  error-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -622.6,
+      background-position: 0px -622.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  error-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -625,
+      background-position: 0px -625px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -629.8,
+      background-position: 0px -629.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -632.2,
+      background-position: 0px -632.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-black-24: (
+    backgroundX: 0,
+    backgroundY: -637,
+      background-position: 0px -637px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-black-48: (
+    backgroundX: 0,
+    backgroundY: -639.4,
+      background-position: 0px -639.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-green-24: (
+    backgroundX: 0,
+    backgroundY: -644.2,
+      background-position: 0px -644.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-green-48: (
+    backgroundX: 0,
+    backgroundY: -646.6,
+      background-position: 0px -646.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-grey-24: (
+    backgroundX: 0,
+    backgroundY: -651.4,
+      background-position: 0px -651.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-grey-48: (
+    backgroundX: 0,
+    backgroundY: -653.8,
+      background-position: 0px -653.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -658.6,
+      background-position: 0px -658.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -661,
+      background-position: 0px -661px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -665.8,
+      background-position: 0px -665.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -668.2,
+      background-position: 0px -668.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -673,
+      background-position: 0px -673px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -675.4,
+      background-position: 0px -675.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -680.2,
+      background-position: 0px -680.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -682.6,
+      background-position: 0px -682.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-red-24: (
+    backgroundX: 0,
+    backgroundY: -687.4,
+      background-position: 0px -687.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-red-48: (
+    backgroundX: 0,
+    backgroundY: -689.8,
+      background-position: 0px -689.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-white-24: (
+    backgroundX: 0,
+    backgroundY: -694.6,
+      background-position: 0px -694.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-white-48: (
+    backgroundX: 0,
+    backgroundY: -697,
+      background-position: 0px -697px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_less-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -701.8,
+      background-position: 0px -701.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_less-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -704.2,
+      background-position: 0px -704.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -709,
+      background-position: 0px -709px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -711.4,
+      background-position: 0px -711.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-black-24: (
+    backgroundX: 0,
+    backgroundY: -716.2,
+      background-position: 0px -716.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-black-48: (
+    backgroundX: 0,
+    backgroundY: -718.6,
+      background-position: 0px -718.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-green-24: (
+    backgroundX: 0,
+    backgroundY: -723.4,
+      background-position: 0px -723.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-green-48: (
+    backgroundX: 0,
+    backgroundY: -725.8,
+      background-position: 0px -725.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-grey-24: (
+    backgroundX: 0,
+    backgroundY: -730.6,
+      background-position: 0px -730.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-grey-48: (
+    backgroundX: 0,
+    backgroundY: -733,
+      background-position: 0px -733px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -737.8,
+      background-position: 0px -737.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -740.2,
+      background-position: 0px -740.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -745,
+      background-position: 0px -745px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -747.4,
+      background-position: 0px -747.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -752.2,
+      background-position: 0px -752.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -754.6,
+      background-position: 0px -754.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -759.4,
+      background-position: 0px -759.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -761.8,
+      background-position: 0px -761.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-red-24: (
+    backgroundX: 0,
+    backgroundY: -766.6,
+      background-position: 0px -766.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-red-48: (
+    backgroundX: 0,
+    backgroundY: -769,
+      background-position: 0px -769px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-white-24: (
+    backgroundX: 0,
+    backgroundY: -773.8,
+      background-position: 0px -773.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-white-48: (
+    backgroundX: 0,
+    backgroundY: -776.2,
+      background-position: 0px -776.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  expand_more-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -781,
+      background-position: 0px -781px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  expand_more-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -783.4,
+      background-position: 0px -783.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  facebook-blue-small: (
+    backgroundX: 0,
+    backgroundY: -788.2,
+      background-position: 0px -788.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  facebook-color-small: (
+    backgroundX: 0,
+    backgroundY: -790.6,
+      background-position: 0px -790.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  facebook-dark-small: (
+    backgroundX: 0,
+    backgroundY: -793,
+      background-position: 0px -793px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  facebook-white-small: (
+    backgroundX: 0,
+    backgroundY: -795.4,
+      background-position: 0px -795.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -797.8,
+      background-position: 0px -797.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -800.2,
+      background-position: 0px -800.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-black-24: (
+    backgroundX: 0,
+    backgroundY: -805,
+      background-position: 0px -805px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-black-48: (
+    backgroundX: 0,
+    backgroundY: -807.4,
+      background-position: 0px -807.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-green-24: (
+    backgroundX: 0,
+    backgroundY: -812.2,
+      background-position: 0px -812.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-green-48: (
+    backgroundX: 0,
+    backgroundY: -814.6,
+      background-position: 0px -814.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-grey-24: (
+    backgroundX: 0,
+    backgroundY: -819.4,
+      background-position: 0px -819.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-grey-48: (
+    backgroundX: 0,
+    backgroundY: -821.8,
+      background-position: 0px -821.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -826.6,
+      background-position: 0px -826.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -829,
+      background-position: 0px -829px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -833.8,
+      background-position: 0px -833.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -836.2,
+      background-position: 0px -836.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -841,
+      background-position: 0px -841px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -843.4,
+      background-position: 0px -843.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -848.2,
+      background-position: 0px -848.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -850.6,
+      background-position: 0px -850.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-red-24: (
+    backgroundX: 0,
+    backgroundY: -855.4,
+      background-position: 0px -855.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-red-48: (
+    backgroundX: 0,
+    backgroundY: -857.8,
+      background-position: 0px -857.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-white-24: (
+    backgroundX: 0,
+    backgroundY: -862.6,
+      background-position: 0px -862.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-white-48: (
+    backgroundX: 0,
+    backgroundY: -865,
+      background-position: 0px -865px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -869.8,
+      background-position: 0px -869.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -872.2,
+      background-position: 0px -872.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -877,
+      background-position: 0px -877px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -879.4,
+      background-position: 0px -879.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-black-24: (
+    backgroundX: 0,
+    backgroundY: -884.2,
+      background-position: 0px -884.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-black-48: (
+    backgroundX: 0,
+    backgroundY: -886.6,
+      background-position: 0px -886.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-green-24: (
+    backgroundX: 0,
+    backgroundY: -891.4,
+      background-position: 0px -891.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-green-48: (
+    backgroundX: 0,
+    backgroundY: -893.8,
+      background-position: 0px -893.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-grey-24: (
+    backgroundX: 0,
+    backgroundY: -898.6,
+      background-position: 0px -898.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-grey-48: (
+    backgroundX: 0,
+    backgroundY: -901,
+      background-position: 0px -901px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -905.8,
+      background-position: 0px -905.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -908.2,
+      background-position: 0px -908.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -913,
+      background-position: 0px -913px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -915.4,
+      background-position: 0px -915.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -920.2,
+      background-position: 0px -920.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -922.6,
+      background-position: 0px -922.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -927.4,
+      background-position: 0px -927.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -929.8,
+      background-position: 0px -929.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-red-24: (
+    backgroundX: 0,
+    backgroundY: -934.6,
+      background-position: 0px -934.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-red-48: (
+    backgroundX: 0,
+    backgroundY: -937,
+      background-position: 0px -937px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-white-24: (
+    backgroundX: 0,
+    backgroundY: -941.8,
+      background-position: 0px -941.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-white-48: (
+    backgroundX: 0,
+    backgroundY: -944.2,
+      background-position: 0px -944.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  favorite_border-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -949,
+      background-position: 0px -949px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  favorite_border-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -951.4,
+      background-position: 0px -951.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -956.2,
+      background-position: 0px -956.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -958.6,
+      background-position: 0px -958.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-black-24: (
+    backgroundX: 0,
+    backgroundY: -963.4,
+      background-position: 0px -963.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-black-48: (
+    backgroundX: 0,
+    backgroundY: -965.8,
+      background-position: 0px -965.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-green-24: (
+    backgroundX: 0,
+    backgroundY: -970.6,
+      background-position: 0px -970.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-green-48: (
+    backgroundX: 0,
+    backgroundY: -973,
+      background-position: 0px -973px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-grey-24: (
+    backgroundX: 0,
+    backgroundY: -977.8,
+      background-position: 0px -977.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-grey-48: (
+    backgroundX: 0,
+    backgroundY: -980.2,
+      background-position: 0px -980.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -985,
+      background-position: 0px -985px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -987.4,
+      background-position: 0px -987.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -992.2,
+      background-position: 0px -992.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -994.6,
+      background-position: 0px -994.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -999.4,
+      background-position: 0px -999.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1001.8,
+      background-position: 0px -1001.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1006.6,
+      background-position: 0px -1006.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1009,
+      background-position: 0px -1009px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-red-24: (
+    backgroundX: 0,
+    backgroundY: -1013.8,
+      background-position: 0px -1013.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-red-48: (
+    backgroundX: 0,
+    backgroundY: -1016.2,
+      background-position: 0px -1016.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-white-24: (
+    backgroundX: 0,
+    backgroundY: -1021,
+      background-position: 0px -1021px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-white-48: (
+    backgroundX: 0,
+    backgroundY: -1023.4,
+      background-position: 0px -1023.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  file_download-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1028.2,
+      background-position: 0px -1028.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  file_download-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1030.6,
+      background-position: 0px -1030.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1035.4,
+      background-position: 0px -1035.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1037.8,
+      background-position: 0px -1037.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-black-24: (
+    backgroundX: 0,
+    backgroundY: -1042.6,
+      background-position: 0px -1042.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-black-48: (
+    backgroundX: 0,
+    backgroundY: -1045,
+      background-position: 0px -1045px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-green-24: (
+    backgroundX: 0,
+    backgroundY: -1049.8,
+      background-position: 0px -1049.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-green-48: (
+    backgroundX: 0,
+    backgroundY: -1052.2,
+      background-position: 0px -1052.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1057,
+      background-position: 0px -1057px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1059.4,
+      background-position: 0px -1059.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1064.2,
+      background-position: 0px -1064.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1066.6,
+      background-position: 0px -1066.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1071.4,
+      background-position: 0px -1071.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1073.8,
+      background-position: 0px -1073.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1078.6,
+      background-position: 0px -1078.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1081,
+      background-position: 0px -1081px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1085.8,
+      background-position: 0px -1085.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1088.2,
+      background-position: 0px -1088.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-red-24: (
+    backgroundX: 0,
+    backgroundY: -1093,
+      background-position: 0px -1093px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-red-48: (
+    backgroundX: 0,
+    backgroundY: -1095.4,
+      background-position: 0px -1095.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-white-24: (
+    backgroundX: 0,
+    backgroundY: -1100.2,
+      background-position: 0px -1100.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-white-48: (
+    backgroundX: 0,
+    backgroundY: -1102.6,
+      background-position: 0px -1102.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  filter_list-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1107.4,
+      background-position: 0px -1107.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  filter_list-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1109.8,
+      background-position: 0px -1109.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1114.6,
+      background-position: 0px -1114.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1117,
+      background-position: 0px -1117px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-black-24: (
+    backgroundX: 0,
+    backgroundY: -1121.8,
+      background-position: 0px -1121.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-black-48: (
+    backgroundX: 0,
+    backgroundY: -1124.2,
+      background-position: 0px -1124.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-green-24: (
+    backgroundX: 0,
+    backgroundY: -1129,
+      background-position: 0px -1129px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-green-48: (
+    backgroundX: 0,
+    backgroundY: -1131.4,
+      background-position: 0px -1131.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1136.2,
+      background-position: 0px -1136.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1138.6,
+      background-position: 0px -1138.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1143.4,
+      background-position: 0px -1143.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1145.8,
+      background-position: 0px -1145.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1150.6,
+      background-position: 0px -1150.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1153,
+      background-position: 0px -1153px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1157.8,
+      background-position: 0px -1157.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1160.2,
+      background-position: 0px -1160.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1165,
+      background-position: 0px -1165px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1167.4,
+      background-position: 0px -1167.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-red-24: (
+    backgroundX: 0,
+    backgroundY: -1172.2,
+      background-position: 0px -1172.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-red-48: (
+    backgroundX: 0,
+    backgroundY: -1174.6,
+      background-position: 0px -1174.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-white-24: (
+    backgroundX: 0,
+    backgroundY: -1179.4,
+      background-position: 0px -1179.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-white-48: (
+    backgroundX: 0,
+    backgroundY: -1181.8,
+      background-position: 0px -1181.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  help-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1186.6,
+      background-position: 0px -1186.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  help-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1189,
+      background-position: 0px -1189px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1193.8,
+      background-position: 0px -1193.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1196.2,
+      background-position: 0px -1196.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-black-24: (
+    backgroundX: 0,
+    backgroundY: -1201,
+      background-position: 0px -1201px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-black-48: (
+    backgroundX: 0,
+    backgroundY: -1203.4,
+      background-position: 0px -1203.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-green-24: (
+    backgroundX: 0,
+    backgroundY: -1208.2,
+      background-position: 0px -1208.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-green-48: (
+    backgroundX: 0,
+    backgroundY: -1210.6,
+      background-position: 0px -1210.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1215.4,
+      background-position: 0px -1215.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1217.8,
+      background-position: 0px -1217.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1222.6,
+      background-position: 0px -1222.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1225,
+      background-position: 0px -1225px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1229.8,
+      background-position: 0px -1229.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1232.2,
+      background-position: 0px -1232.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1237,
+      background-position: 0px -1237px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1239.4,
+      background-position: 0px -1239.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1244.2,
+      background-position: 0px -1244.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1246.6,
+      background-position: 0px -1246.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-red-24: (
+    backgroundX: 0,
+    backgroundY: -1251.4,
+      background-position: 0px -1251.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-red-48: (
+    backgroundX: 0,
+    backgroundY: -1253.8,
+      background-position: 0px -1253.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-white-24: (
+    backgroundX: 0,
+    backgroundY: -1258.6,
+      background-position: 0px -1258.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-white-48: (
+    backgroundX: 0,
+    backgroundY: -1261,
+      background-position: 0px -1261px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  insert_photo-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1265.8,
+      background-position: 0px -1265.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  insert_photo-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1268.2,
+      background-position: 0px -1268.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  instagram-blue-small: (
+    backgroundX: 0,
+    backgroundY: -1273,
+      background-position: 0px -1273px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  instagram-dark-large: (
+    backgroundX: 0,
+    backgroundY: -1275.4,
+      background-position: 0px -1275.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  instagram-dark-small: (
+    backgroundX: 0,
+    backgroundY: -1280.2,
+      background-position: 0px -1280.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  instagram-white-small: (
+    backgroundX: 0,
+    backgroundY: -1282.6,
+      background-position: 0px -1282.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  linkedin-dark-small: (
+    backgroundX: 0,
+    backgroundY: -1285,
+      background-position: 0px -1285px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  linkedin-white-small: (
+    backgroundX: 0,
+    backgroundY: -1287.4,
+      background-position: 0px -1287.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1289.8,
+      background-position: 0px -1289.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1292.2,
+      background-position: 0px -1292.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-black-24: (
+    backgroundX: 0,
+    backgroundY: -1297,
+      background-position: 0px -1297px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-black-48: (
+    backgroundX: 0,
+    backgroundY: -1299.4,
+      background-position: 0px -1299.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-green-24: (
+    backgroundX: 0,
+    backgroundY: -1304.2,
+      background-position: 0px -1304.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-green-48: (
+    backgroundX: 0,
+    backgroundY: -1306.6,
+      background-position: 0px -1306.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1311.4,
+      background-position: 0px -1311.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1313.8,
+      background-position: 0px -1313.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1318.6,
+      background-position: 0px -1318.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1321,
+      background-position: 0px -1321px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1325.8,
+      background-position: 0px -1325.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1328.2,
+      background-position: 0px -1328.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1333,
+      background-position: 0px -1333px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1335.4,
+      background-position: 0px -1335.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1340.2,
+      background-position: 0px -1340.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1342.6,
+      background-position: 0px -1342.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-red-24: (
+    backgroundX: 0,
+    backgroundY: -1347.4,
+      background-position: 0px -1347.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-red-48: (
+    backgroundX: 0,
+    backgroundY: -1349.8,
+      background-position: 0px -1349.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-white-24: (
+    backgroundX: 0,
+    backgroundY: -1354.6,
+      background-position: 0px -1354.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-white-48: (
+    backgroundX: 0,
+    backgroundY: -1357,
+      background-position: 0px -1357px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  live_help-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1361.8,
+      background-position: 0px -1361.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  live_help-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1364.2,
+      background-position: 0px -1364.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  logo-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1369,
+      background-position: 0px -1369px,
+      width: 26.566000000000003px,
+      height: 4.8px,
+  ),
+
+
+
+
+  logo-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1373.8,
+      background-position: 0px -1373.8px,
+      width: 26.566000000000003px,
+      height: 4.8px,
+  ),
+
+
+
+
+  logo-navy-large: (
+    backgroundX: 0,
+    backgroundY: -1378.6,
+      background-position: 0px -1378.6px,
+      width: 41.660000000000004px,
+      height: 7.529999999999999px,
+  ),
+
+
+
+
+  logo-primary-48: (
+    backgroundX: 0,
+    backgroundY: -1386.2,
+      background-position: 0px -1386.2px,
+      width: 26.566000000000003px,
+      height: 4.8px,
+  ),
+
+
+
+
+  logo_color-large: (
+    backgroundX: 0,
+    backgroundY: -1391,
+      background-position: 0px -1391px,
+      width: 26.566000000000003px,
+      height: 4.8px,
+  ),
+
+
+
+
+  logo_shield-gold-large: (
+    backgroundX: 0,
+    backgroundY: -1395.8,
+      background-position: 0px -1395.8px,
+      width: 5.92px,
+      height: 7.540000000000001px,
+  ),
+
+
+
+
+  logo_shield-navy-large: (
+    backgroundX: 0,
+    backgroundY: -1403.4,
+      background-position: 0px -1403.4px,
+      width: 5.92px,
+      height: 7.540000000000001px,
+  ),
+
+
+
+
+  logo_shield_minimal-gold-large: (
+    backgroundX: 0,
+    backgroundY: -1411,
+      background-position: 0px -1411px,
+      width: 5.92px,
+      height: 7.540000000000001px,
+  ),
+
+
+
+
+  logo_shield_minimal-navy-large: (
+    backgroundX: 0,
+    backgroundY: -1418.6,
+      background-position: 0px -1418.6px,
+      width: 5.92px,
+      height: 7.540000000000001px,
+  ),
+
+
+
+
+  logo_stars-navy-large: (
+    backgroundX: 0,
+    backgroundY: -1426.2,
+      background-position: 0px -1426.2px,
+      width: 3.2299999999999995px,
+      height: 3.15px,
+  ),
+
+
+
+
+  mail-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1429.4,
+      background-position: 0px -1429.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1431.8,
+      background-position: 0px -1431.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-black-24: (
+    backgroundX: 0,
+    backgroundY: -1436.6,
+      background-position: 0px -1436.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-black-48: (
+    backgroundX: 0,
+    backgroundY: -1439,
+      background-position: 0px -1439px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-green-24: (
+    backgroundX: 0,
+    backgroundY: -1443.8,
+      background-position: 0px -1443.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-green-48: (
+    backgroundX: 0,
+    backgroundY: -1446.2,
+      background-position: 0px -1446.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1451,
+      background-position: 0px -1451px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1453.4,
+      background-position: 0px -1453.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1458.2,
+      background-position: 0px -1458.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1460.6,
+      background-position: 0px -1460.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1465.4,
+      background-position: 0px -1465.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1467.8,
+      background-position: 0px -1467.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1472.6,
+      background-position: 0px -1472.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1475,
+      background-position: 0px -1475px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1479.8,
+      background-position: 0px -1479.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1482.2,
+      background-position: 0px -1482.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-red-24: (
+    backgroundX: 0,
+    backgroundY: -1487,
+      background-position: 0px -1487px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-red-48: (
+    backgroundX: 0,
+    backgroundY: -1489.4,
+      background-position: 0px -1489.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-white-24: (
+    backgroundX: 0,
+    backgroundY: -1494.2,
+      background-position: 0px -1494.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-white-48: (
+    backgroundX: 0,
+    backgroundY: -1496.6,
+      background-position: 0px -1496.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  mail-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1501.4,
+      background-position: 0px -1501.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  mail-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1503.8,
+      background-position: 0px -1503.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1508.6,
+      background-position: 0px -1508.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1511,
+      background-position: 0px -1511px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-black-24: (
+    backgroundX: 0,
+    backgroundY: -1515.8,
+      background-position: 0px -1515.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-black-48: (
+    backgroundX: 0,
+    backgroundY: -1518.2,
+      background-position: 0px -1518.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-green-24: (
+    backgroundX: 0,
+    backgroundY: -1523,
+      background-position: 0px -1523px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-green-48: (
+    backgroundX: 0,
+    backgroundY: -1525.4,
+      background-position: 0px -1525.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1530.2,
+      background-position: 0px -1530.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1532.6,
+      background-position: 0px -1532.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1537.4,
+      background-position: 0px -1537.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1539.8,
+      background-position: 0px -1539.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1544.6,
+      background-position: 0px -1544.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1547,
+      background-position: 0px -1547px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1551.8,
+      background-position: 0px -1551.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1554.2,
+      background-position: 0px -1554.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1559,
+      background-position: 0px -1559px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1561.4,
+      background-position: 0px -1561.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-red-24: (
+    backgroundX: 0,
+    backgroundY: -1566.2,
+      background-position: 0px -1566.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-red-48: (
+    backgroundX: 0,
+    backgroundY: -1568.6,
+      background-position: 0px -1568.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-white-24: (
+    backgroundX: 0,
+    backgroundY: -1573.4,
+      background-position: 0px -1573.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-white-48: (
+    backgroundX: 0,
+    backgroundY: -1575.8,
+      background-position: 0px -1575.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  menu-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1580.6,
+      background-position: 0px -1580.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  menu-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1583,
+      background-position: 0px -1583px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1587.8,
+      background-position: 0px -1587.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1590.2,
+      background-position: 0px -1590.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-black-24: (
+    backgroundX: 0,
+    backgroundY: -1595,
+      background-position: 0px -1595px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-black-48: (
+    backgroundX: 0,
+    backgroundY: -1597.4,
+      background-position: 0px -1597.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-green-24: (
+    backgroundX: 0,
+    backgroundY: -1602.2,
+      background-position: 0px -1602.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-green-48: (
+    backgroundX: 0,
+    backgroundY: -1604.6,
+      background-position: 0px -1604.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1609.4,
+      background-position: 0px -1609.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1611.8,
+      background-position: 0px -1611.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1616.6,
+      background-position: 0px -1616.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1619,
+      background-position: 0px -1619px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1623.8,
+      background-position: 0px -1623.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1626.2,
+      background-position: 0px -1626.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1631,
+      background-position: 0px -1631px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1633.4,
+      background-position: 0px -1633.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1638.2,
+      background-position: 0px -1638.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1640.6,
+      background-position: 0px -1640.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-red-24: (
+    backgroundX: 0,
+    backgroundY: -1645.4,
+      background-position: 0px -1645.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-red-48: (
+    backgroundX: 0,
+    backgroundY: -1647.8,
+      background-position: 0px -1647.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-white-24: (
+    backgroundX: 0,
+    backgroundY: -1652.6,
+      background-position: 0px -1652.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-white-48: (
+    backgroundX: 0,
+    backgroundY: -1655,
+      background-position: 0px -1655px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  more_horiz-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1659.8,
+      background-position: 0px -1659.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  more_horiz-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1662.2,
+      background-position: 0px -1662.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  msu-logo-dark-large: (
+    backgroundX: 0,
+    backgroundY: -1667,
+      background-position: 0px -1667px,
+      width: 36.7px,
+      height: 12.6px,
+  ),
+
+
+
+
+  msu_logo-light-large: (
+    backgroundX: 0,
+    backgroundY: -1679.6,
+      background-position: 0px -1679.6px,
+      width: 36.7px,
+      height: 12.6px,
+  ),
+
+
+
+
+  msu_logo-navyGoldStars-large: (
+    backgroundX: 0,
+    backgroundY: -1692.2,
+      background-position: 0px -1692.2px,
+      width: 36.7px,
+      height: 12.6px,
+  ),
+
+
+
+
+  new_logo-color-large: (
+    backgroundX: 0,
+    backgroundY: -1704.8,
+      background-position: 0px -1704.8px,
+      width: 41.729px,
+      height: 7.531999999999999px,
+  ),
+
+
+
+
+  new_logo-navy_blue-large: (
+    backgroundX: 0,
+    backgroundY: -1712.4,
+      background-position: 0px -1712.4px,
+      width: 41.729px,
+      height: 7.531999999999999px,
+  ),
+
+
+
+
+  pinterest-dark-small: (
+    backgroundX: 0,
+    backgroundY: -1720,
+      background-position: 0px -1720px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  pinterest-white-small: (
+    backgroundX: 0,
+    backgroundY: -1722.4,
+      background-position: 0px -1722.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1724.8,
+      background-position: 0px -1724.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1727.2,
+      background-position: 0px -1727.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-black-24: (
+    backgroundX: 0,
+    backgroundY: -1732,
+      background-position: 0px -1732px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-black-48: (
+    backgroundX: 0,
+    backgroundY: -1734.4,
+      background-position: 0px -1734.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-green-24: (
+    backgroundX: 0,
+    backgroundY: -1739.2,
+      background-position: 0px -1739.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-green-48: (
+    backgroundX: 0,
+    backgroundY: -1741.6,
+      background-position: 0px -1741.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1746.4,
+      background-position: 0px -1746.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1748.8,
+      background-position: 0px -1748.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1753.6,
+      background-position: 0px -1753.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1756,
+      background-position: 0px -1756px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1760.8,
+      background-position: 0px -1760.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1763.2,
+      background-position: 0px -1763.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1768,
+      background-position: 0px -1768px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1770.4,
+      background-position: 0px -1770.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1775.2,
+      background-position: 0px -1775.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1777.6,
+      background-position: 0px -1777.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-red-24: (
+    backgroundX: 0,
+    backgroundY: -1782.4,
+      background-position: 0px -1782.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-red-48: (
+    backgroundX: 0,
+    backgroundY: -1784.8,
+      background-position: 0px -1784.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-white-24: (
+    backgroundX: 0,
+    backgroundY: -1789.6,
+      background-position: 0px -1789.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-white-48: (
+    backgroundX: 0,
+    backgroundY: -1792,
+      background-position: 0px -1792px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_arrow-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1796.8,
+      background-position: 0px -1796.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_arrow-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1799.2,
+      background-position: 0px -1799.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1804,
+      background-position: 0px -1804px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1806.4,
+      background-position: 0px -1806.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-black-24: (
+    backgroundX: 0,
+    backgroundY: -1811.2,
+      background-position: 0px -1811.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-black-48: (
+    backgroundX: 0,
+    backgroundY: -1813.6,
+      background-position: 0px -1813.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-green-24: (
+    backgroundX: 0,
+    backgroundY: -1818.4,
+      background-position: 0px -1818.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-green-48: (
+    backgroundX: 0,
+    backgroundY: -1820.8,
+      background-position: 0px -1820.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1825.6,
+      background-position: 0px -1825.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1828,
+      background-position: 0px -1828px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1832.8,
+      background-position: 0px -1832.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1835.2,
+      background-position: 0px -1835.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1840,
+      background-position: 0px -1840px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1842.4,
+      background-position: 0px -1842.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1847.2,
+      background-position: 0px -1847.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1849.6,
+      background-position: 0px -1849.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1854.4,
+      background-position: 0px -1854.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1856.8,
+      background-position: 0px -1856.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-red-24: (
+    backgroundX: 0,
+    backgroundY: -1861.6,
+      background-position: 0px -1861.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-red-48: (
+    backgroundX: 0,
+    backgroundY: -1864,
+      background-position: 0px -1864px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-white-24: (
+    backgroundX: 0,
+    backgroundY: -1868.8,
+      background-position: 0px -1868.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-white-48: (
+    backgroundX: 0,
+    backgroundY: -1871.2,
+      background-position: 0px -1871.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_filled-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1876,
+      background-position: 0px -1876px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_filled-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1878.4,
+      background-position: 0px -1878.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1883.2,
+      background-position: 0px -1883.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1885.6,
+      background-position: 0px -1885.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-black-24: (
+    backgroundX: 0,
+    backgroundY: -1890.4,
+      background-position: 0px -1890.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-black-48: (
+    backgroundX: 0,
+    backgroundY: -1892.8,
+      background-position: 0px -1892.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-green-24: (
+    backgroundX: 0,
+    backgroundY: -1897.6,
+      background-position: 0px -1897.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-green-48: (
+    backgroundX: 0,
+    backgroundY: -1900,
+      background-position: 0px -1900px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1904.8,
+      background-position: 0px -1904.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1907.2,
+      background-position: 0px -1907.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1912,
+      background-position: 0px -1912px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1914.4,
+      background-position: 0px -1914.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1919.2,
+      background-position: 0px -1919.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -1921.6,
+      background-position: 0px -1921.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -1926.4,
+      background-position: 0px -1926.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -1928.8,
+      background-position: 0px -1928.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -1933.6,
+      background-position: 0px -1933.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -1936,
+      background-position: 0px -1936px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-red-24: (
+    backgroundX: 0,
+    backgroundY: -1940.8,
+      background-position: 0px -1940.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-red-48: (
+    backgroundX: 0,
+    backgroundY: -1943.2,
+      background-position: 0px -1943.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-white-24: (
+    backgroundX: 0,
+    backgroundY: -1948,
+      background-position: 0px -1948px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-white-48: (
+    backgroundX: 0,
+    backgroundY: -1950.4,
+      background-position: 0px -1950.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  play_circle_outline-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -1955.2,
+      background-position: 0px -1955.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  play_circle_outline-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -1957.6,
+      background-position: 0px -1957.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -1962.4,
+      background-position: 0px -1962.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -1964.8,
+      background-position: 0px -1964.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-black-24: (
+    backgroundX: 0,
+    backgroundY: -1969.6,
+      background-position: 0px -1969.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-black-48: (
+    backgroundX: 0,
+    backgroundY: -1972,
+      background-position: 0px -1972px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-green-24: (
+    backgroundX: 0,
+    backgroundY: -1976.8,
+      background-position: 0px -1976.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-green-48: (
+    backgroundX: 0,
+    backgroundY: -1979.2,
+      background-position: 0px -1979.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1984,
+      background-position: 0px -1984px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1986.4,
+      background-position: 0px -1986.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -1991.2,
+      background-position: 0px -1991.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -1993.6,
+      background-position: 0px -1993.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -1998.4,
+      background-position: 0px -1998.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -2000.8,
+      background-position: 0px -2000.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -2005.6,
+      background-position: 0px -2005.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -2008,
+      background-position: 0px -2008px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -2012.8,
+      background-position: 0px -2012.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -2015.2,
+      background-position: 0px -2015.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-red-24: (
+    backgroundX: 0,
+    backgroundY: -2020,
+      background-position: 0px -2020px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-red-48: (
+    backgroundX: 0,
+    backgroundY: -2022.4,
+      background-position: 0px -2022.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-white-24: (
+    backgroundX: 0,
+    backgroundY: -2027.2,
+      background-position: 0px -2027.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+<<<<<<< Updated upstream
 business-white-24:(
     background-position: 0em -14.4em,
     width: 2.4em,
@@ -440,4 +6292,1021 @@ sort-white-48:(
 
 
 )
+=======
+  reply-white-48: (
+    backgroundX: 0,
+    backgroundY: -2029.6,
+      background-position: 0px -2029.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  reply-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -2034.4,
+      background-position: 0px -2034.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  reply-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -2036.8,
+      background-position: 0px -2036.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -2041.6,
+      background-position: 0px -2041.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -2044,
+      background-position: 0px -2044px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-black-24: (
+    backgroundX: 0,
+    backgroundY: -2048.8,
+      background-position: 0px -2048.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-black-48: (
+    backgroundX: 0,
+    backgroundY: -2051.2,
+      background-position: 0px -2051.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-green-24: (
+    backgroundX: 0,
+    backgroundY: -2056,
+      background-position: 0px -2056px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-green-48: (
+    backgroundX: 0,
+    backgroundY: -2058.4,
+      background-position: 0px -2058.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-grey-24: (
+    backgroundX: 0,
+    backgroundY: -2063.2,
+      background-position: 0px -2063.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-grey-48: (
+    backgroundX: 0,
+    backgroundY: -2065.6,
+      background-position: 0px -2065.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -2070.4,
+      background-position: 0px -2070.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -2072.8,
+      background-position: 0px -2072.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -2077.6,
+      background-position: 0px -2077.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -2080,
+      background-position: 0px -2080px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -2084.8,
+      background-position: 0px -2084.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -2087.2,
+      background-position: 0px -2087.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -2092,
+      background-position: 0px -2092px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -2094.4,
+      background-position: 0px -2094.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-red-24: (
+    backgroundX: 0,
+    backgroundY: -2099.2,
+      background-position: 0px -2099.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-red-48: (
+    backgroundX: 0,
+    backgroundY: -2101.6,
+      background-position: 0px -2101.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-white-24: (
+    backgroundX: 0,
+    backgroundY: -2106.4,
+      background-position: 0px -2106.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-white-48: (
+    backgroundX: 0,
+    backgroundY: -2108.8,
+      background-position: 0px -2108.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  school-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -2113.6,
+      background-position: 0px -2113.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  school-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -2116,
+      background-position: 0px -2116px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -2120.8,
+      background-position: 0px -2120.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -2123.2,
+      background-position: 0px -2123.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-black-24: (
+    backgroundX: 0,
+    backgroundY: -2128,
+      background-position: 0px -2128px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-black-48: (
+    backgroundX: 0,
+    backgroundY: -2130.4,
+      background-position: 0px -2130.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-green-24: (
+    backgroundX: 0,
+    backgroundY: -2135.2,
+      background-position: 0px -2135.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-green-48: (
+    backgroundX: 0,
+    backgroundY: -2137.6,
+      background-position: 0px -2137.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-grey-24: (
+    backgroundX: 0,
+    backgroundY: -2142.4,
+      background-position: 0px -2142.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-grey-48: (
+    backgroundX: 0,
+    backgroundY: -2144.8,
+      background-position: 0px -2144.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -2149.6,
+      background-position: 0px -2149.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -2152,
+      background-position: 0px -2152px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -2156.8,
+      background-position: 0px -2156.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -2159.2,
+      background-position: 0px -2159.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -2164,
+      background-position: 0px -2164px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -2166.4,
+      background-position: 0px -2166.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -2171.2,
+      background-position: 0px -2171.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -2173.6,
+      background-position: 0px -2173.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-red-24: (
+    backgroundX: 0,
+    backgroundY: -2178.4,
+      background-position: 0px -2178.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-red-48: (
+    backgroundX: 0,
+    backgroundY: -2180.8,
+      background-position: 0px -2180.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-white-24: (
+    backgroundX: 0,
+    backgroundY: -2185.6,
+      background-position: 0px -2185.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-white-48: (
+    backgroundX: 0,
+    backgroundY: -2188,
+      background-position: 0px -2188px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  search-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -2192.8,
+      background-position: 0px -2192.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  search-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -2195.2,
+      background-position: 0px -2195.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  shield: (
+    backgroundX: 0,
+    backgroundY: -2200,
+      background-position: 0px -2200px,
+      width: 7.7px,
+      height: 9.9px,
+  ),
+
+
+
+
+  shield-gold-large: (
+    backgroundX: 0,
+    backgroundY: -2209.9,
+      background-position: 0px -2209.9px,
+      width: 7.7px,
+      height: 9.9px,
+  ),
+
+
+
+
+  shield-navy-large: (
+    backgroundX: 0,
+    backgroundY: -2219.8,
+      background-position: 0px -2219.8px,
+      width: 7.7px,
+      height: 9.9px,
+  ),
+
+
+
+
+  shield-navyGoldStars-large: (
+    backgroundX: 0,
+    backgroundY: -2229.7,
+      background-position: 0px -2229.7px,
+      width: 7.7px,
+      height: 9.9px,
+  ),
+
+
+
+
+  snapchat-dark-small: (
+    backgroundX: 0,
+    backgroundY: -2239.6,
+      background-position: 0px -2239.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  snapchat-white-small: (
+    backgroundX: 0,
+    backgroundY: -2242,
+      background-position: 0px -2242px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-ballblue-24: (
+    backgroundX: 0,
+    backgroundY: -2244.4,
+      background-position: 0px -2244.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-ballblue-48: (
+    backgroundX: 0,
+    backgroundY: -2246.8,
+      background-position: 0px -2246.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-black-24: (
+    backgroundX: 0,
+    backgroundY: -2251.6,
+      background-position: 0px -2251.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-black-48: (
+    backgroundX: 0,
+    backgroundY: -2254,
+      background-position: 0px -2254px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-green-24: (
+    backgroundX: 0,
+    backgroundY: -2258.8,
+      background-position: 0px -2258.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-green-48: (
+    backgroundX: 0,
+    backgroundY: -2261.2,
+      background-position: 0px -2261.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-grey-24: (
+    backgroundX: 0,
+    backgroundY: -2266,
+      background-position: 0px -2266px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-grey-48: (
+    backgroundX: 0,
+    backgroundY: -2268.4,
+      background-position: 0px -2268.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -2273.2,
+      background-position: 0px -2273.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-light-grey-48: (
+    backgroundX: 0,
+    backgroundY: -2275.6,
+      background-position: 0px -2275.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -2280.4,
+      background-position: 0px -2280.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-msu-blue-48: (
+    backgroundX: 0,
+    backgroundY: -2282.8,
+      background-position: 0px -2282.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -2287.6,
+      background-position: 0px -2287.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-msu-gold-48: (
+    backgroundX: 0,
+    backgroundY: -2290,
+      background-position: 0px -2290px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -2294.8,
+      background-position: 0px -2294.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-msu-navy-48: (
+    backgroundX: 0,
+    backgroundY: -2297.2,
+      background-position: 0px -2297.2px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-red-24: (
+    backgroundX: 0,
+    backgroundY: -2302,
+      background-position: 0px -2302px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-red-48: (
+    backgroundX: 0,
+    backgroundY: -2304.4,
+      background-position: 0px -2304.4px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-white-24: (
+    backgroundX: 0,
+    backgroundY: -2309.2,
+      background-position: 0px -2309.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-white-48: (
+    backgroundX: 0,
+    backgroundY: -2311.6,
+      background-position: 0px -2311.6px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -2316.4,
+      background-position: 0px -2316.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort-yellow-48: (
+    backgroundX: 0,
+    backgroundY: -2318.8,
+      background-position: 0px -2318.8px,
+      width: 4.8px,
+      height: 4.8px,
+  ),
+
+
+
+
+  sort_by_alpha-black-24: (
+    backgroundX: 0,
+    backgroundY: -2323.6,
+      background-position: 0px -2323.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-green-24: (
+    backgroundX: 0,
+    backgroundY: -2326,
+      background-position: 0px -2326px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-grey-24: (
+    backgroundX: 0,
+    backgroundY: -2328.4,
+      background-position: 0px -2328.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-light-grey-24: (
+    backgroundX: 0,
+    backgroundY: -2330.8,
+      background-position: 0px -2330.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-msu-blue-24: (
+    backgroundX: 0,
+    backgroundY: -2333.2,
+      background-position: 0px -2333.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-msu-gold-24: (
+    backgroundX: 0,
+    backgroundY: -2335.6,
+      background-position: 0px -2335.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-msu-navy-24: (
+    backgroundX: 0,
+    backgroundY: -2338,
+      background-position: 0px -2338px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-red-24: (
+    backgroundX: 0,
+    backgroundY: -2340.4,
+      background-position: 0px -2340.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-white-24: (
+    backgroundX: 0,
+    backgroundY: -2342.8,
+      background-position: 0px -2342.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  sort_by_alpha-yellow-24: (
+    backgroundX: 0,
+    backgroundY: -2345.2,
+      background-position: 0px -2345.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  twitter-blue-small: (
+    backgroundX: 0,
+    backgroundY: -2347.6,
+      background-position: 0px -2347.6px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  twitter-color-small: (
+    backgroundX: 0,
+    backgroundY: -2350,
+      background-position: 0px -2350px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  twitter-dark-large: (
+    backgroundX: 0,
+    backgroundY: -2352.4,
+      background-position: 0px -2352.4px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  twitter-dark-small: (
+    backgroundX: 0,
+    backgroundY: -2354.8,
+      background-position: 0px -2354.8px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  twitter-white-small: (
+    backgroundX: 0,
+    backgroundY: -2357.2,
+      background-position: 0px -2357.2px,
+      width: 2.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  youtube-dark-small: (
+    backgroundX: 0,
+    backgroundY: -2359.6,
+      background-position: 0px -2359.6px,
+      width: 3.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+  youtube-white-small: (
+    backgroundX: 0,
+    backgroundY: -2362,
+      background-position: 0px -2362px,
+      width: 3.4px,
+      height: 2.4px,
+  ),
+
+
+
+
+);
+
+
+>>>>>>> Stashed changes
 

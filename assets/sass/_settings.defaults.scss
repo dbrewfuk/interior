@@ -1,13 +1,11 @@
-$base-font-family: "freight-sans-pro";
+$base-font-family: "freight-sans-pro", myriad-pro, sans-serif;
 $base-serif: "freight-text-pro";
 $base-font-size: 19px !default;
-$base-line-height: 31.35px !default;
-$base-text-color: #3c3c3c !default;
+$base-line-height: 30.44px !default; //19px * 1.6
+$base-text-color: #484848 !default;
 $base-background-color: #fff !default;
 $base-spacing-unit: ($base-line-height / $base-font-size);
-body {
-	background-color: #fafafa;
-}
+$strong: 600;
 
 
 
@@ -16,21 +14,3 @@ body {
 
 
 
-
-
-
-
-// $Weights
-// -------------------------------------//
-
-%light-weight {
-  font-weight: 400;
-}
-
-%medium-weight {
-  font-weight: 500;
-}
-
-%heavy-weight {
-  font-weight: 700;
-}

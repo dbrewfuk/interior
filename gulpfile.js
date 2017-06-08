@@ -33,6 +33,12 @@ var uglify = require('gulp-uglify');
 var svg2png = require('gulp-svg2png');
 var deploy = require('gulp-gh-pages');
 var filter = require('gulp-filter');
+<<<<<<< Updated upstream
+=======
+var merge = require('merge-stream');
+var browserSync = require('browser-sync');
+var imageop = require('gulp-image-optimization');
+>>>>>>> Stashed changes
 
 
 /**
@@ -66,7 +72,7 @@ function streamError(err) {
 function extractFrontMatter(options) {
     var files = [];
     var site = assign({
-        demos: []
+        styleguide: []
     }, options);
     return through.obj(
         function transform(file, enc, done) {
@@ -84,8 +90,8 @@ function extractFrontMatter(options) {
                     }, yaml.attributes)
                 };
 
-                if (file.path.indexOf('demos') > -1) {
-                    site.demos.push(file.data.page);
+                if (file.path.indexOf('site') > -1) {
+                    site.styleguide.push(file.data.page);
                 }
             }
 
@@ -149,6 +155,18 @@ function renderTemplate() {
     });
 }
 
+<<<<<<< Updated upstream
+=======
+gulp.task('browserSync', function() {
+  browserSync({
+    server: {
+      baseDir: 'build',
+      xip: true
+    },
+  })
+})
+
+>>>>>>> Stashed changes
 
 gulp.task('pages', function() {
 
@@ -159,7 +177,7 @@ gulp.task('pages', function() {
     } : {};
     var siteData = assign(baseData, overrides);
 
-    return gulp.src(['*.html', './demos/**/*.html'], {
+    return gulp.src(['*.html', './site/**/*.html'], {
             base: process.cwd()
         })
         .pipe(plumber({
@@ -174,17 +192,6 @@ gulp.task('pages', function() {
                 path.basename = 'index';
                 path.extname = '.html';
             }
-        }))
-        .pipe(htmlmin({
-            removeComments: true,
-            collapseWhitespace: true,
-            collapseBooleanAttributes: true,
-            removeAttributeQuotes: true,
-            removeRedundantAttributes: true,
-            useShortDoctype: true,
-            removeEmptyAttributes: true,
-            minifyJS: true,
-            minifyCSS: true
         }))
         .pipe(gulp.dest(DEST));
 });
@@ -203,16 +210,32 @@ gulp.task("sprites", function() {
             tasks: tasks
         })
         .pipe(sprites(spritesConfig))
-        .pipe(gulp.dest("assets/images"))
+        .pipe(gulp.dest("build/images"))
         .pipe(filter("**/*.svg")) // Filter out everything except the SVG file 
         .pipe(svg2png()) // Create a PNG 
-        .pipe(gulp.dest("assets/images"));
+        .pipe(gulp.dest("build/images"));
 });
 
+<<<<<<< Updated upstream
+=======
+gulp.task('imageOp', function(){
+    return gulp.src('./assets/images/**/*.jpg')
+        .pipe(imageop({
+            optimizationLevel: 5,
+            progressive: true,
+            interlaced: true
+        })).pipe(gulp.dest())
+})
+
+>>>>>>> Stashed changes
 
 gulp.task('images', ['sprites'], function() {
     return gulp.src('./assets/images/**/*')
-        .pipe(gulp.dest(path.join(DEST, 'images')));
+    .pipe(imageop({
+            optimizationLevel: 10,
+            progressive: true,
+            interlaced: true
+        })).pipe(gulp.dest(path.join(DEST, 'images')));
 });
 
 
@@ -239,7 +262,7 @@ gulp.task('css', ['compass'], function() {
 });
 
 gulp.task('lint', function() {
-    return gulp.src('./assets/javascript/*.js')
+    return gulp.src(['./assets/javascript/**/*.js','!./assets/javascript/app.js'])
         .pipe(plumber({
             errorHandler: streamError
         }))
@@ -281,15 +304,21 @@ gulp.task('default', ['css', 'images', 'javascript', 'pages']);
 gulp.task('serve', ['default'], function() {
     var port = argv.port || argv.p || 4000;
     connect().use(serveStatic(DEST)).listen(port);
-    gulp.watch('./assets/css/**/*.css', ['css']);
-    gulp.watch('./assets/sass/**/*.scss', ['compass']);
+
+    gulp.watch('./assets/sass/**/*.scss', ['css']);
     gulp.watch('./assets/images/**/*', ['images']);
     gulp.watch('./assets/javascript/*', ['javascript']);
-    gulp.watch(['*.html', './demos/**/*', './templates/**/*'], ['pages']);
+    gulp.watch(['*.html', './site/**/*', './templates/**/*'], ['pages']);
 });
 
 
+<<<<<<< Updated upstream
 gulp.task('release', ['default'], function() {
+=======
+gulp.task('deploy', function() {
+
+   
+>>>>>>> Stashed changes
 
     // Create a tempory directory and
     // checkout the existing gh-pages branch.

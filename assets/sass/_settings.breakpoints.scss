@@ -24,14 +24,15 @@ $breakpoints: (
 $breakpoint-mobile: 640px;
 $breakpoint-tablet: 641px;
 $breakpoint-desktop: 769px;
-$breakpoint-desktop-big: 1024px;
+$breakpoint-desktop-big: 1290px;
 
 
 //Using only for the flex grid
 $breakpoints: (
   "(min-width: 240px)" "small",
   "(min-width: 641px)" "med",
-  "(min-width: 769px)" "large"
+  "(min-width: 769px)" "large",
+  "(min-width: 1290px)" "xlarge"
 );
 
 @mixin breakpoint($point) {

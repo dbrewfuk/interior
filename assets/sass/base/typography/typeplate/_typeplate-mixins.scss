@@ -90,14 +90,25 @@
 // Some font-families don't support small caps
 // or don't provide them with their Webfont.
 
-@mixin typl8-smallcaps($color: shade(white,50%), $font-weight: 600) {
+@mixin typl8-smallcaps($color: inherit, $font-weight: 600) {
   font-weight: $font-weight;
   text-transform: uppercase;
-  font-size: $typl8-smallest-font-size;
+  font-size: $typl8-smaller-font-size;
   color: $color;
   letter-spacing: typl8-context-calc(1,19,rem);
   text-rendering: optimizeLegibility;
 }
+
+
+@mixin typl8-noSmallcaps($color: inherit, $font-weight: inherit) {
+  font-weight: $font-weight;
+  text-transform: initial;
+  font-size: initial;
+  color: $color;
+  letter-spacing: normal;
+  text-rendering: initial;
+}
+
 
 
 // $Fontsize-Adjust

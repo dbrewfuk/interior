@@ -7,3 +7,5 @@ module.exports = {
         'msFlexAlign' in style || 'webkitBoxDirection' in style));
   }
 };
+
+

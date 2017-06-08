@@ -14,7 +14,8 @@ $typl8-font-weight: normal !default;
 $typl8-line-height: 1.65 !default;
 $typl8-font-size: 100 !default;
 $typl8-desktop-font-size: 118.75 !default;
-$typl8-font-base: 16 * ($typl8-font-size/100) !default;
+$typl8-bigDesktop-font-size: 150 !default;
+$typl8-font-base: 19 * ($typl8-font-size/100) !default;
 $typl8-measure: $typl8-font-base * $typl8-line-height !default;
 $typl8-prefixes: -webkit-, -moz-, -ms-, '' !default;
 
@@ -39,8 +40,8 @@ $typl8-small-print-size: 65% !default;
 // $Base-Colors
 // -------------------------------------//
 
-$typl8-heading-color: #3c3c3c !default;
-$typl8-copy-color: #3c3c3c !default;
+$typl8-heading-color: #1d1d1d !default;
+$typl8-copy-color: #1d1d1d !default;
 
 
 // $Ampersands
@@ -164,7 +165,11 @@ $major-eleventh:   2.667;
 $major-twelfth:    3;
 $double-octave:    4;
 
+<<<<<<< Updated upstream
 $modular-scale-ratio: $perfect-fourth !default;
+=======
+$modular-scale-ratio: $major-third !default;
+>>>>>>> Stashed changes
 $modular-scale-base: strip-units($em-base) !default;
 
 $typl8-scale: (
@@ -181,12 +186,17 @@ $typl8-scale: (
 ) !default;
 
 $typl8-headings: (
-  h1: typl8-gamma,
-  h2: typl8-delta,
-  h3: typl8-epsilon,
-  h4: typl8-zeta
+  h1: typl8-beta,
+  h2: typl8-gamma,
+  h3: typl8-delta,
+  h4: typl8-epsilon,
+  h5: typl8-zeta,
+  h6: typl8-zeta
 ) !default;
 
+$typl8-epsilon: (modular-scale(1)/$typl8-font-base)#{rem};
+$typl8-delta: (modular-scale(2)/$typl8-font-base)#{rem};
+$typl8-gamma: (modular-scale(3)/$typl8-font-base)#{rem};
 $typl8-beta: (modular-scale(4)/$typl8-font-base)#{rem};
 $typl8-alpha: (modular-scale(5)/$typl8-font-base)#{rem};
 $typl8-mega: (modular-scale(6)/$typl8-font-base)#{rem};
