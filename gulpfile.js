@@ -33,12 +33,11 @@ var uglify = require('gulp-uglify');
 var svg2png = require('gulp-svg2png');
 var deploy = require('gulp-gh-pages');
 var filter = require('gulp-filter');
-<<<<<<< Updated upstream
-=======
+
 var merge = require('merge-stream');
 var browserSync = require('browser-sync');
 var imageop = require('gulp-image-optimization');
->>>>>>> Stashed changes
+
 
 
 /**
@@ -49,7 +48,7 @@ const DEST = './build';
 /**
  * The name of the Github repo.
  */
-const REPO = 'interior';
+const REPO = 'pattern-library';
 
 
 /**
@@ -155,18 +154,17 @@ function renderTemplate() {
     });
 }
 
-<<<<<<< Updated upstream
-=======
+
+
 gulp.task('browserSync', function() {
-  browserSync({
-    server: {
-      baseDir: 'build',
-      xip: true
-    },
-  })
+    browserSync({
+        server: {
+            baseDir: 'build',
+            xip: true
+        },
+    })
 })
 
->>>>>>> Stashed changes
 
 gulp.task('pages', function() {
 
@@ -197,7 +195,7 @@ gulp.task('pages', function() {
 });
 
 var spritesConfig = {
-  templates: {
+    templates: {
         css: require("fs").readFileSync("assets/sass/_sprite.scss", "utf-8")
     },
     svgPath: "images/%f",
@@ -216,9 +214,7 @@ gulp.task("sprites", function() {
         .pipe(gulp.dest("build/images"));
 });
 
-<<<<<<< Updated upstream
-=======
-gulp.task('imageOp', function(){
+gulp.task('imageOp', function() {
     return gulp.src('./assets/images/**/*.jpg')
         .pipe(imageop({
             optimizationLevel: 5,
@@ -227,11 +223,11 @@ gulp.task('imageOp', function(){
         })).pipe(gulp.dest())
 })
 
->>>>>>> Stashed changes
+
 
 gulp.task('images', ['sprites'], function() {
     return gulp.src('./assets/images/**/*')
-    .pipe(imageop({
+        .pipe(imageop({
             optimizationLevel: 10,
             progressive: true,
             interlaced: true
@@ -262,7 +258,7 @@ gulp.task('css', ['compass'], function() {
 });
 
 gulp.task('lint', function() {
-    return gulp.src(['./assets/javascript/**/*.js','!./assets/javascript/app.js'])
+    return gulp.src(['./assets/javascript/**/*.js', '!./assets/javascript/app.js'])
         .pipe(plumber({
             errorHandler: streamError
         }))
@@ -312,38 +308,39 @@ gulp.task('serve', ['default'], function() {
 });
 
 
-<<<<<<< Updated upstream
+
 gulp.task('release', ['default'], function() {
-=======
-gulp.task('deploy', function() {
 
-   
->>>>>>> Stashed changes
+            gulp.task('deploy', function() {
 
-    // Create a tempory directory and
-    // checkout the existing gh-pages branch.
-    rm('-rf', '_tmp');
-    mkdir('_tmp');
-    cd('_tmp');
-    exec('git init');
-    exec('git remote add origin git@github.com:dbrewfuk/' + REPO + '.git');
-    exec('git pull origin gh-pages');
 
-    // Delete all the existing files and add
-    // the new ones from the build directory.
-    rm('-rf', './*');
-    cp('-rf', path.join('..', DEST, '/'), './');
-    exec('git add -A');
 
-    // Commit and push the changes to
-    // the gh-pages branch.
-    exec('git commit -m "Deploy site."');
-    exec('git branch -m gh-pages');
-    exec('git push origin gh-pages');
 
-    // Clean up.
-    cd('..');
-    rm('-rf', '_tmp');
-    rm('-rf', DEST);
+                // Create a tempory directory and
+                // checkout the existing gh-pages branch.
+                rm('-rf', '_tmp');
+                mkdir('_tmp');
+                cd('_tmp');
+                exec('git init');
+                exec('git remote add origin git@github.com:dbrewfuk/' + REPO + '.git');
+                exec('git pull origin gh-pages');
 
-});
+                // Delete all the existing files and add
+                // the new ones from the build directory.
+                rm('-rf', './*');
+                cp('-rf', path.join('..', DEST, '/'), './');
+                exec('git add -A');
+
+                // Commit and push the changes to
+                // the gh-pages branch.
+                exec('git commit -m "Deploy site."');
+                exec('git branch -m gh-pages');
+                exec('git push origin gh-pages');
+
+                // Clean up.
+                cd('..');
+                rm('-rf', '_tmp');
+                rm('-rf', DEST);
+
+            });
+        });

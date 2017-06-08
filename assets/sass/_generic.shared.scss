@@ -14,7 +14,7 @@ $context-label-font-size: calc(13/19)#{rem};
 
 @mixin icon-name($icon-name) {
     $target: map-get($icons, $icon-name);
-<<<<<<< Updated upstream
+
     background-position: map-get($target, background-position);
     width: map-get($target, width);
     height: map-get($target, height);
@@ -34,7 +34,7 @@ $context-label-font-size: calc(13/19)#{rem};
 
 .page-title {
 	margin-bottom: 0;
-=======
+
     background-size: map-get($target, background-size);
     background-position: px2em(map-get($target, backgroundX)) px2em(map-get($target, backgroundY));
     width: px2em(map-get($target, width));
@@ -66,7 +66,7 @@ $context-label-font-size: calc(13/19)#{rem};
             @include shared-icon-stuff();
         }
     }
->>>>>>> Stashed changes
+
 }
 
 %link--no-decoration {
@@ -77,14 +77,14 @@ $context-label-font-size: calc(13/19)#{rem};
     }
 }
 
-<<<<<<< Updated upstream
+
 .position-centered,
 %position-centered {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
-=======
+
 @mixin link($style: "") {
   color: $msu-blue;
   font-weight: 500;
@@ -145,7 +145,7 @@ $context-label-font-size: calc(13/19)#{rem};
         z-index: 1;
         background: linear-gradient(to bottom, rgba($color, 0.6) 10%, transparent 100%);
     }
->>>>>>> Stashed changes
+
 }
 
 
@@ -188,8 +188,8 @@ $context-label-font-size: calc(13/19)#{rem};
     bottom: 0;
 }
 
-<<<<<<< Updated upstream
-=======
+
+
 .snippet {
     margin-bottom: $margin;
 }
@@ -211,7 +211,7 @@ $context-label-font-size: calc(13/19)#{rem};
     width: 100%;
     height: 320px;
 }
->>>>>>> Stashed changes
+
 
 // $Label
 // -------------------------------------//

@@ -86,8 +86,8 @@
   align-self: center;
 }
 
-<<<<<<< Updated upstream:assets/sass/_object.flex-grid.scss
-=======
+:assets/sass/_object.flex-grid.scss
+
 .grid-cell {
   &.u-1of2 {
     flex: 0 0 50%;
@@ -193,7 +193,7 @@
   }
 }
 
->>>>>>> Stashed changes:assets/sass/_layout.flex-grid.scss
+:assets/sass/_layout.flex-grid.scss
 @mixin grid-sizing($name: "") {
   $sep: "-";
   @if $name == "" {
@@ -442,8 +442,8 @@
     flex: 0 0 16.6666666667%;
   }
 }
-<<<<<<< Updated upstream:assets/sass/_object.flex-grid.scss
-=======
+:assets/sass/_object.flex-grid.scss
+
 @if $gutters == "gutters" {
   @include gutters(gutters,$selector);
 }
@@ -464,7 +464,7 @@
 @if $align-items == "center" {
   align-items: center;
 }
->>>>>>> Stashed changes:assets/sass/_layout.flex-grid.scss
+:assets/sass/_layout.flex-grid.scss
 }
 
 @mixin grid-cell($name:"") {

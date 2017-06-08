@@ -1,14 +1,14 @@
-<<<<<<< Updated upstream
+
 import analytics from './analytics';
 import supports from './supports';
 import './vendor/moment.js';
 import './vendor/velocity';
 import './vendor/instafeed';
-=======
+
 var supports = require('./supports');
 
 import './vendor/prism.js';
->>>>>>> Stashed changes
+
 
 
 
@@ -37,8 +37,6 @@ if (!supports.flexbox()) {
 analytics.track();
 
 
-<<<<<<< Updated upstream
-=======
 
 
 
@@ -48,5 +46,7 @@ analytics.track();
 
 
 
->>>>>>> Stashed changes
+
+
+
       

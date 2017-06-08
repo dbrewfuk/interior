@@ -1,5 +1,5 @@
 {
-  "name": "interior",
+  "name": "pattern-library",
   "description": "Testing site for MSU interior pages.",
   "homepage": "http://dbrewfuk.github.io/pattern-library",
   "repository": {
@@ -10,18 +10,11 @@
   "scripts": {
     "build": "gulp",
     "start": "NODE_ENV=dev gulp serve",
-<<<<<<< Updated upstream
-    "release": "gulp clean && gulp release"
-  },
-  "devDependencies": {
-=======
-    "clean": "gulp clean",
-    "deploy": "gulp deploy"
+    "publish": "gulp clean && gulp release"
   },
   "devDependencies": {
     "babelify": "^6.1.2",
     "browser-sync": "^2.9.11",
->>>>>>> Stashed changes
     "browserify": "^8.1.1",
     "connect": "^3.3.4",
     "del": "^1.1.1",
@@ -39,15 +32,12 @@
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",
     "gulp-sourcemaps": "^1.3.0",
-<<<<<<< Updated upstream
     "gulp-svg-sprite": "^1.2.11",
     "gulp-svg-sprites": "^3.0.0",
     "gulp-svg2png": "^0.3.0",
-=======
     "gulp-svg-sprite": "^1.1.2",
     "gulp-svg-sprites": "^4.0.2",
     "gulp-svg2png": "^2.0.",
->>>>>>> Stashed changes
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.7",
     "he": "^0.5.0",
@@ -67,12 +57,5 @@
     "vinyl-source-stream": "^1.0.0",
     "yargs": "^1.3.3",
     "zeroclipboard": "^2.2.0"
-  },
-  "dependencies": {},
-  "bugs": {
-    "url": "https://github.com/dbrewfuk/interior/issues"
-  },
-  "version": "1.0.0",
-  "main": "gulpfile.js",
-  "author": ""
+  }
 }
